@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Wangriyu’s Blog">
 <meta property="og:description" content="输入输出（I/O）是主存和外部设备设备（磁盘驱动器、终端、网络等）之间复制数据的过程。">
 <meta property="og:image" content="https://wangriyu.github.io/images/IO.png">
-<meta property="og:updated_time" content="2017-08-16T15:06:03.000Z">
+<meta property="og:updated_time" content="2017-08-17T01:10:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统I&#x2F;O">
 <meta name="twitter:description" content="输入输出（I/O）是主存和外部设备设备（磁盘驱动器、终端、网络等）之间复制数据的过程。">
@@ -357,9 +357,11 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssize_t write(int fd, const void *buf, size_t nbytes) // write函数将buf中的nbytes字节内容写入文件描述符fd. 成功时返回写的字节数. 失败时返回-1</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">char buf[512];</div><div class="line">int fd;</div><div class="line">int nbytes;</div><div class="line">// 打开文件描述符，并向其写入 512 字节的数据</div><div class="line">if ((nbytes = write(fd, buf, sizeof(buf)) &lt; 0)</div><div class="line">&#123;</div><div class="line">    perror(&quot;write&quot;);</div><div class="line">    exit(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>tips：x86-64系统中，size-t被定义为unsigned long，而ssize-t（有符号）被定义为long</p>
+<blockquote>
+<p>tips：x86-64系统中，size-t被定义为unsigned long，而ssize-t（有符号）被定义为long，因为函数返回值可能为-1</p>
+</blockquote>
 <ul>
-<li>lseek函数，因为函数返回值可能为-1<br>为一个打开的文件设置其偏移量</li>
+<li>lseek函数<br>为一个打开的文件设置其偏移量</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">off_t lseek(int fd, off_t offset, int whence)</div></pre></td></tr></table></figure>
 <p>Offset：偏移量，每一读写操作所需要移动的距离，单位是字节的数量，可正可负（向前，向后）<br>whence:  SEEK_SET / SEEK_CUR / SEEK_END (依次为0，1，2）.<br>　　SEEK_SET 将读写位置指向文件头后再增加offset个位移量。<br>　　SEEK_CUR 以目前的读写位置往后增加offset个位移量。<br>　　SEEK_END 将读写位置指向文件尾后再增加offset个位移量。</p>
@@ -483,7 +485,7 @@
         <p><span>本文标题:</span><a href="/2017/08/05/系统输入输出/">系统I/O</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p>
         <p><span>发布时间:</span>2017-08-05, 00:00:00</p>
-        <p><span>最后更新:</span>2017-08-16, 23:06:03</p>
+        <p><span>最后更新:</span>2017-08-17, 09:10:27</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/05/系统输入输出/" title="系统I/O">http://wangriyu.github.io/2017/08/05/系统输入输出/</a>
             <span class="copy-path" data-clipboard-text="原文: http://wangriyu.github.io/2017/08/05/系统输入输出/　　作者: 鱼乐" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
