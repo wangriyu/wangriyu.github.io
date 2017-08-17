@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Wangriyu’s Blog">
 <meta property="og:description" content="输入输出（I/O）是主存和外部设备设备（磁盘驱动器、终端、网络等）之间复制数据的过程。">
 <meta property="og:image" content="https://wangriyu.github.io/images/IO.png">
-<meta property="og:updated_time" content="2017-08-17T01:10:27.000Z">
+<meta property="og:updated_time" content="2017-08-17T01:37:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统I&#x2F;O">
 <meta name="twitter:description" content="输入输出（I/O）是主存和外部设备设备（磁盘驱动器、终端、网络等）之间复制数据的过程。">
@@ -404,7 +404,7 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.stat(path, callback(err, stats))</div></pre></td></tr></table></figure>
 <p>  一个stats类对象的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  dev: 16777220,</div><div class="line">  mode: 33188,</div><div class="line">  nlink: 1,</div><div class="line">  uid: 501,</div><div class="line">  gid: 20,</div><div class="line">  rdev: 0,</div><div class="line">  blksize: 4096,</div><div class="line">  ino: 78808297,</div><div class="line">  size: 244,</div><div class="line">  blocks: 8,</div><div class="line">  atime: Wed May 27 2015 18:24:43 GMT+0800 (CST),</div><div class="line">  mtime: Wed May 27 2015 18:26:25 GMT+0800 (CST),</div><div class="line">  ctime: Wed May 27 2015 18:26:25 GMT+0800 (CST)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  dev: 16777220,   // 文件或目录所在的设备I, 该属性值在UNIX系统下有效</div><div class="line">  mode: 33188,     // 文件或目录的权限标志，采用数值形式表示</div><div class="line">  nlink: 1,        // 文件或目录的的硬连接数量</div><div class="line">  uid: 501,        // 文件或目录的所有者的用户ID, 该属性值在UNIX系统下有效</div><div class="line">  gid: 20,         // 文件或目录的所有者的用户组ID, 该属性值在UNIX系统下有效</div><div class="line">  rdev: 0,         // 字符设备文件或块设备文件所在设备ID, 该属性值在UNIX系统下有效</div><div class="line">  blksize: 4096,   // 块大小</div><div class="line">  ino: 78808297,   // 文件或目录的索引编号, 该属性值仅在UNIX系统下有效</div><div class="line">  size: 244,       // 文件的字节数</div><div class="line">  blocks: 8,       // 块数</div><div class="line">  atime: Wed May 27 2015 18:24:43 GMT+0800 (CST),  // 文件或目录的访问时间</div><div class="line">  mtime: Wed May 27 2015 18:26:25 GMT+0800 (CST),  // 文件或目录的最后修改时间</div><div class="line">  ctime: Wed May 27 2015 18:26:25 GMT+0800 (CST),  // 文件或目录状态的最后修改时间</div><div class="line">  birthtime: Mon, 10 Oct 2011 23:24:11 GMT,        // 文件创建时间</div><div class="line">  atimeMs: 1318289051000.1,      // 以单位为毫秒保存相对应时间的数字</div><div class="line">  mtimeMs: 1318289051000.1,</div><div class="line">  ctimeMs: 1318289051000.1,</div><div class="line">  birthtimeMs: 1318289051000.1,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>stats类的方法</p>
 <ol>
 <li>stats.isFile() 如果是标准文件，返回true。是目录、套接字、符号连接、或设备等返回false</li>
@@ -485,7 +485,7 @@
         <p><span>本文标题:</span><a href="/2017/08/05/系统输入输出/">系统I/O</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p>
         <p><span>发布时间:</span>2017-08-05, 00:00:00</p>
-        <p><span>最后更新:</span>2017-08-17, 09:10:27</p>
+        <p><span>最后更新:</span>2017-08-17, 09:37:56</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/05/系统输入输出/" title="系统I/O">http://wangriyu.github.io/2017/08/05/系统输入输出/</a>
             <span class="copy-path" data-clipboard-text="原文: http://wangriyu.github.io/2017/08/05/系统输入输出/　　作者: 鱼乐" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
