@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -112,6 +112,13 @@
         
 
         
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
 
 
         
@@ -149,7 +156,7 @@
                         <li>友情链接</li>
                         
                         
-                        <li>关于我</li>
+                        <li>目标</li>
                         
                     </ul>
                 </div>
@@ -178,6 +185,8 @@
                                 <a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
                             
                                 <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                                 <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
                             
@@ -263,13 +272,15 @@
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
                             
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
                                 <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
                             
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
 </nav>
       <div class="body-wrap"><article id="post-20170811IndexedDB" class="article article-type-post" itemscope itemprop="blogPost">
   
