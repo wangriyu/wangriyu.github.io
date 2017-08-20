@@ -606,50 +606,66 @@ a {
   border: 5px solid #88acdb;
   -webkit-box-shadow: 0 0 1.5em #88acdb;
   box-shadow: 0 0 1.5em #88acdb;
-  -webkit-animation: profilepic 0.15s linear infinite alternate;
-  -moz-animation: profilepic 0.15s linear infinite alternate;
-  -ms-animation: profilepic 0.15s linear infinite alternate;
-  animation: profilepic 0.15s linear infinite alternate;
-  -webkit-animation: profilepic 0.15s linear infinite alternate;
+  -webkit-animation: profilepic 5s linear infinite;
+  -moz-animation: profilepic 5s linear infinite;
+  -ms-animation: profilepic 5s linear infinite;
+  animation: profilepic 5s linear infinite;
+  -webkit-animation: profilepic 5s linear infinite;
 }
 @-moz-keyframes profilepic {
   0% {
-    right: 4px;
-    top: 1x;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
-    right: 0px;
-    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @-webkit-keyframes profilepic {
   0% {
-    right: 4px;
-    top: 1x;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
-    right: 0px;
-    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @-o-keyframes profilepic {
   0% {
-    right: 4px;
-    top: 1x;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
-    right: 0px;
-    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes profilepic {
   0% {
-    right: 4px;
-    top: 1x;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
-    right: 0px;
-    top: -1px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 #header .header-subtitle {
