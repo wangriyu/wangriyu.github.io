@@ -2854,6 +2854,16 @@ pre .javascript .function {
   content: "\f02b";
   margin-left: 1em;
 }
+.article-tag span {
+  cursor: pointer;
+  line-height: 28px;
+  font-size: 13px;
+  color: #aaa;
+}
+.article-tag span::before {
+  content: "\27A4";
+  margin-left: 1em;
+}
 .article-category::before {
   content: "\f02d";
 }
