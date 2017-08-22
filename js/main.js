@@ -146,7 +146,7 @@ require([], function (){
     // PC
     $("#container .left-col .overlay").css({"background-color": colorList[id],"opacity": .3});
     // Mobile
-    $("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .7});
+    $("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .5});
 
     // Table
     $("table").wrap("<div class='table-area'></div>");
