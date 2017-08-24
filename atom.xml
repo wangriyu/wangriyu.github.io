@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangriyu.github.io/"/>
-  <updated>2017-08-15T14:29:56.000Z</updated>
+  <updated>2017-08-24T16:26:17.000Z</updated>
   <id>http://wangriyu.github.io/</id>
   
   <author>
@@ -14,6 +14,86 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo主题Yelee</title>
+    <link href="http://wangriyu.github.io/2017/08/24/Hexo/"/>
+    <id>http://wangriyu.github.io/2017/08/24/Hexo/</id>
+    <published>2017-08-23T16:00:00.000Z</published>
+    <updated>2017-08-24T16:26:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前使用的是next主题，虽然next很强大，但是next的样式并不是我很喜欢的类型。<br>后来无意间在别人博客上看到这种双栏主题，而且还有各种动画效果，作为颜控立马被吸引了，然后发现类似的双栏博客有好几个，像yilia、spfk、yelee等。<br>后者好像都是在yilia的基础上修改的，而我选择了yelee，因为我更喜欢其色调，并且作者很贴心地写了<a href="http://moxfive.coding.me/yelee" title="Yelee主题使用说明" target="_blank" rel="external">gitbook操作指南</a>，这对刚接触博客的小白我来说真是福音。<br>感谢作者提供了这么好的主题，后来使用上碰到的一些问题和修改，我都一一列举在下面，以后如果还有修改我还会更新。</p>
+<hr>
+<p>按照gitbook的教程我完成博客的基础配置，效果基本上已经很满足了，但是测试上发现有些小小小问题，作为强迫症，修改之。</p>
+<h2 id="代码块前后留白问题："><a href="#代码块前后留白问题：" class="headerlink" title="代码块前后留白问题："></a>代码块前后留白问题：</h2><p>代码块中的代码空行消失，都被挤到前后了，issue上有人解决了：<br><img src="/images/hexo/CodeSpace.png" alt="代码显示错位"></p>
+<hr>
+<p>然后是页面跳转问题，我希望的是本站内的链接和标签都在本窗口打开，外站的都在新标签页打开，<br>但是像搜索结果和迷你文章列表等点击会在新标签页打开，得做如下修改：</p>
+<h2 id="取消搜索结果跳转新标签页："><a href="#取消搜索结果跳转新标签页：" class="headerlink" title="取消搜索结果跳转新标签页："></a>取消搜索结果跳转新标签页：</h2><p><strong>文件：themes/yelee/source/js/search.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// show search results</span></div><div class="line"><span class="keyword">if</span> (isMatch) &#123;</div><div class="line">str += <span class="string">"&lt;li&gt;&lt;a href='"</span>+ data_url +<span class="string">"' class='search-result-title' target='_blank'&gt;"</span>+ <span class="string">"&gt; "</span> + data_title +<span class="string">"&lt;/a&gt;"</span>;</div></pre></td></tr></table></figure>
+<p>删除 <code>target=&#39;_blank&#39;</code>字段</p>
+<hr>
+<h2 id="取消迷你文章在新窗口打开"><a href="#取消迷你文章在新窗口打开" class="headerlink" title="取消迷你文章在新窗口打开"></a>取消迷你文章在新窗口打开</h2><p><img src="/images/hexo/miniArchives.png" alt="迷你文章列表"></p>
+<p><strong>文件：themes/yelee/layout/_partial/open-in-new-tab.ejs</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.open_in_new.mini_archives) &#123; %&gt; miniArchives: <span class="string">"a.post-list-link"</span>, &lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<p>将<code>theme.open_in_new.mini_archives</code>直接改为false</p>
+<p>我在 _config.yml 里设置 mini_archives 好像不起作用</p>
+<hr>
+<p><strong>下面的是我自己的一些修改，如有需要可供参考！</strong></p>
+<h2 id="添加文章字数统计"><a href="#添加文章字数统计" class="headerlink" title="添加文章字数统计"></a>添加文章字数统计</h2><p>用到的插件是<a href="https://github.com/willin/hexo-wordcount" title="点击访问" target="_blank" rel="external">hexo-wordcount</a></p>
+<p>安装很简单，一条命令<code>npm i --save hexo-wordcount</code>即可解决，<br>下面的配置是信息显示位置和样式，仅供参考，也可以自行修改</p>
+<p><strong>文件：themes/yelee/layout/_partial/post/tag.ejs</strong></p>
+<p>加上两个span标签：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (post.tags &amp;&amp; post.tags.length)&#123; %&gt;</div><div class="line">    &lt;div class="article-tag tagcloud"&gt;</div><div class="line">        &lt;%-</div><div class="line">          list_tags(post.tags, &#123;</div><div class="line">            show_count: false,</div><div class="line">            class: 'article-tag'</div><div class="line">          &#125;)</div><div class="line">        %&gt;</div><div class="line">        &lt;span class="post-count"&gt;总字数&lt;%= wordcount(post.content) %&gt;&lt;/span&gt;</div><div class="line">        &lt;span class="post-count"&gt;预计阅读&lt;%= min2read(post.content) %&gt;分钟&lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<p><strong>文件：themes/yelee/source/css/_partial/tagcloud.styl</strong></p>
+<p>添加样式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.article-tag::before,</div><div class="line">.article-category::before</div><div class="line">    float left</div><div class="line">    color #999</div><div class="line">    font base-font-size FontAwesome</div><div class="line">    margin-right 5px</div><div class="line">    margin-top (1/3)rem</div><div class="line"></div><div class="line">.article-tag::before</div><div class="line">    content "\f02b"</div><div class="line">    margin-left 1em</div><div class="line"></div><div class="line">.article-category::before</div><div class="line">    content "\f02d"</div></pre></td></tr></table></figure>
+<p>在<code>.article-category::before</code>前插入：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.article-tag span</div><div class="line">    cursor: pointer</div><div class="line">    line-height: 31px</div><div class="line">    font-size: 13px</div><div class="line">    color: #aaa</div><div class="line"></div><div class="line">.article-tag span::before</div><div class="line">    content: "\27A4"</div><div class="line">    margin-left: 1em</div></pre></td></tr></table></figure>
+<p>content: “\27A4” 是unicode图标编码，可以换成其他的</p>
+<p><a href="https://unicode-table.com/cn" title="点击访问" target="_blank" rel="external">unicode图标</a></p>
+<hr>
+<h2 id="添加音乐播放器"><a href="#添加音乐播放器" class="headerlink" title="添加音乐播放器"></a>添加音乐播放器</h2><p>我知道的有三种形式、两种样式的播放器添加方式</p>
+<ul>
+<li>网易云<code>iframe</code>标签<br>到网易云网页上找喜欢的歌，点击生产外链播放器，获取<code>iframe</code>标签代码，粘贴到想放的地方即可，也可以直接贴在markdown文本中，<br>我就是这样在每篇文章中插入一首歌;<br>如果是歌单，因为限制问题不能正常打开生产外链播放器的网页，需要以下操作，右键点击歌单的<code>生成外链播放器</code></li>
+</ul>
+<p><img src="/images/hexo/NeteasePlayer.png" alt="网易云歌单"></p>
+<p>点击审查元素，图中的inspect，开发者工具会定位到该标签，data-href的最后那串数字就是我们的歌单ID，这个ID后面还要用到</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a data-action=<span class="string">"outchain"</span> data-href=<span class="string">"/outchain/0/604161338/"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"des s-fc7"</span>&gt;生成外链播放器&lt;<span class="regexp">/a&gt;</span></div></pre></td></tr></table></figure>
+<p>将浏览器中的网址改成 <a href="https://music.163.com/#/outchain/0/604161338/" target="_blank" rel="external">https://music.163.com/#/outchain/0/604161338/</a> ，#后面就是上面得到的data-href，<br>刷新页面就可以看见生产外链播放器的网页了</p>
+<ul>
+<li>使用插件<a href="https://github.com/MoePlayer/hexo-tag-aplayer" title="点击访问" target="_blank" rel="external">hexo-tag-aplayer</a></li>
+</ul>
+<p>安装：<code>npm install --save hexo-tag-aplayer</code><br>使用：<code>{% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %}</code><br>我没用过这个方法，好像这个插件得用音乐文件或者指定地址，网易云的ID可能没用</p>
+<ul>
+<li>使用aplayer</li>
+</ul>
+<p>在主题的_config.yml文件底部添加两个库：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CDN</div><div class="line">  ...</div><div class="line">  aplayer: <span class="comment">//cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js</span></div><div class="line">  player: <span class="comment">//api.i-meto.com/music/player.js</span></div></pre></td></tr></table></figure>
+<p><strong>文件：themes/yelee/layout/_partial/head.ejs</strong><br>在jquery后面导入库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"&lt;%- theme.CDN.jquery %&gt;"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"&lt;%- theme.CDN.clipboard %&gt;"</span>&gt;&lt;/script&gt;</div><div class="line">+ &lt;script src="&lt;%- theme.CDN.aplayer %&gt;"&gt;&lt;/script&gt;</div><div class="line">+ &lt;script src="&lt;%- theme.CDN.player %&gt;"&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>使用：粘贴以下代码生成播放器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div</div><div class="line">  <span class="class"><span class="keyword">class</span></span>=<span class="string">"aplayer"</span></div><div class="line">  data-id=<span class="string">"883067320"</span>    <span class="comment">// 歌曲/专辑/歌单 ID</span></div><div class="line">  data-server=<span class="string">"netease"</span>  <span class="comment">// 音乐平台：netease、tencent、xiami、kugou、baidu</span></div><div class="line">  data-type=<span class="string">"playlist"</span>   <span class="comment">// 类型：song、album、playlist、search</span></div><div class="line">  data-mode=<span class="string">"random"</span>     <span class="comment">// 播放模式：random、single、circulation、order</span></div><div class="line">  data-autoplay=<span class="string">"true"</span>&gt;  <span class="comment">// 自动播放</span></div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="修改头像动画"><a href="#修改头像动画" class="headerlink" title="修改头像动画"></a>修改头像动画</h2><p><strong>文件：themes/yelee/source/css/_partial/main.styl</strong></p>
+<p>修改头像为旋转效果：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">    ...</div><div class="line">    // animation: profilepic .15s linear infinite alternate;</div><div class="line">    // -webkit-animation: profilepic .15s linear infinite alternate;</div><div class="line">    animation: profilepic 5s linear infinite;</div><div class="line">    -webkit-animation: profilepic 5s linear infinite; // profilepic动画，周期5秒，速度不变，无限循环</div><div class="line">&#125;</div><div class="line">@keyframes profilepic &#123;</div><div class="line">    0% &#123;</div><div class="line">        // right: 4px;</div><div class="line">        // top: 1x;</div><div class="line">        transform: rotate(360deg);</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        // right: 0px;</div><div class="line">        // top: -1px;</div><div class="line">        transform: rotate(0deg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>animation: name duration timing-function delay iteration-count direction;</code><br>animation是CSS动画属性：第一个参数是用@keyframes定义的动画，第二个参数是单次动画持续时间，<br>第三个是动画的速度曲线，第四个参数是动画开始之前的延迟，第五个是动画应该播放的次数，最后一个规定是否应该轮流反向播放动画</p>
+<h2 id="推荐几个使用工具"><a href="#推荐几个使用工具" class="headerlink" title="推荐几个使用工具"></a>推荐几个使用工具</h2><p><a href="https://zhitu.isux.us/" title="点击访问" target="_blank" rel="external">智图</a>：压缩图片很方便</p>
+<p><a href="https://clipchamp.com/zh-Hans/dashboard" target="_blank" rel="external">在线压缩视频</a></p>
+<p><a href="https://ezgif.com/video-to-gif" target="_blank" rel="external">EZGIF</a>：视频转gif，压缩截取等</p>
+]]></content>
+    
+    <summary type="html">
+    
+      更换博客主题Yelee的前前后后
+    
+    </summary>
+    
+      <category term="Web" scheme="http://wangriyu.github.io/categories/Web/"/>
+    
+    
+      <category term="Yelee" scheme="http://wangriyu.github.io/tags/Yelee/"/>
+    
+  </entry>
   
   <entry>
     <title>浏览器本地存储</title>
