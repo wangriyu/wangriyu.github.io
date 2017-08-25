@@ -5,7 +5,9 @@
     <entry>
       <title><![CDATA[使用Hexo主题Yelee]]></title>
       <url>/2017/08/24/Hexo/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前使用的是next主题，虽然next很强大，但是next的样式并不是我很喜欢的类型。<br>后来无意间在别人博客上看到这种双栏主题，而且还有各种动画效果，作为颜控立马被吸引了，然后发现类似的双栏博客有好几个，像yilia、spfk、yelee等。<br>后者好像都是在yilia的基础上修改的，而我选择了yelee，因为我更喜欢其色调，并且作者很贴心地写了<a href="http://moxfive.coding.me/yelee" title="Yelee主题使用说明" target="_blank" rel="external">gitbook操作指南</a>，这对刚接触博客的小白我来说真是福音。<br>感谢作者提供了这么好的主题，后来使用上碰到的一些问题和修改，我都一一列举在下面，以后如果还有修改我还会更新。</p>
+      <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=729638&auto=1&height=66"></iframe>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前使用的是next主题，虽然next很强大，但是next的样式并不是我很喜欢的类型。<br>后来无意间在别人博客上看到这种双栏主题，而且还有各种动画效果，作为颜控立马被吸引了，然后发现类似的双栏博客有好几个，像yilia、spfk、yelee等。<br>后者好像都是在yilia的基础上修改的，而我选择了yelee，因为我更喜欢其色调，并且作者很贴心地写了<a href="http://moxfive.coding.me/yelee" title="Yelee主题使用说明" target="_blank" rel="external">gitbook操作指南</a>，这对刚接触博客的小白我来说真是福音。<br>感谢作者提供了这么好的主题，后来使用上碰到的一些问题和修改，我都一一列举在下面，以后如果还有修改我还会更新。</p>
 <hr>
 <p>按照gitbook的教程我完成博客的基础配置，效果基本上已经很满足了，但是测试上发现有些小小小问题，作为强迫症，修改之。</p>
 <h2 id="代码块前后留白问题："><a href="#代码块前后留白问题：" class="headerlink" title="代码块前后留白问题："></a>代码块前后留白问题：</h2><p>代码块中的代码空行消失，都被挤到前后了，issue上有人解决了：<br><img src="/images/hexo/CodeSpace.png" alt="代码显示错位"></p>

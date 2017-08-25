@@ -242,7 +242,7 @@ a {
   height: 100%;
   overflow-y: auto;
   background-image: url("/img/yule.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 #container .left-col .overlay {
   width: 100%;
