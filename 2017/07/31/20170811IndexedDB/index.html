@@ -500,7 +500,7 @@
         $(document).ready(function() {
             if ($(".left-col").css("display") === "none") {
               var backgroundimg = "url(/background/bg-6.jpg)";
-              $("body").css({"background": backgroundimg, "background-position": "center", "background-attachment": "fixed", "background-size": "cover"});
+              $("body").css({"background": backgroundimg, "background-position": "center center", "min-height": "100%", "background-attachment": "fixed", "background-size": "cover"});
             } else {
                 var backgroundnum = 6;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
