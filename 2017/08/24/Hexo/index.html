@@ -199,18 +199,19 @@
                                 <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
                             
                         </ul>
+                      
                         <ul class="social">
                             <div style="position: absolute; top: 95%; left: 50%; margin-left: -30px;">
                                 <p style="display: block">
                                     <a
-                                        class="donate"
+                                        class="donateIcon"
                                         href="javascript:void(0)"
                                         onmouseout="
-                                            var qr = document.getElementById('QR');
+                                            var qr = document.getElementById('donate');
                                             qr.style.display='none';
                                         "
                                         onmouseenter="
-                                            var qr = document.getElementById('QR');
+                                            var qr = document.getElementById('donate');
                                             qr.style.display='block';
                                         ">
                                         赏
@@ -218,6 +219,7 @@
                                 </p>
                             </div>
                         </ul>
+                      
                     </nav>
                 </section>
                 
@@ -265,10 +267,12 @@
             </div>
         </div>
     </header>
-    <div id="QR">
-        <img id="alipay_qr" src="/img/alipay.jpg" width="260px" alt="鱼乐 Alipay"/>
+  
+    <div id="donate">
+        <img id="alipay" src="/img/alipay.jpg" width="260px" alt="鱼乐 Alipay"/>
         <div class="triangle"></div>
     </div>
+  
 </div>
     </div>
     <div class="mid-col">

@@ -259,16 +259,16 @@ a {
   text-align: center;
   margin: 112px auto 0;
 }
-#container .left-col .intrude-less #QR {
+#container .left-col .intrude-less #donate {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 312px;
   left: 20px;
 }
-#container .left-col .intrude-less #QR img {
+#container .left-col .intrude-less #donate img {
   border-radius: 5px;
 }
-#container .left-col .intrude-less #QR .triangle {
+#container .left-col .intrude-less #donate .triangle {
   height: 0;
   width: 0;
   margin: -5px 0 0 85px;
@@ -813,7 +813,7 @@ a {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-#header .header-nav .social .donate {
+#header .header-nav .social .donateIcon {
   display: block;
   width: 56px;
   margin: auto;
