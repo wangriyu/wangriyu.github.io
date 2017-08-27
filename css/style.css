@@ -264,13 +264,6 @@ a {
   position: absolute;
   top: 312px;
   left: 20px;
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -ms-transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -ms-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 #container .left-col .intrude-less #QR img {
   border-radius: 5px;
