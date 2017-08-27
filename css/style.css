@@ -242,7 +242,10 @@ a {
   height: 100%;
   overflow-y: auto;
   background-image: url("/img/yule.jpg");
-  background-repeat: repeat-y;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: 0% 50%;
 }
 #container .left-col .overlay {
   width: 100%;
@@ -275,10 +278,10 @@ a {
 #container .left-col .intrude-less #QR .triangle {
   height: 0;
   width: 0;
-  margin: -2px 0 0 93px;
-  border-right: 35px solid transparent;
-  border-left: 35px solid transparent;
-  border-top: 25px solid #059fe7;
+  margin: -5px 0 0 85px;
+  border-right: 45px solid transparent;
+  border-left: 45px solid transparent;
+  border-top: 30px solid #059fe7;
 }
 #container .left-col li:hover {
   background: none;
