@@ -49,7 +49,7 @@
 
 
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-center-simple.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -197,6 +197,25 @@
                                 <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
                             
                         </ul>
+                        <ul class="social">
+                            <div style="position: absolute; top: 95%; left: 50%; margin-left: -30px;">
+                                <p style="display: block">
+                                    <a
+                                        class="donate"
+                                        href="javascript:void(0)"
+                                        onmouseout="
+                                            var qr = document.getElementById('QR');
+                                            qr.style.display='none';
+                                        "
+                                        onmouseenter="
+                                            var qr = document.getElementById('QR');
+                                            qr.style.display='block';
+                                        ">
+                                        赏
+                                    </a>
+                                </p>
+                            </div>
+                        </ul>
                     </nav>
                 </section>
                 
@@ -243,7 +262,11 @@
                 
             </div>
         </div>
-    </header>                
+    </header>
+    <div id="QR">
+        <img id="alipay_qr" src="/img/alipay.jpg" width="260px" alt="鱼乐 Alipay"/>
+        <div class="triangle"></div>
+    </div>
 </div>
     </div>
     <div class="mid-col">
@@ -278,19 +301,19 @@
                 </ul>
             </nav>
             <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                                <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
-                            
-                        </ul>
+                <ul class="social">
+                    
+                        <a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
+                    
+                        <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
+                    
+                        <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                    
+                        <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
+                    
+                </ul>
             </nav>
-        </header>                
+        </header>
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
 </nav>

@@ -256,6 +256,30 @@ a {
   text-align: center;
   margin: 112px auto 0;
 }
+#container .left-col .intrude-less #QR {
+  display: none;
+  position: absolute;
+  top: 312px;
+  left: 20px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+#container .left-col .intrude-less #QR img {
+  border-radius: 5px;
+}
+#container .left-col .intrude-less #QR .triangle {
+  height: 0;
+  width: 0;
+  margin: -2px 0 0 93px;
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-top: 25px solid #059fe7;
+}
 #container .left-col li:hover {
   background: none;
   font-weight: bold;
@@ -793,6 +817,29 @@ a {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+#header .header-nav .social .donate {
+  display: block;
+  width: 56px;
+  margin: auto;
+  height: 56px;
+  line-height: 56px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  background: #4094c7;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
 #header .header-nav .social .新浪微博 {
   background: url("/img/新浪微博.png") center no-repeat #ecc260;
   -webkit-background-size: 80%;
@@ -1111,11 +1158,6 @@ color
 }
 body .ui-tooltip {
   border: 1px solid #fff;
-}
-.pace .pace-progress {
-  background: #77b6ff;
-  -webkit-box-shadow: 0 0 10px rgba(119,182,255,0.7);
-  box-shadow: 0 0 10px rgba(119,182,255,0.7);
 }
 .article-entry ul > li,
 .share,
