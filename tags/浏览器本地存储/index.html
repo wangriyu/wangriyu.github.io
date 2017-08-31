@@ -451,15 +451,28 @@
   <script>
     $(document).ready(function() {
       var iPad = window.navigator.userAgent.indexOf('iPad');
-      if (iPad > -1 || $(".left-col").css("display") === "none") {
+      if (iPad > -1) {
         var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
         var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
         $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-      }
-      else {
+      } else if ($(".left-col").css("display") === "none") {
+        $("body").css({
+          "background": "url(/background/bg-6.jpg)",
+          "background-position": "center center",
+          "background-repeat": "no-repeat",
+          "background-attachment": "fixed",
+          "background-size": "cover"
+        })
+      } else {
         var backgroundnum = 6;
         var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-        $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+        $("body").css({
+          "background": backgroundimg,
+          "background-position": "0% 80%",
+          "background-repeat": "no-repeat",
+          "background-attachment": "fixed",
+          "background-size": "cover"
+        })
       }
     })
   </script>
