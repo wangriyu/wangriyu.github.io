@@ -510,16 +510,19 @@
     $(document).ready(function() {
       var iPad = window.navigator.userAgent.indexOf('iPad');
       if (iPad > -1) {
-        var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-        var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+        let bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+        let bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
         $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
       } else if ($(".left-col").css("display") === "none") {
+        let bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+        let bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
         $("body").css({
-          "background": "url(/background/bg-6.jpg)",
+          "background-color": bgColorList[bgColor],
+          "background-image": "url(/background/bg-6.jpg)",
           "background-position": "center center",
           "background-repeat": "no-repeat",
           "background-attachment": "fixed",
-          "background-size": "cover"
+          "background-size": "auto 100%"
         })
       } else {
         var backgroundnum = 6;
