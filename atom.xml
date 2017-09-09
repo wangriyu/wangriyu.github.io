@@ -4,9 +4,9 @@
   <subtitle>子非鱼，安知鱼之乐也！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://wangriyu.github.io/"/>
+  <link href="http://wangriyu.wang/"/>
   <updated>2017-09-02T14:56:38.000Z</updated>
-  <id>http://wangriyu.github.io/</id>
+  <id>http://wangriyu.wang/</id>
   
   <author>
     <name>鱼乐</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>使用Hexo主题Yelee</title>
-    <link href="http://wangriyu.github.io/2017/08/24/Hexo/"/>
-    <id>http://wangriyu.github.io/2017/08/24/Hexo/</id>
+    <link href="http://wangriyu.wang/2017/08/24/Hexo/"/>
+    <id>http://wangriyu.wang/2017/08/24/Hexo/</id>
     <published>2017-08-23T16:00:00.000Z</published>
     <updated>2017-09-02T14:56:38.000Z</updated>
     
@@ -112,17 +112,17 @@
     
     </summary>
     
-      <category term="Web" scheme="http://wangriyu.github.io/categories/Web/"/>
+      <category term="Web" scheme="http://wangriyu.wang/categories/Web/"/>
     
     
-      <category term="Yelee" scheme="http://wangriyu.github.io/tags/Yelee/"/>
+      <category term="Yelee" scheme="http://wangriyu.wang/tags/Yelee/"/>
     
   </entry>
   
   <entry>
     <title>浏览器本地存储</title>
-    <link href="http://wangriyu.github.io/2017/08/15/20170815Storage/"/>
-    <id>http://wangriyu.github.io/2017/08/15/20170815Storage/</id>
+    <link href="http://wangriyu.wang/2017/08/15/20170815Storage/"/>
+    <id>http://wangriyu.wang/2017/08/15/20170815Storage/</id>
     <published>2017-08-14T16:00:00.000Z</published>
     <updated>2017-08-15T14:29:56.000Z</updated>
     
@@ -290,7 +290,7 @@
 <li><p>关闭数据库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.close()</div></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://wangriyu.github.io/2017/07/31/20170811IndexedDB/">在react中使用IndexedDB的一个函数封装例子</a></p>
+<li><p><a href="http://wangriyu.github.io/2017/07/31/20170811IndexedDB/" target="_blank" rel="external">在react中使用IndexedDB的一个函数封装例子</a></p>
 </li>
 </ul>
 ]]></content>
@@ -310,17 +310,17 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://wangriyu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="浏览器本地存储" scheme="http://wangriyu.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
+      <category term="浏览器本地存储" scheme="http://wangriyu.wang/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
     <title>系统I/O</title>
-    <link href="http://wangriyu.github.io/2017/08/05/%E7%B3%BB%E7%BB%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
-    <id>http://wangriyu.github.io/2017/08/05/系统输入输出/</id>
+    <link href="http://wangriyu.wang/2017/08/05/%E7%B3%BB%E7%BB%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
+    <id>http://wangriyu.wang/2017/08/05/系统输入输出/</id>
     <published>2017-08-04T16:00:00.000Z</published>
     <updated>2017-08-18T03:02:37.000Z</updated>
     
@@ -489,17 +489,17 @@
     
     </summary>
     
-      <category term="READ" scheme="http://wangriyu.github.io/categories/READ/"/>
+      <category term="READ" scheme="http://wangriyu.wang/categories/READ/"/>
     
     
-      <category term="深入理解计算机" scheme="http://wangriyu.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="深入理解计算机" scheme="http://wangriyu.wang/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>react使用IndexedDB示例</title>
-    <link href="http://wangriyu.github.io/2017/07/31/20170811IndexedDB/"/>
-    <id>http://wangriyu.github.io/2017/07/31/20170811IndexedDB/</id>
+    <link href="http://wangriyu.wang/2017/07/31/20170811IndexedDB/"/>
+    <id>http://wangriyu.wang/2017/07/31/20170811IndexedDB/</id>
     <published>2017-07-30T16:00:00.000Z</published>
     <updated>2017-08-15T14:22:40.000Z</updated>
     
@@ -518,17 +518,17 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://wangriyu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="浏览器本地存储" scheme="http://wangriyu.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
+      <category term="浏览器本地存储" scheme="http://wangriyu.wang/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
     <title>0611-JS笔记</title>
-    <link href="http://wangriyu.github.io/2017/06/11/20170611JS%E7%AC%94%E8%AE%B0/"/>
-    <id>http://wangriyu.github.io/2017/06/11/20170611JS笔记/</id>
+    <link href="http://wangriyu.wang/2017/06/11/20170611JS%E7%AC%94%E8%AE%B0/"/>
+    <id>http://wangriyu.wang/2017/06/11/20170611JS笔记/</id>
     <published>2017-06-10T16:00:00.000Z</published>
     <updated>2017-08-15T14:28:04.000Z</updated>
     
@@ -575,17 +575,17 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://wangriyu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="javaScript" scheme="http://wangriyu.github.io/tags/javaScript/"/>
+      <category term="javaScript" scheme="http://wangriyu.wang/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>0507-JS笔记</title>
-    <link href="http://wangriyu.github.io/2017/05/07/20170507%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/"/>
-    <id>http://wangriyu.github.io/2017/05/07/20170507前端笔记/</id>
+    <link href="http://wangriyu.wang/2017/05/07/20170507%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/"/>
+    <id>http://wangriyu.wang/2017/05/07/20170507前端笔记/</id>
     <published>2017-05-06T16:00:00.000Z</published>
     <updated>2017-09-02T14:55:16.000Z</updated>
     
@@ -666,17 +666,17 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://wangriyu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="javaScript" scheme="http://wangriyu.github.io/tags/javaScript/"/>
+      <category term="javaScript" scheme="http://wangriyu.wang/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>0423-JS笔记</title>
-    <link href="http://wangriyu.github.io/2017/04/23/20170423%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/"/>
-    <id>http://wangriyu.github.io/2017/04/23/20170423前端笔记/</id>
+    <link href="http://wangriyu.wang/2017/04/23/20170423%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/"/>
+    <id>http://wangriyu.wang/2017/04/23/20170423前端笔记/</id>
     <published>2017-04-22T16:00:00.000Z</published>
     <updated>2017-08-15T14:24:29.000Z</updated>
     
@@ -723,10 +723,10 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://wangriyu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="javaScript" scheme="http://wangriyu.github.io/tags/javaScript/"/>
+      <category term="javaScript" scheme="http://wangriyu.wang/tags/javaScript/"/>
     
   </entry>
   
