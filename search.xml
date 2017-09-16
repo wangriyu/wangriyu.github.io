@@ -3,6 +3,131 @@
   
     
     <entry>
+      <title><![CDATA[分享自用的一些软件、插件、网站和应用。]]></title>
+      <url>/2017/09/14/ShareArtifact/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>这些只是收录我现在用到的东西，没有特意收集的意思，未必很全，但每个应该都很实用</p>
+</blockquote>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><h3 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h3><ul>
+<li>Adblock Plus:：屏蔽广告，必备，不用介绍</li>
+<li><a href="https://chrome.google.com/webstore/detail/code-cola/lomkpheldlbkkfiifcbfifipaofnmnkn" title="点击访问" target="_blank" rel="external">Code Cola</a>：一个可视化编辑在线页面css样式的chrome插件，相当于控制台修改的效果，但方便很多</li>
+<li><a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl" target="_blank" rel="external">Full Page Screen Capture</a>：可以滚动截取整个网页</li>
+<li>Google Translate：谷歌翻译，点击翻译</li>
+<li><a href="https://chrome.google.com/webstore/detail/page-ruler/jlpkojjdgbllmedoapgfodplfhcbnbpn" target="_blank" rel="external">Page Ruler</a>：网页标尺，可以方便测量各个元素的尺寸</li>
+<li><a href="http://chrispederick.com/work/web-developer/" target="_blank" rel="external">Web Developer</a>：前端必备，功能强大，可以设置网页上几乎所有东西</li>
+<li><a href="https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad?utm_source=chrome-ntp-icon" target="_blank" rel="external">WEB前端助手(FeHelper)</a>：也是前端必备，包括json美化、页面测试、编解码、代码美化压缩等等</li>
+<li>有道云笔记网页剪报：配合有道云笔记，方便收藏各种笔记、网页</li>
+<li><a href="https://chrome.google.com/webstore/detail/wide-github/kaalofacklcidaampbokdplbklpeldpj" target="_blank" rel="external">Wide Github</a>：加宽GitHub的页面内容，让你的GitHub网页显示更舒服</li>
+<li><a href="https://chrome.google.com/webstore/detail/sourcegraph-for-github/dgjhfomjieaadpoljlnidmbgkdffpack" target="_blank" rel="external">Sourcegraph for GitHub</a>：相当于一个IDE，直接查看GitHub上的仓库</li>
+<li><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US" target="_blank" rel="external">Octotree</a>：GitHub插件，极力推荐，在仓库左上角显示目录，直接点击文件跳转，不用一级级打开网页上的repo</li>
+<li><a href="https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien" target="_blank" rel="external">Isometric Contributions</a>：装逼利器，让GitHub profile页的提交记录立体化，跟gitee的效果差不多</li>
+<li><a href="https://chrome.google.com/webstore/detail/github-plus/anlikcnbgdeidpacdbdljnabclhahhmd" target="_blank" rel="external">GitHub Plus</a>：极力推荐，显示仓库、文件大小，并提供单文件的下载</li>
+<li><a href="http://listen1.github.io/listen1" title="点击访问" target="_blank" rel="external">Lisen1</a>：很棒的一个音乐插件，还有客户端版本</li>
+</ul>
+<h3 id="Terminal插件"><a href="#Terminal插件" class="headerlink" title="Terminal插件"></a>Terminal插件</h3><p>Terminal插件和vim插件没怎么试过，这里只收录两个有意思的插件</p>
+<ul>
+<li><a href="https://github.com/johngrib/vim-game-code-break" target="_blank" rel="external">VimGameCodeBreak</a>：，打开一个文本，开始一盘打方块游戏吧，注意需要vim8.0</li>
+<li><a href="https://github.com/aksakalli/gtop" target="_blank" rel="external">gtop</a>：在终端显示电脑cpu、内存、进程信息</li>
+</ul>
+<h2 id="软件篇"><a href="#软件篇" class="headerlink" title="软件篇"></a>软件篇</h2><ul>
+<li><a href="https://pdfexpert.com/" target="_blank" rel="external">PDF Expert</a>：mac上最好用最强大的pdf软件，如果资金有限不想购买的客官可以看下<a href="http://xclient.info/s/pdf-expert-for-mac.html?_=f7d710b8833dbc76de5d7640956a0551" target="_blank" rel="external">Xclient.info</a></li>
+<li><a href="https://typora.io/" target="_blank" rel="external">Typora</a>：方便快速地编写MarkDown，界面简单，实用高效</li>
+<li><a href="https://itunes.apple.com/cn/app/networker-%E6%98%BE%E7%A4%BA%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF/id1163602886?mt=12" target="_blank" rel="external">NetWorker</a>：状态栏显示网速，简单美观</li>
+<li><a href="https://sipapp.io/" target="_blank" rel="external">Sip</a>：很好用的取色工具，需要购买，如果资金有限不想购买的客官可以看下<a href="http://xclient.info/s/sip.html?_=f7d710b8833dbc76de5d7640956a0551" target="_blank" rel="external">Xclient.info</a></li>
+<li><a href="http://faststone.org/FSCaptureDetail.htm" target="_blank" rel="external">FastStone Capture</a>：Windows上一款非常强大的集取色截屏录屏于一身的软件，而且支持滚动截屏，可惜mac上没有</li>
+<li><a href="https://note.youdao.com/" target="_blank" rel="external">有道云笔记</a>：收藏编写笔记很方便，配合浏览器插件可以收藏网页，关注官方公众号还可以把微信文章也收藏进去，我的所有收藏和笔记都可以放进去，而且多端同步随时可以看，手机版还可以写markdown</li>
+<li><a href="http://snip.qq.com/" target="_blank" rel="external">Snip</a>：之前找mac上支持滚动截屏的软件，但没找到很好的能代替Windows平台利器FastStone的，这个Snip勉强符合滚动截屏的要求，但不能截部分</li>
+<li><a href="https://itunes.apple.com/cn/app/%E6%88%AA%E5%9B%BE-jietu-%E5%BF%AB%E9%80%9F%E6%A0%87%E6%B3%A8-%E4%BE%BF%E6%8D%B7%E5%88%86%E4%BA%AB%E7%9A%84%E6%88%AA%E5%B1%8F%E5%B7%A5%E5%85%B7/id1059334054?mt=12" target="_blank" rel="external">Jietu</a>：和snip一样同出于鹅厂，也有滚动截屏，功能多一点，但仍不能截部分，而且名字略low</li>
+<li><a href="https://itunes.apple.com/app/id992076693?mt=12&amp;ign-mpt=uo%3D4" target="_blank" rel="external">MindNode</a>：很漂亮的一款思维导图，如果资金有限不想购买的客官可以看下<a href="http://xclient.info/s/mind-node-pro.html?_=f7d710b8833dbc76de5d7640956a0551" target="_blank" rel="external">Xclient.info</a></li>
+<li><a href="https://itunes.apple.com/cn/app/expressions/id913158085?l=en&amp;mt=12" target="_blank" rel="external">Expressions</a>：一款macOS平台的强大的正则表达式工具，测试正则表达式，多种主题，选中高亮等。如果资金有限不想购买的客官可以看下<a href="http://xclient.info/s/expressions.html?_=f7d710b8833dbc76de5d7640956a0551" target="_blank" rel="external">Xclient.info</a></li>
+<li><a href="https://webtorrent.io/desktop/" target="_blank" rel="external">WebTorrent</a>：直接看磁链里的内容，无需等待下载</li>
+<li><a href="https://framer.com/features/" target="_blank" rel="external">Framer</a>：一个设计开发用的</li>
+<li><a href="http://tumult.com/hype/pro/" target="_blank" rel="external">Tumult</a>：也是一个设计工具，还没用过</li>
+<li><a href="https://zhitu.isux.us/" target="_blank" rel="external">智图</a>：图片压缩，方便快捷</li>
+<li><a href="https://github.com/yinghuocho/firefly-proxy" target="_blank" rel="external">萤火虫Firefly</a>：一款翻墙软件，电脑手机都有</li>
+<li><a href="https://github.com/getlantern/lantern" target="_blank" rel="external">蓝灯</a>：蓝灯VPN，速度挺快的，如果下载发行版的话有流量限制，建议去GitHub上照步骤自己编译程序，这样是没有流量限制的</li>
+<li><a href="https://github.com/XX-net/XX-Net" target="_blank" rel="external">XX-Net</a>：很好用的翻墙工具，但配置会麻烦一点</li>
+<li><a href="https://kapeli.com/dash" target="_blank" rel="external">Dash</a>：开发者必备，各种API文档，配合Alfred查询非常方便，如果资金有限不想购买的客官可以看下<a href="http://xclient.info/s/dash.html?_=f7d710b8833dbc76de5d7640956a0551" target="_blank" rel="external">Xclient.info</a></li>
+<li><a href="http://xscopeapp.com" target="_blank" rel="external">xScope</a>：设计开发辅助工具，有10个实用优秀的小工具，如屏幕镜像、屏幕标尺、放大镜、十字定位等等</li>
+<li><a href="https://itunes.apple.com/cn/app/ohmystar2-best-way-to-organize-your-github-stars/id1218642292?l=en&amp;mt=12" target="_blank" rel="external">ohMyStar2</a>：强烈推荐的一个软件，可以管理GitHub账号的star，分类管理添加标签，还可以看热门项目，对于star几百个的人太有用了</li>
+<li><a href="https://github.com/Nightonke/Gitee" target="_blank" rel="external">gitee</a>：显示GitHub账号信息，方便查看trending、项目信息等</li>
+<li><a href="https://slack.com/" target="_blank" rel="external">Slack</a>：开发人员的聊天app，主要是国外用户，加入不同的channel，了解不同的地域风格，与国外友人交流</li>
+<li><a href="http://gitter.im" target="_blank" rel="external">Gitter</a>：也是一款开发人员地聊天app，集合各种语言和框架，与其相关的还有一个GitLab</li>
+<li><a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred</a>：如果上面的都是神器，那这个就是超神器，我会详细介绍一下它的使用，强烈推荐</li>
+</ul>
+<h2 id="应用篇"><a href="#应用篇" class="headerlink" title="应用篇"></a>应用篇</h2><p>本人手机安卓，所以只推荐一些自用的安卓应用</p>
+<ul>
+<li>[Google Play]：第一推荐当然是谷歌商店啦，上面也有很多精品应用</li>
+<li>[蓝灯VPN]：要访问谷歌肯定要翻墙，蓝灯还是能用的，之前用的是green，但后来又被封了</li>
+<li>[萤火虫VPN]：萤火虫也是可以用的</li>
+<li>[知乎、简书、轻氧、掘金、开发者头条]：学习的好地方</li>
+<li><a href="http://zuimeia.com/apps/?platform=2" target="_blank" rel="external">最美应用</a>：这是一个应用的名字，是最美团队出品的，收集了很多精品应用</li>
+<li><a href="https://play.google.com/store/apps/details?id=flipboard.app&amp;hl=zh_CN" target="_blank" rel="external">Flipboard</a>：需要翻墙，一些时事资讯。热门文章等</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.zuiapps.suite.days&amp;hl=zh_CN" target="_blank" rel="external">ZUI Days</a>：一款很漂亮的记录时间和重要纪念日的应用</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.ruguoapp.jike&amp;hl=zh_CN" target="_blank" rel="external">即刻</a>：专门为你定制的内容推送，推荐使用</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.google.android.spotlightstories&amp;hl=zh_CN" target="_blank" rel="external">Google Spotlight Stories</a>：用手机看真•3D视频，效果很棒，值得一试</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.memorado.brain.games&amp;hl=zh_CN" target="_blank" rel="external">Memorado</a>：很棒的一款脑力游戏，画面精美，无聊的时候练练脑力</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.picsart.studio&amp;hl=zh_CN" target="_blank" rel="external">PicsArt</a>：很强大的修图应用，但让我印象深刻的是里面的魔法：可以将一张图转换成其他图片的风格，比如梵高的星夜</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.scheffsblend.designertools&amp;hl=zh_CN" target="_blank" rel="external">Designer Tools</a>：设计师工具，提供了网格覆盖图、样机覆盖图、取色器、截图细节等</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.curiosity.dailycuriosity&amp;hl=zh_CN" target="_blank" rel="external">Curiosity</a>：各种视频，了解世界，增长见识</li>
+<li><a href="https://play.google.com/store/apps/details?id=mark.via.gp&amp;hl=zh_CN" target="_blank" rel="external">Via浏览器</a>：非常小巧的浏览器，但功能一应俱全，而且响应速度很快，类似的还有一个夸克浏览器</li>
+</ul>
+<h2 id="网站篇"><a href="#网站篇" class="headerlink" title="网站篇"></a>网站篇</h2><ul>
+<li><a href="http://xclient.info" target="_blank" rel="external">Xclient</a>：精品mac应用分享</li>
+<li><a href="http://devdocs.io/" target="_blank" rel="external">Devdocs</a>：API文档，功能和Dash差不多</li>
+<li><a href="https://www.docschina.org/" target="_blank" rel="external">印记中文</a>：一些权威中文文档</li>
+<li><a href="https://htmlpreview.github.io/" target="_blank" rel="external">HtmlPreview</a>：HTML链接预览，可以用于预览github上的html文件</li>
+<li><a href="https://clipchamp.com/zh-Hans/dashboard" target="_blank" rel="external">在线压缩视频ClipChamp</a>：方便好用</li>
+<li><a href="https://ezgif.com/video-to-gif" target="_blank" rel="external">视频转换器</a>：视频转GIF，压缩、裁剪等等</li>
+<li><a href="http://naotu.baidu.com/home" target="_blank" rel="external">百度脑图</a>：在线创建思维导图，功能强大</li>
+<li><a href="http://caibaojian.com/page/3" target="_blank" rel="external">前端开发博客</a>：前端优质内容</li>
+<li><a href="http://gank.io/" target="_blank" rel="external">干货集中营</a>：确实有干货，还有妹纸</li>
+<li><a href="https://tutorialzine.com/articles" target="_blank" rel="external">tutorialzine</a>：前端文章推送</li>
+<li><a href="http://collectui.com/" target="_blank" rel="external">Collect UI </a>：UI设计灵感</li>
+<li><a href="http://www.uisdc.com/75-web-animation-tools-1#" target="_blank" rel="external">优设</a>：关于设计和开发</li>
+<li><a href="https://codepen.io/picks/2/" target="_blank" rel="external">CodePen</a>：各种有趣的js demo和项目</li>
+<li><a href="https://tympanus.net/codrops/category/playground/" target="_blank" rel="external">Codrops</a>：各种优质文章和设计</li>
+<li><a href="https://www.ctolib.com/" target="_blank" rel="external">CTOLib码库</a>：各种代码库</li>
+<li><a href="http://nec.netease.com/library" target="_blank" rel="external">网易代码库</a></li>
+<li><a href="https://dribbble.com/" target="_blank" rel="external">Dribbble</a>：优秀设计模板</li>
+<li><a href="https://www.behance.net/" target="_blank" rel="external">Behance</a>：优秀设计创意作品</li>
+<li><a href="https://tinypng.com/" target="_blank" rel="external">压缩图片</a></li>
+<li><a href="http://asciiflow.com/" target="_blank" rel="external">在线画图Asciiflow</a></li>
+<li><a href="http://thecodeplayer.com/" target="_blank" rel="external">TheCodePlayer</a>：很棒的HTML5、CSS3、JS学习网站，代码一行一行视频演示</li>
+<li><a href="https://www.freshdesignweb.com/" target="_blank" rel="external">Freshdesignweb</a>：网站设计</li>
+<li><a href="https://css-tricks.com/" target="_blank" rel="external">CSS-Tricks</a>：学习CSS不可错过此网站</li>
+<li><a href="http://en.jsrun.net/" target="_blank" rel="external">JSRUN</a>：类似codepen，提供在线编写代码，也有很多有趣demo</li>
+<li><a href="http://cssdeck.com/" target="_blank" rel="external">CssDeck</a>：一些展示CSS效果的demo</li>
+<li><a href="http://tool.oschina.net/" target="_blank" rel="external">在线工具汇总</a></li>
+<li><a href="http://www.jiawin.com/10-design-artifact" target="_blank" rel="external">觉唯设计</a></li>
+<li><a href="https://www.smashingmagazine.com/tag/javascript/" target="_blank" rel="external">SmashingMagazine</a>：前端杂志</li>
+<li><a href="http://navnav.co/" target="_blank" rel="external">NavNav</a>：各种响应式菜单的设计</li>
+<li><a href="https://codyhouse.co/library/" target="_blank" rel="external">CODYHOUSE</a>：视觉设计</li>
+<li><a href="https://csswizardry.com/archive/" target="_blank" rel="external">CSS Wizardry Posts Archive</a>：优质博客文章，很多关于css和设计的</li>
+<li></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Share </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 应用 </tag>
+            
+            <tag> 插件 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用Hexo主题Yelee]]></title>
       <url>/2017/08/24/Hexo/</url>
       <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=729638&auto=1&height=66"></iframe>
@@ -276,9 +401,7 @@
 </blockquote>
 <p>IndexedDB.js</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> indexedDB = <span class="built_in">window</span>.indexedDB || <span class="built_in">window</span>.mozIndexedDB || <span class="built_in">window</span>.webkitIndexedDB || <span class="built_in">window</span>.msIndexedDB || <span class="built_in">window</span>.shimIndexedDB;</div><div class="line"><span class="keyword">var</span> userID = localStorage.getItem(<span class="string">'userID'</span>), db;</div><div class="line"></div><div class="line">indexedDB.open(<span class="string">'LocalMessageDataBase'</span>, <span class="number">1</span>).onupgradeneeded = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">  <span class="comment">// console.log('establish database');</span></div><div class="line">  db = evt.target.result;</div><div class="line">  db.createObjectStore(userID, &#123; <span class="attr">keyPath</span>: <span class="string">"chatID"</span> &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getLocalData</span> (<span class="params">chatID</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> localDB = indexedDB.open(<span class="string">'LocalMessageDataBase'</span>, <span class="number">1</span>), data = [];</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">    localDB.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">      <span class="comment">// console.log('open database to getdata');</span></div><div class="line">      db = evt.target.result;</div><div class="line">      <span class="keyword">if</span> (chatID) &#123;</div><div class="line">        <span class="keyword">let</span> request = db.transaction([userID]).objectStore(userID).get(chatID);</div><div class="line"></div><div class="line">        request.onerror = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'get error: '</span>, evt);</div><div class="line">          reject(evt)</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        request.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">          <span class="comment">// console.log('get data: ', evt.target.result);</span></div><div class="line">          data = request.result || [];</div><div class="line">          resolve(data)</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">setLocalData</span> (<span class="params">chatID, list</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> localDB = indexedDB.open(<span class="string">'LocalMessageDataBase'</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line">  localDB.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">// console.log('open database to setdata');</span></div><div class="line">    db = evt.target.result;</div><div class="line">    <span class="keyword">let</span> store = db.transaction([userID], <span class="string">'readwrite'</span>).objectStore(userID);</div><div class="line">    <span class="keyword">let</span> request = store.get(chatID);</div><div class="line"></div><div class="line">    request.onerror = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123; <span class="keyword">throw</span> evt &#125;;</div><div class="line"></div><div class="line">    request.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> data = evt.target.result;</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (data) &#123;</div><div class="line">        <span class="comment">// console.log('update data');</span></div><div class="line">        data.messageList = list;</div><div class="line">        store.put(data)</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">// console.log('add data');</span></div><div class="line">        store.add(&#123;<span class="attr">chatID</span>: chatID, <span class="attr">messageList</span>: list&#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">deleteLocalData</span> (<span class="params">chatID</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> localDB = indexedDB.open(<span class="string">'LocalMessageDataBase'</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line">  localDB.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">    db = evt.target.result;</div><div class="line">    <span class="keyword">let</span> request = db.transaction([userID], <span class="string">"readwrite"</span>).objectStore(userID).delete(chatID);</div><div class="line"></div><div class="line">    request.onerror = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'delete error'</span>, evt)</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    request.onsuccess = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'delete data'</span>)</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>调用函数只需引入IndexedDB.js</p>
-</blockquote>
+<p><strong>调用函数只需引入IndexedDB.js</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; getLocalData, setLocalData, deleteLocaldata &#125; = <span class="string">'path/IndexedDB'</span>;</div><div class="line"></div><div class="line">getLocalData(chatID).then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(data); <span class="comment">// 获取聊天记录</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">setLocalData(chatID, list); <span class="comment">// 存入新的聊天消息记录</span></div><div class="line"></div><div class="line">deleteLocaldata(chatID); <span class="comment">// 删除指定对象的消息记录</span></div></pre></td></tr></table></figure>
 ]]></content>
       
