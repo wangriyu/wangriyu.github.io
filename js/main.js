@@ -171,10 +171,9 @@ require([], function (){
     // Task lists in markdown
     $('ul > li').each(function() {
         var taskList = {
-            field: this.textContent.substring(0, 2),
+            field: this.textContent.substring(0, 3),
             check: function(str) {
-                var re = new RegExp(str);
-                return this.field.match(re);
+                return this.field === str;
             }
         }
 
@@ -184,9 +183,8 @@ require([], function (){
 
         var $current = $(this);
         function update(str, check) {
-            var click = ["disabled", ""];
             $current.html($current.html().replace(
-              str, "<input type='checkbox' " + check + " " + click[1] + " >")
+              str, "<input type='checkbox' " + check + " disabled >")
             )
         }
 
