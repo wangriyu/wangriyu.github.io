@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangriyu.wang/"/>
-  <updated>2017-09-16T16:18:57.000Z</updated>
+  <updated>2017-09-17T03:07:32.000Z</updated>
   <id>http://wangriyu.wang/</id>
   
   <author>
@@ -16,16 +16,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>分享自用的一些软件、插件、网站和应用。</title>
+    <title>分享自用的一些软件、插件、网站和应用</title>
     <link href="http://wangriyu.wang/2017/09/14/ShareArtifact/"/>
     <id>http://wangriyu.wang/2017/09/14/ShareArtifact/</id>
     <published>2017-09-13T16:00:00.000Z</published>
-    <updated>2017-09-16T16:18:57.000Z</updated>
+    <updated>2017-09-17T03:07:32.000Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29816800&auto=1&height=66"></iframe>
 
 <blockquote>
-<p>这些只是收录我现在用到的东西，没有特意收集的意思，未必很全，但每个应该都很实用</p>
+<p>这些只是收录我现在用到的东西，没有特意收集的意思，未必很全，但每个应该都很实用<br><a href="https://github.com/wangriyu/Collections" title="点击访问" target="_blank" rel="external">Github仓库</a></p>
 </blockquote>
 <h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><h3 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h3><ul>
 <li>Adblock Plus:：屏蔽广告，必备，不用介绍</li>
@@ -137,6 +137,7 @@
 <li><a href="http://tushuo.baidu.com/wave/index#/gallery" title="点击访问" target="_blank" rel="external">百度•图说</a>：在线创建图表</li>
 <li><a href="http://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all" title="点击访问" target="_blank" rel="external">Echart</a>：漂亮又强大的图表库</li>
 </ul>
+<p>如果你在这找到好用的东西，恭喜！如果你有有好用的东西分享，欢迎在评论中告诉我！</p>
 ]]></content>
     
     <summary type="html">
