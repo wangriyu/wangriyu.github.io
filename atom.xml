@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangriyu.wang/"/>
-  <updated>2017-09-17T04:36:20.000Z</updated>
+  <updated>2017-09-17T04:39:54.000Z</updated>
   <id>http://wangriyu.wang/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wangriyu.wang/2017/09/14/ShareArtifact/"/>
     <id>http://wangriyu.wang/2017/09/14/ShareArtifact/</id>
     <published>2017-09-13T16:00:00.000Z</published>
-    <updated>2017-09-17T04:36:20.000Z</updated>
+    <updated>2017-09-17T04:39:54.000Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29816800&auto=1&height=66"></iframe>
 
@@ -78,7 +78,7 @@
 <li><a href="https://github.com/Nightonke/Gitee" title="点击访问" target="_blank" rel="external">gitee</a>：显示GitHub账号信息，方便查看trending、项目信息等</li>
 <li><a href="https://slack.com/" title="点击访问" target="_blank" rel="external">Slack</a>：开发人员的聊天app，主要是国外用户，加入不同的channel，了解不同的地域风格，与国外友人交流</li>
 <li><a href="http://gitter.im" title="点击访问" target="_blank" rel="external">Gitter</a>：也是一款开发人员地聊天app，集合各种语言和框架，与其相关的还有一个GitLab</li>
-<li><a href="https://www.alfredapp.com/" title="点击访问" target="_blank" rel="external">Alfred</a>：如果上面的都是神器，那这个就是超神器，强烈推荐。附上<a href="http://wellsnake.com/jekyll/update/2014/06/15/001/" title="点击访问" target="_blank" rel="external">使用教程</a>。<br>建议关掉mac自带的Spotlight, 将Alfred快捷键设置成cmd + space(原Spotlight快捷键)；<br>把常用的网站，特别是搜索类的放到websearch里：<br><img src="/images/artifact/websearch.png" width="600px" height="400px"><br>把浏览器书签导入Safari，可以用Alfred搜索打开；快捷键打开终端；查询文档；搜索打开文件；记录Clipboard历史等等…<br>当然最强大的功能还是workflow：<img src="/images/artifact/workflow.png" alt="image"></li>
+<li><a href="https://www.alfredapp.com/" title="点击访问" target="_blank" rel="external">Alfred</a>：如果上面的都是神器，那这个就是超神器，强烈推荐。附上<a href="http://wellsnake.com/jekyll/update/2014/06/15/001/" title="点击访问" target="_blank" rel="external">使用教程</a>。<br>建议关掉mac自带的Spotlight, 将Alfred快捷键设置成cmd + space(原Spotlight快捷键)；<br>把常用的网站，特别是搜索类的放到websearch里：<br><img alt="image" src="/images/artifact/websearch.png" width="600px" height="400px"><br>把浏览器书签导入Safari，可以用Alfred搜索打开；快捷键打开终端；查询文档；搜索打开文件；记录Clipboard历史等等…<br>当然最强大的功能还是workflow：<img src="/images/artifact/workflow.png" alt="image"></li>
 </ul>
 <h2 id="应用篇"><a href="#应用篇" class="headerlink" title="应用篇"></a>应用篇</h2><p>本人手机安卓，所以只推荐一些自用的安卓应用</p>
 <ul>
