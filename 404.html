@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }    .whiteSide {     width: 3px;     background: #fff;     height">
+<meta name="description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }   .whiteSide {     width: 3px;     background: #fff;     height:">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wangriyu’s Blog">
 <meta property="og:url" content="http://wangriyu.wang/404.html">
 <meta property="og:site_name" content="Wangriyu’s Blog">
-<meta property="og:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }    .whiteSide {     width: 3px;     background: #fff;     height">
-<meta property="og:updated_time" content="2017-09-18T15:37:02.000Z">
+<meta property="og:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }   .whiteSide {     width: 3px;     background: #fff;     height:">
+<meta property="og:updated_time" content="2017-09-18T15:43:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wangriyu’s Blog">
-<meta name="twitter:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }    .whiteSide {     width: 3px;     background: #fff;     height">
+<meta name="twitter:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }   .whiteSide {     width: 3px;     background: #fff;     height:">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -174,6 +174,8 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/404.html">简历</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -292,6 +294,8 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
+                    <li><a href="/404.html">简历</a></li>
+                
                     <li><a href="/tags/">标签云</a></li>
                 
                     <li><a href="/about/">关于我</a></li>
@@ -320,7 +324,7 @@
   
     <div class="article-meta">
       <a href="/404.html" class="article-date">
-      <time datetime="2017-09-18T15:37:02.000Z" itemprop="datePublished">2017-09-18</time>
+      <time datetime="2017-09-18T15:43:50.000Z" itemprop="datePublished">2017-09-18</time>
 </a>
 
 
@@ -362,7 +366,6 @@
     position: relative;
     top: 3px;
   }
-
   .whiteSide {
     width: 3px;
     background: #fff;
@@ -370,7 +373,6 @@
     position: relative;
     top: 3px;
   }
-
   .text-magic {
     width: 100%;
     position: absolute;
@@ -381,7 +383,6 @@
     font-family: Raleway, Verdana, Arial, sans-serif;
     animation: skewX 5s ease-in infinite;
   }
-
   .white {
     position: absolute;
     left: 0;
@@ -393,7 +394,6 @@
     animation: whiteMove 3s ease-out infinite;
     mix-blend-mode: luminosity;
   }
-
   .errBefore {
     width: 100%;
     font-size: 6vw;
@@ -412,7 +412,6 @@
     text-shadow: 0.1px 0 0 red;
     mix-blend-mode: color-burn;
   }
-
   .errAfter {
     width: 100%;
     font-size: 6vw;
@@ -431,7 +430,11 @@
     -webkit-filter: contrast(200%);
     mix-blend-mode: hard-light;
   }
-
+  @media only screen and (max-width: 768px) {
+    .errAfter {
+      left: -1px;
+    }
+  }
   @keyframes redShadow {
     20% {
       left: -1px;
@@ -446,7 +449,6 @@
       height: 42px;
     }
   }
-
   @keyframes redHeight {
     20% {
       height: 3.5vw;
@@ -470,7 +472,6 @@
       height: 0vw;
     }
   }
-
   @keyframes whiteMove {
     8% {
       top: 3vw;
@@ -497,7 +498,6 @@
       top: 3.6vw;
     }
   }
-
   @keyframes skewX {
     78% {
       transform: translate(-50%, -50%) skewX(0);
