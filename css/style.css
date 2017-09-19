@@ -1700,7 +1700,10 @@ body .ui-tooltip {
 }
 @media only screen and (max-width: 768px) {
   .article-entry .errAfter {
-    left: -1px;
+    left: -2px;
+  }
+  .article-entry .errBefore {
+    left: 0px;
   }
   .article-entry .white {
     top: 6vw;
@@ -1817,6 +1820,9 @@ body .ui-tooltip {
 @media only screen and (max-width: 425px) {
   .article-entry .error {
     height: 100px;
+  }
+  .article-entry .errBefore {
+    left: -1px;
   }
   .article-entry .whiteSide {
     height: 100px;
@@ -1937,57 +1943,57 @@ body .ui-tooltip {
 @-moz-keyframes redShadow {
   20% {
     left: -1px;
-    height: 32px;
+    height: 3vw;
   }
   60% {
     left: 2px;
-    height: 6px;
+    height: 0.1vw;
   }
   100% {
     left: -2px;
-    height: 42px;
+    height: 4vw;
   }
 }
 @-webkit-keyframes redShadow {
   20% {
     left: -1px;
-    height: 32px;
+    height: 3vw;
   }
   60% {
     left: 2px;
-    height: 6px;
+    height: 0.1vw;
   }
   100% {
     left: -2px;
-    height: 42px;
+    height: 4vw;
   }
 }
 @-o-keyframes redShadow {
   20% {
     left: -1px;
-    height: 32px;
+    height: 3vw;
   }
   60% {
     left: 2px;
-    height: 6px;
+    height: 0.1vw;
   }
   100% {
     left: -2px;
-    height: 42px;
+    height: 4vw;
   }
 }
 @keyframes redShadow {
   20% {
     left: -1px;
-    height: 32px;
+    height: 3vw;
   }
   60% {
     left: 2px;
-    height: 6px;
+    height: 0.1vw;
   }
   100% {
     left: -2px;
-    height: 42px;
+    height: 4vw;
   }
 }
 @-moz-keyframes redHeight {
