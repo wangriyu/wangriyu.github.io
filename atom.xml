@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangriyu.wang/"/>
-  <updated>2017-09-17T12:37:51.000Z</updated>
+  <updated>2017-09-19T04:21:47.000Z</updated>
   <id>http://wangriyu.wang/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wangriyu.wang/2017/09/14/ShareArtifact/"/>
     <id>http://wangriyu.wang/2017/09/14/ShareArtifact/</id>
     <published>2017-09-13T16:00:00.000Z</published>
-    <updated>2017-09-17T12:37:51.000Z</updated>
+    <updated>2017-09-19T04:21:47.000Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29816800&auto=1&height=66"></iframe>
 
@@ -62,6 +62,8 @@
 <li><a href="https://webtorrent.io/desktop/" title="点击访问" target="_blank" rel="external">WebTorrent</a>：直接看磁链里的内容，无需等待下载</li>
 <li><a href="https://framer.com/features/" title="点击访问" target="_blank" rel="external">Framer</a>：一个设计开发用的</li>
 <li><a href="http://tumult.com/hype/pro/" title="点击访问" target="_blank" rel="external">Tumult</a>：也是一个设计工具，还没用过</li>
+<li><a href="http://xclient.info/s/new-file-menu.html?_=8f2ea7453a409bd6674c05d22079f675" title="点击访问" target="_blank" rel="external">New File Menu</a>：finder扩展，右键新建文件，还可以自定义文件模板</li>
+<li><a href="https://itunes.apple.com/cn/app/leaf-rss-news-reader/id576338668?l=en&amp;mt=12" target="_blank" rel="external">Leaf</a>：RSS News Reader, 订阅RSS源后，可以一站式阅读，之前不知道rss这东西，傻傻地一个个打开别人博客看文章</li>
 <li><a href="https://zhitu.isux.us/" title="点击访问" target="_blank" rel="external">智图</a>：图片压缩，方便快捷</li>
 <li><a href="https://github.com/yinghuocho/firefly-proxy" title="点击访问" target="_blank" rel="external">萤火虫Firefly</a>：一款翻墙软件，电脑手机都有</li>
 <li><a href="https://github.com/getlantern/lantern" title="点击访问" target="_blank" rel="external">蓝灯</a>：蓝灯VPN，速度挺快的，如果下载发行版的话有流量限制，建议去GitHub上照步骤自己编译程序，这样是没有流量限制的</li>
