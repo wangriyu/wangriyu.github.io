@@ -15,12 +15,16 @@
 
 
 
+<meta name="description" content="Title        body {       background: #03a4e4;     }     #notFound {       position: absolute;       top: 50%;       left: 50%;       transform: translateY(-50%) translateX(-50%) scale(1.2);">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wangriyu’s Blog">
-<meta property="og:url" content="http://wangriyu.wang/tags/javaScript/index.html">
+<meta property="og:url" content="http://wangriyu.wang/error.html">
 <meta property="og:site_name" content="Wangriyu’s Blog">
+<meta property="og:description" content="Title        body {       background: #03a4e4;     }     #notFound {       position: absolute;       top: 50%;       left: 50%;       transform: translateY(-50%) translateX(-50%) scale(1.2);">
+<meta property="og:updated_time" content="2017-09-19T15:41:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wangriyu’s Blog">
+<meta name="twitter:description" content="Title        body {       background: #03a4e4;     }     #notFound {       position: absolute;       top: 50%;       left: 50%;       transform: translateY(-50%) translateX(-50%) scale(1.2);">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: javaScript | Wangriyu’s Blog</title>
+<title>Wangriyu’s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +71,7 @@
         isHome: false,
         isPost: false,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -317,143 +321,369 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/error.html" class="article-date">
+      <time datetime="2017-09-19T15:41:44.000Z" itemprop="datePublished">2017-09-19</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+    <div class="article-entry" itemprop="articleBody">
       
+          
+              <style>
+    .article-meta { display: none; }
+    #container .article .article-title { padding-right: 0; }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover { border-left: none; }
+    .article-title { font-size: 1.6em }
+    .article-entry hr { margin: 0;}
+    .article-meta,
+    #container .article-info-post.article-info { display: none;}
+    #container .article .article-title { padding: 0; }
+</style>
+
+
+          
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      background: #03a4e4;
+    }
+    #notFound {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%) scale(1.2);
+      width: 80%;
+      height: auto;
+    }
+  </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js"></script>
+<body>
+<script type="text/javascript">
+  //animation frame polyfill
+  (function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+      window.requestAnimationFrame = function(callback, element) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function() {
+            callback(currTime + timeToCall);
+          },
+          timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
+      };
+
+    if (!window.cancelAnimationFrame)
+      window.cancelAnimationFrame = function(id) {
+        clearTimeout(id);
+      };
+  }());
+
+  //math2 utils
+  var Math2={};
+  Math2.random = function (t, n) {
+    return Math.random() * (n - t) + t
+  }, Math2.map = function (t, n, r, a, o) {
+    return (o - a) * ((t - n) / (r - n)) + a
+  }, Math2.randomPlusMinus = function (t) {
+    return t = t ? t : .5, Math.random() > t ? -1 : 1
+  }, Math2.randomInt = function (t, n) {
+    return n += 1, Math.floor(Math.random() * (n - t) + t)
+  }, Math2.randomBool = function (t) {
+    return t = t ? t : .5, Math.random() < t ? !0 : !1
+  }, Math2.degToRad = function (t) {
+    return rad = t * Math.PI / 180, rad
+  }, Math2.radToDeg = function (t) {
+    return deg = 180 / (Math.PI * t), deg
+  }, Math2.rgbToHex = function (t) {
+    function n(t) {
+      return ("0" + parseInt(t).toString(16)).slice(-2)
+    }
+    t = t.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    var r = n(t[1]) + n(t[2]) + n(t[3]);
+    return r.toUpperCase()
+  }, Math2.distance = function (t, n, r, a) {
+    return Math.sqrt((r - t) * (r - t) + (a - n) * (a - n))
+  };
+  //mouse
+  var mousePos={
+    x:0,
+    y:0
+  };
+  window.onmousemove = function(e) {
+    e = e || window.event;
+
+    var pageX = e.pageX;
+    var pageY = e.pageY;
+    if (pageX === undefined) {
+      pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+      pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+    }
+    mousePos = {
+      x: pageX,
+      y: pageY,
+    };
+  }
+
+  var options = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+    keyword : "404",
+    density : 10,
+    densityText : 3,
+    minDist : 20,
+  }
+  // initialize canvas
+  var canvas = document.createElement('canvas');
+  canvas.width = options.width;
+  canvas.height = options.height;
+  canvas.style.width = options.width/2;
+  canvas.style.height = options.height/2;
+  canvas.getContext('2d').scale(2,2)
+
+  var renderer = new PIXI.autoDetectRenderer(options.width, options.height, {
+    transparent: true
+  });
+  var stage = new PIXI.Container("0X000000", true);
+  document.body.appendChild(renderer.view);
+  renderer.view.id = "notFound";
+
+  var imageData = false;
+  var particles =[];
+
+  function init() {
+    positionParticles();
+    positionText();
+  }
+
+  function positionParticles() {
+    var canvas = document.createElement("canvas");
+    canvas.width = 500;
+    canvas.height = 350;
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#000000";
+    context.font = "300px 'Arial', sans-serif";
+    context.fillText(options.keyword, 0, 250);
+
+    var imageData = context.getImageData(0, 0, 350, 500);
+    data = imageData.data;
+    console.log('4', data);
+
+    // Iterate each row and column
+    for (var i = 0; i < imageData.height; i += options.density) {
+      for (var j = 0; j < imageData.width; j += options.density) {
+
+        // Get the color of the pixel
+        var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+        // If the color is black, draw pixels
+        if (color == 255) {
+          var newPar = particle()
+          newPar.setPosition(i, j);
+          particles.push(newPar);
+          stage.addChild(newPar)
+        }
+      }
+    }
+  }
+
+  function positionText() {
+    var canvas = document.createElement("canvas");
+    canvas.width = 400;
+    canvas.height = 120;
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#000000";
+    context.font = "80px 'Arial', sans-serif";
+    context.fillText("Not Found", 0, 80);
+
+    var imageData = context.getImageData(0, 0, 400, 400);
+    data = imageData.data;
+    console.log('f', data);
+
+    // Iterate each row and column
+    for (var i = 0; i < imageData.height; i += options.densityText) {
+      for (var j = 0; j < imageData.width; j += options.densityText) {
+
+        // Get the color of the pixel
+        var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+        // If the color is black, draw pixels
+        if (color == 255) {
+          var newPar = particle(true)
+          newPar.setPosition(i, j);
+          particles.push(newPar);
+          stage.addChild(newPar)
+        }
+      }
+    }
+  }
+
+  function particle(text) {
+    $this = new PIXI.Graphics()
+
+    if (text == true) {
+      $this.text = true;
+    }
+
+    $this.beginFill(0XFFFFFF);
+
+    var radius;
+    $this.radius = radius = $this.text ? Math.random() * 3.5 : Math.random() * 10.5;
+
+    $this.drawCircle(0, 0, radius);
+
+    $this.size = this.radius;
+    $this.x = -this.width;
+    $this.y = -this.height;
+    $this.free = false;
+
+    $this.timer = Math2.randomInt(0, 100);
+    $this.v = Math2.randomPlusMinus() * Math2.random(.5, 1);
+    $this.hovered = false
+
+    $this.alpha = Math2.randomInt(10, 100) / 100;
+
+    $this.vy = -5 + parseInt(Math.random() * 10) / 2;
+    $this.vx = -4 + parseInt(Math.random() * 8);
+
+    $this.setPosition = function(x, y) {
+      if ($this.text) {
+        $this.x = x + (options.width / 2 - 180);
+        $this.y = y + (options.height / 2 + 100);
+      } else {
+        $this.x = x + (options.width / 2 - 250);
+        $this.y = y + (options.height / 2 - 175);
+      }
+    };
+
+    return $this;
+  }
+
+  function update() {
+    renderer.render(stage);
+
+    for (i = 0; i < particles.length; i++) {
+      var p = particles[i];
+
+      if (mousePos.x > p.x && mousePos.x < p.x + p.size && mousePos.y > p.y && mousePos.y < p.y + p.size) {
+        p.hovered = true;
+      }
+
+      p.scale.x = p.scale.y = scale = Math.max(Math.min(2.5 - (Math2.distance(p.x, p.y, mousePos.x, mousePos.y) / 160), 160), 1);
+
+
+      p.x = p.x + .2 * Math.sin(p.timer * .15)
+      p.y = p.y + .2 * Math.cos(p.timer * .15)
+      p.timer = p.timer + p.v;
+
+    }
+    window.requestAnimationFrame(update);
+  }
+
+  init();
+  update()
+</script>
+</body>
+</html>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/06/11/20170611JS笔记/" class="archive-article-date">
-      <time datetime="2017-06-10T16:00:00.000Z" itemprop="datePublished">06-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/11/20170611JS笔记/">0611-JS笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li></ul>
-        <span class="post-count">总字数980</span>
-        <span class="post-count">预计阅读4分钟</span>
-    </div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
   </div>
+  
+    
+
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/05/07/20170507前端笔记/" class="archive-article-date">
-      <time datetime="2017-05-06T16:00:00.000Z" itemprop="datePublished">05-07</time>
-</a>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/20170507前端笔记/">0507-JS笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li></ul>
-        <span class="post-count">总字数2,413</span>
-        <span class="post-count">预计阅读10分钟</span>
-    </div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| Wangriyu’s Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/23/20170423前端笔记/" class="archive-article-date">
-      <time datetime="2017-04-22T16:00:00.000Z" itemprop="datePublished">04-23</time>
-</a>
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/23/20170423前端笔记/">0423-JS笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li></ul>
-        <span class="post-count">总字数2,238</span>
-        <span class="post-count">预计阅读10分钟</span>
-    </div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://wangriyu.wang/error.html';
+            this.page.identifier = 'error.html';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//wangriyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
 
     
 
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
