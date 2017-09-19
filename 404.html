@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://wangriyu.wang/404.html">
 <meta property="og:site_name" content="Wangriyu’s Blog">
 <meta property="og:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }   .whiteSide {     width: 3px;     background: #fff;     height:">
-<meta property="og:updated_time" content="2017-09-18T15:43:50.000Z">
+<meta property="og:updated_time" content="2017-09-19T02:22:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wangriyu’s Blog">
 <meta name="twitter:description" content=".error {     text-align: center;     height: 150px;     width: 100%;     background: #fff;     position: relative;     top: 3px;   }   .whiteSide {     width: 3px;     background: #fff;     height:">
@@ -264,7 +264,7 @@
     </header>
   
     <div id="donate">
-        <img id="alipay" src="/img/alipay.jpg" width="260px" alt="鱼乐 Alipay"/>
+        <img id="alipay" src="/img/alipay.jpg" width="250px" alt="鱼乐 Alipay"/>
         <div class="triangle"></div>
     </div>
   
@@ -324,7 +324,7 @@
   
     <div class="article-meta">
       <a href="/404.html" class="article-date">
-      <time datetime="2017-09-18T15:43:50.000Z" itemprop="datePublished">2017-09-18</time>
+      <time datetime="2017-09-19T02:22:11.000Z" itemprop="datePublished">2017-09-19</time>
 </a>
 
 
@@ -433,6 +433,75 @@
   @media only screen and (max-width: 768px) {
     .errAfter {
       left: -1px;
+    }
+    .white {
+      top: 6vw;
+      animation: whiteMove 3s ease-out infinite;
+    }
+    @keyframes whiteMove {
+      8% {
+        top: 5vw;
+      }
+      20% {
+        top: 6.6vw;
+      }
+      45% {
+        top: 5.5vw;
+      }
+      60% {
+        top: 4vw;
+      }
+      88% {
+        top: 5.5vw;
+      }
+      90% {
+        top: 3.5vw;
+      }
+      92% {
+        top: 4vw;
+      }
+      94% {
+        top: 5.6vw;
+      }
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .error {
+      height: 100px;
+    }
+    .whiteSide {
+      height: 100px;
+    }
+    .white {
+      height: 1px;
+      top: 12vw;
+      animation: whiteMove 3s ease-out infinite;
+    }
+    @keyframes whiteMove {
+      8% {
+        top: 6vw;
+      }
+      20% {
+        top: 7.2vw;
+      }
+      45% {
+        top: 9vw;
+      }
+      60% {
+        top: 6vw;
+      }
+      88% {
+        top: 3vw;
+      }
+      90% {
+        top: 7vw;
+      }
+      92% {
+        top: 4vw;
+      }
+      94% {
+        top: 7.2vw;
+      }
     }
   }
   @keyframes redShadow {

@@ -266,8 +266,8 @@ a {
 #container .left-col .intrude-less #donate {
   display: none;
   position: fixed;
-  top: 312px;
-  left: 20px;
+  top: 345px;
+  left: 25px;
 }
 #container .left-col .intrude-less #donate img {
   border-radius: 5px;
@@ -275,7 +275,7 @@ a {
 #container .left-col .intrude-less #donate .triangle {
   height: 0;
   width: 0;
-  margin: -5px 0 0 85px;
+  margin: -5px 0 0 80px;
   border-right: 45px solid transparent;
   border-left: 45px solid transparent;
   border-top: 30px solid #059fe7;
