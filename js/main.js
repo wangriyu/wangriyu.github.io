@@ -199,7 +199,10 @@ require([], function (){
         }
     });
 
-     (function() {
+  /**
+   *  404页面
+   */
+  (function() {
        var lastTime = 0;
        var vendors = ['ms', 'moz', 'webkit', 'o'];
        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
@@ -259,11 +262,11 @@ require([], function (){
   window.onmousemove = function(e) {
     e = e || window.event;
 
-    var pageX = e.pageX;
-    var pageY = e.pageY;
+    var pageX = e.pageX - 80;
+    var pageY = e.pageY + 150;
     if (pageX === undefined) {
-      pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-      pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+      pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 80;
+      pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 150;
     }
     mousePos = {
       x: pageX,
@@ -304,14 +307,14 @@ require([], function (){
 
   function positionParticles() {
     var canvas = document.createElement("canvas");
-    canvas.width = 500;
-    canvas.height = 350;
+    canvas.width = 400;
+    canvas.height = 280;
     var context = canvas.getContext("2d");
     context.fillStyle = "#000000";
-    context.font = "300px 'Arial', sans-serif";
-    context.fillText(options.keyword, 0, 250);
+    context.font = "240px 'Arial', sans-serif";
+    context.fillText(options.keyword, 0, 200);
 
-    var imageData = context.getImageData(0, 0, 350, 500);
+    var imageData = context.getImageData(0, 0, 280, 400);
     data = imageData.data;
 
     // Iterate each row and column
@@ -334,14 +337,14 @@ require([], function (){
 
   function positionText() {
     var canvas = document.createElement("canvas");
-    canvas.width = 400;
-    canvas.height = 120;
+    canvas.width = 320;
+    canvas.height = 96;
     var context = canvas.getContext("2d");
     context.fillStyle = "#000000";
-    context.font = "80px 'Arial', sans-serif";
-    context.fillText("Not Found", 0, 80);
+    context.font = "64px 'Arial', sans-serif";
+    context.fillText("Not Found", 0, 64);
 
-    var imageData = context.getImageData(0, 0, 400, 400);
+    var imageData = context.getImageData(0, 0, 320, 320);
     data = imageData.data;
 
     // Iterate each row and column
