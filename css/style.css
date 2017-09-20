@@ -1632,10 +1632,7 @@ body .ui-tooltip {
     height: 300px;
   }
   .article-entry #notFound {
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    -ms-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -1643,11 +1640,7 @@ body .ui-tooltip {
     height: 200px;
   }
   .article-entry #notFound {
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    -ms-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-    width: 100%;
+    width: 120%;
   }
 }
 .article-meta {
