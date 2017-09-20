@@ -1615,10 +1615,10 @@ body .ui-tooltip {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%) scale(1.2);
-  -moz-transform: translateY(-50%) translateX(-50%) scale(1.2);
-  -ms-transform: translateY(-50%) translateX(-50%) scale(1.2);
-  transform: translateY(-50%) translateX(-50%) scale(1.2);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   width: 80%;
   height: auto;
 }
