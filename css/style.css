@@ -1640,13 +1640,14 @@ body .ui-tooltip {
 }
 @media only screen and (max-width: 425px) {
   .article-entry #yun {
-    height: 250px;
+    height: 200px;
   }
   .article-entry #notFound {
-    -webkit-transform: translateY(-50%) translateX(-50%) scale(0.75);
-    -moz-transform: translateY(-50%) translateX(-50%) scale(0.75);
-    -ms-transform: translateY(-50%) translateX(-50%) scale(0.75);
-    transform: translateY(-50%) translateX(-50%) scale(0.75);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
   }
 }
 .article-meta {

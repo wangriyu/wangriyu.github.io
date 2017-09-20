@@ -262,26 +262,27 @@ require([], function (){
   window.onmousemove = function(e) {
     e = e || window.event;
 
-    var pageX = e.pageX - 80;
-    var pageY = e.pageY + 150;
+    var pageX = e.pageX - 300;
+    var pageY = e.pageY + 350;
     if (pageX === undefined) {
-      pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 80;
-      pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 150;
+      pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 300;
+      pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 350;
     }
     mousePos = {
       x: pageX,
       y: pageY,
     };
-  }
+  };
 
   var options = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-    keyword : "404",
-    density : 10,
-    densityText : 3,
-    minDist : 20,
-  }
+    width: 1000,
+    height: 1000,
+    keyword: "404",
+    density: 8,
+    densityText: 2,
+    minDist: 20,
+  };
+
   // initialize canvas
   var canvas = document.createElement('canvas');
   canvas.width = options.width;
@@ -326,10 +327,10 @@ require([], function (){
 
         // If the color is black, draw pixels
         if (color == 255) {
-          var newPar = particle()
+          var newPar = particle();
           newPar.setPosition(i, j);
           particles.push(newPar);
-          stage.addChild(newPar)
+          stage.addChild(newPar);
         }
       }
     }
@@ -356,10 +357,10 @@ require([], function (){
 
         // If the color is black, draw pixels
         if (color == 255) {
-          var newPar = particle(true)
+          var newPar = particle(true);
           newPar.setPosition(i, j);
           particles.push(newPar);
-          stage.addChild(newPar)
+          stage.addChild(newPar);
         }
       }
     }
