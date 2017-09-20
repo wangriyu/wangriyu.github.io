@@ -307,14 +307,14 @@ require([], function (){
 
   function positionParticles() {
     var canvas = document.createElement("canvas");
-    canvas.width = 400;
-    canvas.height = 280;
+    canvas.width = 500;
+    canvas.height = 350;
     var context = canvas.getContext("2d");
     context.fillStyle = "#000000";
-    context.font = "240px 'Arial', sans-serif";
-    context.fillText(options.keyword, 0, 200);
+    context.font = "300px 'Arial', sans-serif";
+    context.fillText(options.keyword, 0, 250);
 
-    var imageData = context.getImageData(0, 0, 280, 400);
+    var imageData = context.getImageData(0, 0, 350, 500);
     data = imageData.data;
 
     // Iterate each row and column
@@ -337,14 +337,14 @@ require([], function (){
 
   function positionText() {
     var canvas = document.createElement("canvas");
-    canvas.width = 320;
-    canvas.height = 96;
+    canvas.width = 400;
+    canvas.height = 120;
     var context = canvas.getContext("2d");
     context.fillStyle = "#000000";
-    context.font = "64px 'Arial', sans-serif";
-    context.fillText("Not Found", 0, 64);
+    context.font = "80px 'Arial', sans-serif";
+    context.fillText("Not Found", 0, 80);
 
-    var imageData = context.getImageData(0, 0, 320, 320);
+    var imageData = context.getImageData(0, 0, 400, 400);
     data = imageData.data;
 
     // Iterate each row and column

@@ -1627,9 +1627,26 @@ body .ui-tooltip {
   width: 100%;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  .article-entry #yun {
+    height: 300px;
+  }
+  .article-entry #notFound {
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
 @media only screen and (max-width: 425px) {
   .article-entry #yun {
     height: 250px;
+  }
+  .article-entry #notFound {
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(0.75);
+    -moz-transform: translateY(-50%) translateX(-50%) scale(0.75);
+    -ms-transform: translateY(-50%) translateX(-50%) scale(0.75);
+    transform: translateY(-50%) translateX(-50%) scale(0.75);
   }
 }
 .article-meta {
