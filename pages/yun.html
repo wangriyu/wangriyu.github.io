@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Yun404</title>
   <style>
     body {
       background: #03a4e4;
@@ -238,12 +238,9 @@
       }
 
       p.scale.x = p.scale.y = scale = Math.max(Math.min(2.5 - (Math2.distance(p.x, p.y, mousePos.x, mousePos.y) / 160), 160), 1);
-
-
       p.x = p.x + .2 * Math.sin(p.timer * .15)
       p.y = p.y + .2 * Math.cos(p.timer * .15)
       p.timer = p.timer + p.v;
-
     }
     window.requestAnimationFrame(update);
   }
