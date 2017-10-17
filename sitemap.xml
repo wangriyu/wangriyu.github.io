@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangriyu.wang/2017/MacSkills.html</loc>
+    
+    <lastmod>2017-10-17T15:21:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangriyu.wang/2017/ShareArtifact.html</loc>
     
-    <lastmod>2017-10-16T16:41:45.000Z</lastmod>
+    <lastmod>2017-10-17T14:07:22.000Z</lastmod>
     
   </url>
   
@@ -23,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/about/index.html</loc>
+    <loc>http://wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2017-09-18T08:13:54.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/tags/index.html</loc>
+    <loc>http://wangriyu.wang/about/index.html</loc>
     
     <lastmod>2017-09-18T08:13:54.000Z</lastmod>
     
