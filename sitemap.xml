@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangriyu.wang/2017/ShareArtifact.html</loc>
+    
+    <lastmod>2017-10-29T08:35:56.945Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangriyu.wang/2017/Hexo.html</loc>
     
     <lastmod>2017-10-28T14:12:59.755Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/about/index.html</loc>
+    <loc>http://wangriyu.wang//404.html</loc>
     
     <lastmod>2017-10-24T09:13:35.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangriyu.wang//404.html</loc>
+    <loc>http://wangriyu.wang/about/index.html</loc>
     
     <lastmod>2017-10-24T09:13:35.000Z</lastmod>
     
@@ -30,21 +37,14 @@
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/2017/ShareArtifact.html</loc>
-    
-    <lastmod>2017-10-24T09:08:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangriyu.wang/2017/20170815Storage.html</loc>
+    <loc>http://wangriyu.wang/2017/20170611JSNote.html</loc>
     
     <lastmod>2017-10-24T09:07:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/2017/20170611JSNote.html</loc>
+    <loc>http://wangriyu.wang/2017/20170815Storage.html</loc>
     
     <lastmod>2017-10-24T09:07:32.000Z</lastmod>
     
