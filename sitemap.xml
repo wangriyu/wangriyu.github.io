@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangriyu.wang/2017/MacSkills.html</loc>
+    
+    <lastmod>2017-10-31T06:15:05.259Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangriyu.wang/2017/ShareArtifact.html</loc>
     
-    <lastmod>2017-10-29T08:35:56.945Z</lastmod>
+    <lastmod>2017-10-31T06:03:57.221Z</lastmod>
     
   </url>
   
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://wangriyu.wang/about/index.html</loc>
+    <loc>http://wangriyu.wang//404.html</loc>
     
     <lastmod>2017-10-24T09:13:35.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangriyu.wang//404.html</loc>
+    <loc>http://wangriyu.wang/about/index.html</loc>
     
     <lastmod>2017-10-24T09:13:35.000Z</lastmod>
     
@@ -61,13 +68,6 @@
     <loc>http://wangriyu.wang/2017/20170423JSNote.html</loc>
     
     <lastmod>2017-10-24T09:07:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangriyu.wang/2017/MacSkills.html</loc>
-    
-    <lastmod>2017-10-24T09:06:31.000Z</lastmod>
     
   </url>
   
