@@ -8,8 +8,10 @@
   <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <style>
     html, body {
-      background-color: #ECECEC;
+      background-color: #2EC7C9;
       height: 100%;
+      min-height: 100%;
+      margin: 0;
       padding: 0;
       overflow-y: hidden;
     }
@@ -134,7 +136,7 @@
     .Yiyan {
       position: absolute;
       top: 156px;
-      width: 448px;
+      width: calc(100% - 32px);
       height: 80px;
       padding: 0 14px 0 18px;
       display: flex;
@@ -144,7 +146,40 @@
     #yiyan {
       font-size: 18px;
       font-weight: bold;
+      font-family: "Microsoft YaHei";
       text-shadow: 1px 1px 10px #cfcfcf
+    }
+    .img {
+      height: 128px;
+      width: 128px;
+      border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+      .box {
+        width: 300px;
+        height: 360px;
+        margin: -180px 0 0 -150px;
+      }
+      .avatar {
+        height: 100px;
+        width: 100px;
+      }
+      .img {
+        height: 100px;
+        width: 100px;
+      }
+      .social_nav .social a {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        line-height: 36px;
+      }
+      body {
+        background-image: url(./mobile.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
     }
   </style>
 </head>
@@ -152,7 +187,7 @@
 <div id="ripple" style="position: fixed; top: 0; left: 0;"></div>
 <div class="box">
   <a href="/" class="avatar" title="点击返回博客">
-    <img src="/img/avatar.jpg" height="128px" width="128px" class="animated zoomIn" style="border-radius: 50%;">
+    <img id="avt" src="/img/avatar.jpg" class="animated zoomIn img">
   </a>
   <div class="Yiyan">
     <span id="yiyan">
@@ -180,14 +215,16 @@
   </nav>
 </div>
 <script>
+  var isMobile = window.screen.width <= 768;
+
   (function init() {
     var settings = {
-      image: './fish.jpg',          //背景图片
-      rippleRadius: 5,              //radius of the ripple
-      width: window.screen.width,   //width
-      height: window.screen.height, //height
-      delay: 1,                     //if auto param === true. 1 === 1 second delay for animation
-      auto: true                    //if auto param === true, animation starts on it´s own
+      image: isMobile ? '' : './fish.jpg', // 背景图片
+      rippleRadius: 5,              // radius of the ripple
+      width: window.screen.width,   // width
+      height: window.screen.height, // height
+      delay: 1,                     // if auto param === true. 1 === 1 second delay for animation
+      auto: true                    // if auto param === true, animation starts on it´s own
     };
 
     var waterRippleEffect = new WaterRippleEffect(document.getElementById('ripple'), settings);
