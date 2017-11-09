@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangriyu.wang/2017/MacSkills.html</loc>
+    
+    <lastmod>2017-11-08T10:41:21.298Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangriyu.wang/about/index.html</loc>
     
     <lastmod>2017-11-05T12:46:50.927Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://wangriyu.wang/2017/Hexo.html</loc>
     
     <lastmod>2017-11-05T12:41:27.135Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangriyu.wang/2017/MacSkills.html</loc>
-    
-    <lastmod>2017-11-04T06:14:13.035Z</lastmod>
     
   </url>
   
