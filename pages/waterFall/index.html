@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WaterFall</title>
+  <link href="https://cdn.bootcss.com/aos/2.2.0/aos.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/aos/2.2.0/aos.js"></script>
+
+  <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.7/css/jquery.fancybox.min.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="https://cdn.bootcss.com/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="jquery.fancybox-buttons.js?v=1.0.5"></script>
+  <link rel="stylesheet" href="jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+  <script type="text/javascript" src="jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    body {
+      padding-top: 20px;
+      background: #efefdf;
+    }
+
+    img {
+      width: 220px;
+      display: block;
+    }
+
+    #box {
+      margin: 0 auto;
+    }
+
+    .fancybox-thumb {
+      position: absolute;
+    }
+
+    .fancybox-thumb > img {
+      filter: drop-shadow(5px 5px 5px #999);
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+<script>
+  $(document).ready(function() {
+    $(".fancybox-thumb").fancybox({
+      prevEffect	: 'none',
+      nextEffect	: 'none',
+      helpers	: {
+        title	: {
+          type: 'outside'
+        },
+        thumbs	: {
+          width	: 50,
+          height	: 50
+        }
+      }
+    });
+  });
+  var imgs = [
+    "http://owq6b7ufh.bkt.clouddn.com/heart.png",
+    "http://owq6b7ufh.bkt.clouddn.com/1.jpg",
+    "http://owq6b7ufh.bkt.clouddn.com/10.jpg",
+    "http://owq6b7ufh.bkt.clouddn.com/102.jpg",
+    "http://owq6b7ufh.bkt.clouddn.com/11.jpg",
+    "http://owq6b7ufh.bkt.clouddn.com/112.jpg",
+    "http://owq6b7ufh.bkt.clouddn.com/1466036082931.jpeg",
+    "http://owq6b7ufh.bkt.clouddn.com/16.jpg",
+  ];
+  var box = document.getElementById('box');
+  for (let i = 0; i < imgs.length; i++) {
+    var div = document.createElement("a");
+    div.className = "fancybox-thumb";
+    div.setAttribute("rel", "fancybox-thumb");
+    div.setAttribute("href", imgs[i]);
+    div.innerHTML = '<img src="' + imgs[i] + '" alt="">';
+    box.appendChild(div)
+  }
+  var items = box.children;
+  // 定义每一列之间的间隙 为10像素
+  var gap = 15;
+
+  window.onload = function() {
+    // 一进来就调用一次
+    waterFall();
+    // 封装成一个函数
+    function waterFall() {
+      // 1- 确定列数  = 页面的宽度 / 图片的宽度
+      var pageWidth = getClient().width;
+      var itemWidth = items[0].offsetWidth;
+      var columns = parseInt(pageWidth / (itemWidth + gap));
+      box.style.width = columns * (itemWidth + gap) - gap + 'px';
+      var arr = [];
+
+      for (var i = 0; i < items.length; i++) {
+        let imgC = items[i].firstElementChild;
+        if (imgC.getAttribute("data-aos") === null) {
+          imgC.setAttribute("data-aos", "zoom-in");
+        }
+
+        if (i < columns) {
+          // 2- 确定第一行
+          items[i].style.top = 0;
+          items[i].style.left = (itemWidth + gap) * i + 'px';
+          arr.push(items[i].offsetHeight);
+        } else {
+          // 其他行
+          // 3- 找到数组中最小高度  和 它的索引
+          var minHeight = arr[0];
+          var index = 0;
+          for (var j = 0; j < arr.length; j++) {
+            if (minHeight > arr[j]) {
+              minHeight = arr[j];
+              index = j;
+            }
+          }
+          // 4- 设置下一行的第一个盒子位置
+          // top值就是最小列的高度 + gap
+          items[i].style.top = arr[index] + gap + 'px';
+          // left值就是最小列距离左边的距离
+          items[i].style.left = items[index].offsetLeft + 'px';
+
+          // 5- 修改最小列的高度
+          // 最小列的高度 = 当前自己的高度 + 拼接过来的高度 + 间隙的高度
+          arr[index] = arr[index] + items[i].offsetHeight + gap;
+        }
+      }
+    }
+    // 页面尺寸改变时实时触发
+    window.onresize = function() {
+      waterFall();
+    };
+    // 当加载到第30张的时候
+//   window.onscroll = function() {
+//     var scroll = getClient().height + getScrollTop();
+//     if (scroll >= items[items.length - 1].offsetTop) {
+//       // 模拟 ajax 获取数据
+//       var datas = [
+//         "./imgs/mobile.jpg",
+//         "./imgs/1.jpg",
+//         "./imgs/2.jpg",
+//         "./imgs/3.jpg",
+//         "./imgs/yu.png",
+//         "./imgs/4.jpg",
+//         "./imgs/5.jpg",
+//         "./imgs/yu.png",
+//         "./imgs/6.jpg",
+//         "./imgs/7.jpg",
+//         "./imgs/84_Groa_Moogly_2560x1600.jpg",
+//         "./imgs/9.jpg",
+//         "./imgs/mobile.jpg",
+//         "./imgs/10.jpg",
+//         "./imgs/11.jpg",
+//         "./imgs/yu.png",
+//         "./imgs/mobile.jpg",
+//       ];
+//       for (var i = 0; i < datas.length; i++) {
+//         var div = document.createElement("a");
+//         div.className = "fancybox-thumb";
+//         div.setAttribute("rel", "fancybox-thumb");
+//         div.setAttribute("href", datas[i]);
+//         div.innerHTML = '<img src="' + datas[i] + '" alt="">';
+//         box.appendChild(div);
+//       }
+//       waterFall();
+//     }
+//
+//   };
+  };
+
+  // clientWidth 处理兼容性
+  function getClient() {
+    return {
+      width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+      height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    }
+  }
+  // scrollTop兼容性处理
+  function getScrollTop() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+  }
+
+  AOS.init({
+    easing: 'linear',
+    once: true,
+  });
+</script>
+</body>
+</html>
