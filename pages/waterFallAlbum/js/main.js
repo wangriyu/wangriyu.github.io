@@ -141,9 +141,6 @@
 
       // Show current grid.
       grids[currentGrid].classList.remove('grid--hidden')
-
-      // Remove loading class from body
-      body.classList.remove('loading')
     });
     applyFx();
   }
@@ -154,11 +151,13 @@
     grids[currentGrid].classList.add('grid--loading')
 
     loadingTimeout = setTimeout(function () {
-      grids[currentGrid].classList.remove('grid--loading')
+      grids[currentGrid].classList.remove('grid--loading');
+      document.getElementById("top").style.display = "block";
+      document.getElementById("blog").style.display = "block";
 
       // Apply effect.
       loaders[currentGrid]._render('Montu')
-    }, 500)
+    }, 3000)
   }
   init()
 })(window)

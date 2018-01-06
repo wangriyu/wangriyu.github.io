@@ -20,39 +20,6 @@ body {
   filter: drop-shadow(5px 5px 10px #888);
 }
 
-.js .loading::before,
-.js .loading::after {
-  content: '';
-  position: fixed;
-  z-index: 1000;
-}
-
-.loading::before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2c2d31;
-}
-
-.loading::after {
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  margin: -20px 0 0 -20px;
-  border: 8px solid #383a41;
-  border-bottom-color: #565963;
-  border-radius: 50%;
-  animation: animLoader 0.8s linear infinite forwards;
-}
-
-@keyframes animLoader {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 a {
   text-decoration: none;
   color: #f2f2f2;
@@ -62,11 +29,6 @@ a {
 a:hover,
 a:focus {
   color: #e6629a;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .content--center {
@@ -113,7 +75,6 @@ main {
 }
 
 /* Grid */
-
 .grid {
   position: relative;
   z-index: 2;
@@ -203,6 +164,58 @@ main {
   margin: 0 10px 20px;
 }
 
+#top, #blog {
+  z-index: 99;
+  position: fixed;
+  bottom: 32px;
+  right: 16px;
+  display: none;
+  width: 36px;
+  heigh: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  background: #4094c7;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#blog {
+  bottom: 76px;
+  font-size: 12px;
+  background: #e6629a;
+}
+
+#blog:hover {
+  transform: scale(1.1);
+}
+
+#top:hover {
+  transform: scale(1.1);
+}
+
+#top::before {
+  content: "\21E7";
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+@keyframes animLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 60em) {
   .grid .grid__item,
   .grid .grid__sizer {
@@ -239,5 +252,12 @@ main {
 
   .content--center {
     max-width: 100vw;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .header__title::before,
+  .header__title::after {
+    font-size: 0.75em;
   }
 }
