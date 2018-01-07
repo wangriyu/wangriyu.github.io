@@ -8,11 +8,8 @@
   <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
   <link rel="stylesheet" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen"/>
   <script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-  <link rel="stylesheet" href="lib/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen"/>
-  <script type="text/javascript" src="lib/jquery.fancybox-buttons.js?v=1.0.5"></script>
-  <link rel="stylesheet" href="lib/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen"/>
-  <script type="text/javascript" src="lib/jquery.fancybox-thumbs.js?v=1.0.7"></script>
   <script>document.documentElement.className = 'js'</script>
+  <script type="text/javascript" src="imgs.js"></script>
 </head>
 <body>
 <header class="header">
@@ -21,99 +18,22 @@
 <div id="content" class="content content--center">
   <h3>2018-01-01</h3>
   <hr />
-  <div id="box" class="grid">
+  <div id="box" class="grid grid--hidden">
     <div class="grid__sizer"></div>
   </div>
 </div>
-<a id="blog" title="返回博客" href="/">
-  Blog
-</a>
-<a id="top" title="返回顶部" href="#">
-</a>
+<a id="blog" title="返回博客" href="/">Blog</a>
+<a id="top" title="返回顶部" onclick="$('body,html').animate({scrollTop:0},1000)"></a>
 <script>
-//  $.getJSON('imgs.json', function (data) {
-//    $.each(data, function (i, imgs) {
-var imgs = [
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1%20%E6%8B%B7%E8%B4%9D.png",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/1.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/10.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/102.jpg",
-  "http://wangriyu.oss-cn-shanghai.aliyuncs.com/11.jpg"
-];
-      var box = document.getElementById('box')
-      for (var i = 0; i < imgs.length; i++) {
-        var gridItem = document.createElement('div')
-        gridItem.className = 'grid__item'
-        gridItem.innerHTML = '<a class="grid__link" rel="fancybox-thumb" href="' + imgs[i] + '"><img class="grid__img" src="' + imgs[i] + '" alt="" /></a>'
-        box.appendChild(gridItem)
-      }
-//    })
-//  })
+for (let index in data) {
+  var box = document.getElementById('box')
+  for (var i = 0; i < data[index].length; i++) {
+    var gridItem = document.createElement('div')
+    gridItem.className = 'grid__item'
+    gridItem.innerHTML = '<a class="grid__link" rel="fancybox-thumb" href="' + data[index][i] + '"><img class="grid__img" src="' + data[index][i] + '" alt="" /></a>'
+    box.appendChild(gridItem)
+  }
+}
 </script>
 <script src="lib/imagesloaded.pkgd.min.js"></script>
 <script src="lib/masonry.pkgd.min.js"></script>
@@ -123,11 +43,7 @@ var imgs = [
   $('.grid__link').fancybox({
     prevEffect: 'none',
     nextEffect: 'none',
-    helpers: {
-      thumbs: {
-        width: 25, height: 25
-      }
-    }
+    type: 'image'
   })
 </script>
 </body>
