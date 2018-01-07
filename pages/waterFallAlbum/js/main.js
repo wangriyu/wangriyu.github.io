@@ -26,7 +26,7 @@
     // Reset styles.
     this._resetStyles()
 
-    var self = this, effectSettings = this.effects['Montu'], animeOpts = effectSettings.animeOpts
+    var self = this, effectSettings = this.effects[effect], animeOpts = effectSettings.animeOpts
 
     if (effectSettings.perspective != undefined) {
       [].slice.call(this.items).forEach(function (item) {
@@ -141,7 +141,10 @@
 
       // Show current grid.
       grids[currentGrid].classList.remove('grid--hidden')
-    });
+
+      // Remove loading class from body
+      //body.classList.remove('loading')
+    })
     applyFx();
   }
 
@@ -151,9 +154,7 @@
     grids[currentGrid].classList.add('grid--loading')
 
     loadingTimeout = setTimeout(function () {
-      grids[currentGrid].classList.remove('grid--loading');
-      document.getElementById("top").style.display = "block";
-      document.getElementById("blog").style.display = "block";
+      grids[currentGrid].classList.remove('grid--loading')
 
       // Apply effect.
       loaders[currentGrid]._render('Montu')
