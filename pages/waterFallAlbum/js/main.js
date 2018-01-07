@@ -158,7 +158,7 @@
 
       // Apply effect.
       loaders[currentGrid]._render('Montu')
-    }, 500)
+    }, 3000)
   }
   init()
 })(window)
