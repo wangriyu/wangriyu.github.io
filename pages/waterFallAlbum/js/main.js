@@ -151,14 +151,14 @@
   function applyFx (ev) {
     // Simulate loading grid to show the effect.
     clearTimeout(loadingTimeout)
-    grids[currentGrid].classList.add('grid--loading')
+    //grids[currentGrid].classList.add('grid--loading')
 
     loadingTimeout = setTimeout(function () {
-      grids[currentGrid].classList.remove('grid--loading')
+      //grids[currentGrid].classList.remove('grid--loading')
 
       // Apply effect.
       loaders[currentGrid]._render('Montu')
-    }, 3000)
+    }, 10)
   }
   init()
 })(window)
