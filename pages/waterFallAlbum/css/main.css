@@ -109,7 +109,7 @@ a:focus {
 
 .js .grid--loading::after {
   position: absolute;
-  top: calc(25vh - 20px);
+  top: 45%;
   left: 50%;
   width: 40px;
   height: 40px;
@@ -118,6 +118,12 @@ a:focus {
   border-bottom-color: #565963;
   border-radius: 50%;
   animation: animLoader 0.8s linear forwards infinite;
+}
+
+@keyframes animLoader {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .grid__sizer {
@@ -210,12 +216,6 @@ a:focus {
   font-size: 1em;
   font-weight: bold;
   display: inline-block;
-}
-
-@keyframes animLoader {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @media screen and (min-width: 60em) {

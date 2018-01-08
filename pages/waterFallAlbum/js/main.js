@@ -147,10 +147,9 @@
   function applyFx (ev) {
     // Simulate loading grid to show the effect.
     clearTimeout(loadingTimeout)
-    grids[currentGrid].classList.add('grid--loading')
 
     loadingTimeout = setTimeout(function () {
-      grids[currentGrid].classList.remove('grid--loading')
+      document.getElementById('content').classList.remove('grid--loading')
       grids[currentGrid].classList.remove('grid--hidden')
       document.getElementById('blog').style.display = 'block'
       document.getElementById('top').style.display = 'block'
