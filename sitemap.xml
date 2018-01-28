@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
-    <lastmod>2017-12-31T15:53:59.442Z</lastmod>
+    <lastmod>2018-01-28T12:09:13.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/about/index.html</loc>
+    
+    <lastmod>2018-01-28T11:35:01.021Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang//404.html</loc>
+    
+    <lastmod>2018-01-28T11:33:19.518Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
     
-    <lastmod>2017-12-25T08:49:54.104Z</lastmod>
+    <lastmod>2018-01-20T08:09:08.128Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    
+    <lastmod>2017-12-31T15:53:59.442Z</lastmod>
     
   </url>
   
@@ -30,23 +51,9 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang//404.html</loc>
-    
-    <lastmod>2017-12-05T07:47:03.639Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
     
     <lastmod>2017-11-27T08:45:17.369Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/about/index.html</loc>
-    
-    <lastmod>2017-11-05T12:46:50.927Z</lastmod>
     
   </url>
   
