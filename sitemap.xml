@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/about/index.html</loc>
+    
+    <lastmod>2018-03-14T09:48:55.217Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
+    
+    <lastmod>2018-03-14T07:41:34.110Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
     
     <lastmod>2018-03-14T06:24:39.656Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-01-28T12:09:13.479Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/about/index.html</loc>
-    
-    <lastmod>2018-01-28T11:35:01.021Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>https://blog.wangriyu.wang/2017/04-JSNote1.html</loc>
     
     <lastmod>2017-10-24T09:07:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
-    
-    <lastmod>2017-09-18T08:13:54.000Z</lastmod>
     
   </url>
   
