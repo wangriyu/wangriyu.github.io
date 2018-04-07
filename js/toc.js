@@ -1,3 +1,104 @@
-// build time:Thu Apr 05 2018 18:26:58 GMT+0800 (CST)
-define(function(){var i=function(){var i=yiliaConfig.toc[0];var t=yiliaConfig.toc[1];if($(".left-col").is(":hidden")){$("#tocButton").attr("value",t)}$("#tocButton").click(function(){if($("#toc").is(":hidden")){$("#tocButton").attr("value",i);$("#toc").slideDown(320);$(".switch-btn, .switch-area").fadeOut(300)}else{$("#tocButton").attr("value",t);$("#toc").slideUp(350);$(".switch-btn, .switch-area").fadeIn(500)}})}();var t=function(){if(!$(".toc").length){$("#toc, #tocButton").hide();$(".switch-btn, .switch-area").show()}}();var c=$("#toc .toc-item:has(> .toc-child)");var o=c.children(".toc-link");c.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");var s=function(){$("#toc .toc-item > i").click(function(){$(this).siblings(".toc-child").slideToggle(100);$(this).toggleClass("hide");$(this).siblings("i").toggleClass("hide")})}();var a=function(){o.dblclick(function(){$(this).siblings(".toc-child").hide(100);$(this).siblings("i").toggleClass("hide")});o.click(function(){var i=$(this).siblings(".toc-child");if(i.is(":hidden")){i.show(100);$(this).siblings("i").toggleClass("hide")}})}();var e=function(){var i=$(".toc-item > .fa-caret-right");var t=$(".toc-item > .fa-caret-down");var c=o.next(".toc-child");i.addClass("hide");var s=$("#toc .toc-title");if(o.length){s.addClass("clickable");s.click(function(){if(c.is(":hidden")){c.show(150);i.removeClass("hide");t.addClass("hide")}else{c.hide(100);i.addClass("hide");t.removeClass("hide")}});if($(".left-col").is(":hidden")){$("#container .toc-article .toc").css("padding-left","1.4em");$("#container .toc-article .toc-title").css("display","initial")}}}();var n=function(i){if(i){var t=$(".toc li a");t.each(function(){var i=$(this).find(".toc-text").text();if(this.offsetWidth<this.scrollWidth){$(this).attr("title",i);if(!!$().tooltip){$(this).tooltip()}}});var c=!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);if(c){$("#toc .toc-item i").css("bottom",".1em")}}};n(yiliaConfig.toc[2])});
-//rebuild by neat 
+define(function (){
+
+    var toggleTocArea = function(){
+        var valueHide = yiliaConfig.toc[0];
+        var valueShow = yiliaConfig.toc[1];
+        if ($(".left-col").is(":hidden")) {
+            $("#tocButton").attr("value", valueShow);
+        }
+        $("#tocButton").click(function() {
+            if ($("#toc").is(":hidden")) {
+                $("#tocButton").attr("value", valueHide);
+                $("#toc").slideDown(320);
+                $(".switch-btn, .switch-area").fadeOut(300);
+            }
+            else {
+                $("#tocButton").attr("value", valueShow);
+                $("#toc").slideUp(350);
+                $(".switch-btn, .switch-area").fadeIn(500);
+            }
+        })
+    }()
+
+    var HideTOCifNoHeader = function(){
+        if (!$(".toc").length) {
+            $("#toc, #tocButton").hide();
+            $(".switch-btn, .switch-area").show();
+        }
+    }()
+
+    var $itemHasChild = $("#toc .toc-item:has(> .toc-child)");
+    var $titleHasChild = $itemHasChild.children(".toc-link");
+    $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
+
+    var clickIcon = function(){
+        $("#toc .toc-item > i").click(function(){
+            $(this).siblings(".toc-child").slideToggle(100);
+            $(this).toggleClass("hide");
+            $(this).siblings("i").toggleClass("hide");
+        })
+    }()
+
+    var clickTitle = function(){
+        $titleHasChild.dblclick(function(){
+            $(this).siblings(".toc-child").hide(100);
+            $(this).siblings("i").toggleClass("hide");
+        })
+        // After dblclick enent
+        $titleHasChild.click(function(){
+            var $curentTocChild = $(this).siblings(".toc-child");
+            if ($curentTocChild.is(":hidden")) {
+                $curentTocChild.show(100);
+                $(this).siblings("i").toggleClass("hide");
+            }
+        })
+    }()
+
+    var clickTocTitle = function(){
+        var $iconToExpand = $(".toc-item > .fa-caret-right");
+        var $iconToFold = $(".toc-item > .fa-caret-down");
+        var $subToc = $titleHasChild.next(".toc-child");
+        $iconToExpand.addClass("hide");
+
+        var $tocTitle = $("#toc .toc-title");
+        if ($titleHasChild.length) {
+            $tocTitle.addClass("clickable");
+            $tocTitle.click(function(){
+                if ($subToc.is(":hidden")) {
+                    $subToc.show(150);
+                    $iconToExpand.removeClass("hide");
+                    $iconToFold.addClass("hide");
+                } else {
+                    $subToc.hide(100);
+                    $iconToExpand.addClass("hide");
+                    $iconToFold.removeClass("hide");
+                }
+            })
+            // TOC on mobile
+            if ($(".left-col").is(":hidden")) {
+                $("#container .toc-article .toc").css("padding-left", "1.4em");
+                $("#container .toc-article .toc-title").css("display", "initial");
+            }
+        }
+    }()
+
+    var TocNoWarp = function(cond){
+        if (cond) {
+            var $tocLink = $(".toc li a");
+            $tocLink.each(function(){
+                var title = $(this).find('.toc-text').text();
+                // Find elements with ellipsis
+                if (this.offsetWidth < this.scrollWidth) {
+                    $(this).attr("title", title);
+                    if (!!$().tooltip) { $(this).tooltip() }
+                }
+            })
+            var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+            if (isSafari) {
+                $("#toc .toc-item i").css("bottom", ".1em");
+            }
+        }
+    }
+    TocNoWarp(yiliaConfig.toc[2]);
+
+})

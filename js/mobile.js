@@ -1,3 +1,154 @@
-// build time:Thu Apr 05 2018 18:26:58 GMT+0800 (CST)
-define([],function(){var e=false;var t,n,i;var d,s,a,o,r;var l=function(){s=document.body.scrollHeight/document.body.scrollWidth;a=document.body.scrollWidth;o=0};var c=function(){if(t){document.getElementById("js-mobile-tagcloud").innerHTML=t.innerHTML}if(n){document.getElementById("js-mobile-aboutme").innerHTML=n.innerHTML}if(i){document.getElementById("js-mobile-friends").innerHTML=i.innerHTML}};var m=function(){var e=document.createElement("div");e.id="viewer";e.className="hide";t=document.getElementById("js-tagcloud");n=document.getElementById("js-aboutme");i=document.getElementById("js-friends");function d(e){return $("link.menu-list").attr(e)}var s=t?'<span class="viewer-title">'+d("tags")+'</span><div class="viewer-div tagcloud" id="js-mobile-tagcloud"></div>':"";var a=i?'<span class="viewer-title">'+d("friends")+'</span><div class="viewer-div friends" id="js-mobile-friends"></div>':"";var o=n?'<span class="viewer-title">'+d("about")+'</span><div class="viewer-div aboutme" id="js-mobile-aboutme"></div>':"";e.innerHTML='<div id="viewer-box">        <div class="viewer-box-l">            <div class="viewer-box-wrap">'+o+a+s+'</div>        </div>        <div class="viewer-box-r"></div>        </div>';document.getElementsByTagName("body")[0].appendChild(e);var l=document.getElementById("viewer-box");r=l;l.style.height=document.body.scrollHeight+"px"};var u=function(t,n){document.getElementById("viewer").className="";setTimeout(function(){r.className="anm-swipe"},0);e=true;document.ontouchstart=function(e){if(e.target.tagName!="A"){return false}}};var v=function(){document.getElementById("viewer-box").className="";e=false;document.ontouchstart=function(){return true}};var f=function(){var t=t;document.getElementById("viewer-box").addEventListener("webkitTransitionEnd",function(){if(e==false){document.getElementById("viewer").className="hide";e=true}else{}},false);d.addEventListener("touchend",function(){u()},false);var n=document.getElementsByClassName("viewer-box-r")[0];var i;var s;n.addEventListener("touchstart",function(){i=+new Date},false);n.addEventListener("touchend",function(){s=+new Date;if(s-i<300){v()}i=0;s=0},false);$(".slider-trigger").click(function(){u()});$(".viewer-box-r").click(function(){v()});var a=$("#mobile-nav .overlay");var o=$(".js-mobile-header");window.onscroll=function(){var e=document.documentElement.scrollTop+document.body.scrollTop;if(e>=69){a.addClass("fixed")}else{a.removeClass("fixed")}if(e>=160){o.removeClass("hide").addClass("fixed")}else{o.addClass("hide").removeClass("fixed")}};o[0].addEventListener("touchstart",function(){$("html, body").animate({scrollTop:0},"slow")},false)};return{init:function(){d=document.getElementsByClassName("slider-trigger")[0];l();m();c();f();resetTags()}}});
-//rebuild by neat 
+define([], function(){
+    var _isShow = false;
+    var $tag, $aboutme, $friends;
+
+    var ctn,radio,scaleW,idx,basicwrap;
+
+    //第一步 -- 初始化
+    var reset = function() {
+        //设定窗口比率
+        radio = document.body.scrollHeight/document.body.scrollWidth;
+        //设定一页的宽度
+        scaleW = document.body.scrollWidth;
+        //设定初始的索引值
+        idx = 0;
+    };
+    //第一步 -- 组合
+    var combine = function(){
+        if($tag){
+            document.getElementById("js-mobile-tagcloud").innerHTML = $tag.innerHTML;
+        }
+        if($aboutme){
+            document.getElementById("js-mobile-aboutme").innerHTML = $aboutme.innerHTML;
+        }
+        if($friends){
+            document.getElementById("js-mobile-friends").innerHTML = $friends.innerHTML;
+        }
+    }
+    //第三步 -- 根据数据渲染DOM
+    var renderDOM = function(){
+        //生成节点
+        var $viewer = document.createElement("div");
+        $viewer.id = "viewer";
+        $viewer.className = "hide";
+        $tag = document.getElementById("js-tagcloud");
+        $aboutme = document.getElementById("js-aboutme");
+        $friends = document.getElementById("js-friends");
+        function menuList(name) {
+            return $("link.menu-list").attr(name);
+        };
+        var tagStr = $tag?'<span class="viewer-title">'+ menuList("tags") + '</span><div class="viewer-div tagcloud" id="js-mobile-tagcloud"></div>':"";
+        var friendsStr = $friends?'<span class="viewer-title">'+ menuList("friends") + '</span><div class="viewer-div friends" id="js-mobile-friends"></div>':"";
+        var aboutmeStr = $aboutme?'<span class="viewer-title">'+ menuList("about") + '</span><div class="viewer-div aboutme" id="js-mobile-aboutme"></div>':"";
+
+        $viewer.innerHTML = '<div id="viewer-box">\
+        <div class="viewer-box-l">\
+            <div class="viewer-box-wrap">'+aboutmeStr+friendsStr+tagStr+'</div>\
+        </div>\
+        <div class="viewer-box-r"></div>\
+        </div>';
+
+        //主要图片节点
+        document.getElementsByTagName("body")[0].appendChild($viewer);
+        var wrap = document.getElementById("viewer-box");
+        basicwrap = wrap;
+        wrap.style.height = document.body.scrollHeight + 'px';
+    };
+
+    var show = function(target, idx){
+        document.getElementById("viewer").className = "";
+        setTimeout(function(){
+            basicwrap.className = "anm-swipe";
+        },0);
+        _isShow = true;
+        document.ontouchstart=function(e){
+            if(e.target.tagName != "A"){
+                return false;
+            }
+        }
+    }
+
+    var hide = function(){
+        document.getElementById("viewer-box").className = "";
+        _isShow = false;
+        document.ontouchstart=function(){
+            return true;
+        }
+    }
+
+    //第四步 -- 绑定 DOM 事件
+    var bindDOM = function(){
+        var scaleW = scaleW;
+        
+        //滑动隐藏
+        document.getElementById("viewer-box").addEventListener("webkitTransitionEnd", function(){
+
+            if(_isShow == false){
+                document.getElementById("viewer").className = "hide";
+                _isShow = true;
+            }else{
+            }
+            
+        }, false);
+
+        //点击展示和隐藏
+        ctn.addEventListener("touchend", function(){
+            show();
+        }, false);
+
+        var $right = document.getElementsByClassName("viewer-box-r")[0];
+        var touchStartTime;
+        var touchEndTime;
+        $right.addEventListener("touchstart", function(){
+            touchStartTime = + new Date();
+        }, false);
+        $right.addEventListener("touchend", function(){
+            touchEndTime = + new Date();
+            if(touchEndTime - touchStartTime < 300){
+                hide();
+            }
+            touchStartTime = 0;
+            touchEndTime = 0;
+        }, false);
+
+        $(".slider-trigger").click(function(){
+            show();
+        })
+        $(".viewer-box-r").click(function(){
+            hide();
+        })
+
+        //滚动样式
+        var $overlay = $("#mobile-nav .overlay");
+        var $header = $(".js-mobile-header");
+        window.onscroll = function(){
+            var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+            if(scrollTop >= 69){
+                $overlay.addClass("fixed");
+            }else{
+                $overlay.removeClass("fixed");
+            }
+            if(scrollTop >= 160){
+                $header.removeClass("hide").addClass("fixed");
+            }else{
+                $header.addClass("hide").removeClass("fixed");
+            }
+        };
+        $header[0].addEventListener("touchstart", function(){
+            $('html, body').animate({scrollTop:0}, 'slow');
+        }, false);
+    };
+
+    return{
+        init: function() {
+            //构造函数需要的参数
+            ctn = document.getElementsByClassName("slider-trigger")[0];
+            //构造四步
+            reset();
+            renderDOM();
+            combine();
+            bindDOM();
+            resetTags();
+        }
+    }
+})
