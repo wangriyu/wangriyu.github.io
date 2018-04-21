@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.wangriyu.wang/2018/03-http-message.html</loc>
+    <loc>http://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
     
-    <lastmod>2018-04-10T11:29:48.613Z</lastmod>
+    <lastmod>2018-04-21T10:15:58.259Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wangriyu.wang/2018/04-go-http.html</loc>
+    
+    <lastmod>2018-04-21T10:14:47.951Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wangriyu.wang/2018/04-http-pki.html</loc>
     
-    <lastmod>2018-04-10T11:29:26.463Z</lastmod>
+    <lastmod>2018-04-21T09:55:13.623Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wangriyu.wang/2018/03-http-message.html</loc>
+    
+    <lastmod>2018-04-21T09:53:43.562Z</lastmod>
     
   </url>
   
