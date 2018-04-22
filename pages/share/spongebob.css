@@ -349,8 +349,8 @@
 #modal-container .modal-background .modal .modal-svg rect {
   stroke: #fff;
   stroke-width: 2px;
-  stroke-dasharray: 778;
-  stroke-dashoffset: 778;
+  stroke-dasharray: 1044;
+  stroke-dashoffset: 1044;
 }
 
 @keyframes fadeIn {
@@ -385,7 +385,7 @@
 
 @keyframes sketchIn {
   0% {
-    stroke-dashoffset: 778;
+    stroke-dashoffset: 1044;
   }
   100% {
     stroke-dashoffset: 0;
@@ -397,7 +397,7 @@
     stroke-dashoffset: 0;
   }
   100% {
-    stroke-dashoffset: 778;
+    stroke-dashoffset: 1044;
   }
 }
 
