@@ -1,4 +1,4 @@
-<!-- build time:Sun Apr 22 2018 15:12:10 GMT+0800 (CST) --><!DOCTYPE html><html lang="zh-Hans"><head><!--[if IE]>
+<!-- build time:Sun Apr 22 2018 18:27:26 GMT+0800 (CST) --><!DOCTYPE html><html lang="zh-Hans"><head><!--[if IE]>
       <style>
         body { display: none; }
       </style>
@@ -117,23 +117,36 @@
           }
         })
 
-        document.getElementById('copyBtn').onclick = function copyClick () {
-          document.getElementById('selection').select();
-          document.execCommand('copy');
-          document.getElementById('modal-container').setAttribute('class', 'sketch')
+        document.getElementById('copyBtn').onclick = function () {
+          var input = document.createElement('input'); // fix ios safari copy event
+          input.setAttribute('readonly', 'readonly');
+          input.setAttribute('value', url);
+          document.body.appendChild(input);
+          if (!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+            input.setSelectionRange(0, input.value.length);
+          } else {
+            document.getElementById('selection').select();
+          }
+          document.execCommand("copy") || (document.getElementById("link").textContent="Failed！");
+          document.getElementById('modal-container').setAttribute('class', 'sketch');
+          document.body.removeChild(input);
         }
 
         document.getElementById('copyBtn').oncopy = function (event) {
-          if (!-[1,]) {
-            if (window.clipboardData) {
-              window.clipboardData.setData('Text', window.location.href);
-              document.getElementById('link').textContent = window.clipboardData.getData('Text')
-            }
+          if (!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+            document.getElementById('link').textContent = url;
           } else {
-            event.preventDefault()
-            if (event.clipboardData) {
-              event.clipboardData.setData('text/plain', window.location.href);
-              document.getElementById('link').textContent = event.clipboardData.getData('text')
+            if (!-[1,]) {
+              if (window.clipboardData) {
+                window.clipboardData.setData('Text', url);
+                document.getElementById('link').textContent = window.clipboardData.getData('Text')
+              }
+            } else {
+              event.preventDefault()
+              if (event.clipboardData) {
+                event.clipboardData.setData('text/plain', url);
+                document.getElementById('link').textContent = event.clipboardData.getData('text')
+              }
             }
           }
         }
