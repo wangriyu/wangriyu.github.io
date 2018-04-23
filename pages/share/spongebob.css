@@ -248,7 +248,7 @@
 #modal-container {
   position: fixed;
   display: table;
-  height: 100%;
+  height: calc(100% + 100px);
   width: 100%;
   top: 0;
   left: 0;
