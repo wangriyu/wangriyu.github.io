@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /pages/
+Disallow: /page/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /tags/
+Disallow: /404.html
