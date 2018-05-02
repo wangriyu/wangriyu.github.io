@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
+    
+    <lastmod>2018-05-02T10:32:01.814Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.wangriyu.wang/about/index.html</loc>
     
     <lastmod>2018-04-24T11:49:41.251Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://blog.wangriyu.wang/2018/03-valine.html</loc>
     
     <lastmod>2018-03-23T05:04:10.530Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
-    
-    <lastmod>2018-03-20T08:11:45.759Z</lastmod>
     
   </url>
   
