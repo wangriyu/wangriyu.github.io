@@ -2,182 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
+    <loc>//blog.wangriyu.wang/2018/04-http-pki.html</loc>
     
-    <lastmod>2018-05-07T07:54:19.703Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
-    
-    <lastmod>2018-05-06T16:55:53.021Z</lastmod>
+    <lastmod>2018-05-16T06:01:37.667Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2018/03-valine.html</loc>
+    <loc>//blog.wangriyu.wang/2018/03-http-message.html</loc>
+    
+    <lastmod>2018-05-16T05:57:50.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2018/04-go-rpc.html</loc>
+    
+    <lastmod>2018-05-16T05:57:50.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2018/03-http-tls.html</loc>
+    
+    <lastmod>2018-05-16T05:57:50.515Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/06-JSNote3.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.594Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/10-MacSkills.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/08-Storage.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.544Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.537Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/08-Hexo.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.528Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.487Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/04-JSNote1.html</loc>
+    
+    <lastmod>2018-05-16T05:18:50.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
+    
+    <lastmod>2018-05-10T06:22:46.062Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2018/03-valine.html</loc>
     
     <lastmod>2018-05-06T16:55:53.015Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
-    
-    <lastmod>2018-05-06T16:55:53.010Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/08-Hexo.html</loc>
-    
-    <lastmod>2018-05-06T16:55:53.002Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2018/03-http-tls.html</loc>
-    
-    <lastmod>2018-05-06T16:55:52.995Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2018/04-http-pki.html</loc>
-    
-    <lastmod>2018-05-06T16:55:52.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
+    <loc>//blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
     
     <lastmod>2018-05-06T16:55:52.984Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    <loc>//blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
     
     <lastmod>2018-05-06T16:55:52.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/06-JSNote3.html</loc>
-    
-    <lastmod>2018-05-06T16:55:52.968Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2018/04-go-http.html</loc>
+    <loc>//blog.wangriyu.wang/2018/04-go-http.html</loc>
     
     <lastmod>2018-05-06T16:55:52.961Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/05-JSNote2.html</loc>
+    <loc>//blog.wangriyu.wang/2017/05-JSNote2.html</loc>
     
     <lastmod>2018-05-06T16:55:52.955Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2018/03-http-message.html</loc>
-    
-    <lastmod>2018-05-06T16:55:52.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/04-JSNote1.html</loc>
-    
-    <lastmod>2018-05-06T16:55:52.940Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>//blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-05-06T12:59:19.869Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
+    <loc>//blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
     
     <lastmod>2018-05-06T12:59:19.862Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/08-Storage.html</loc>
+    <loc>//blog.wangriyu.wang/2018/01-githubpage.html</loc>
     
     <lastmod>2018-05-06T12:59:19.862Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2018/01-githubpage.html</loc>
-    
-    <lastmod>2018-05-06T12:59:19.862Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/08-SystemIO.html</loc>
+    <loc>//blog.wangriyu.wang/2017/08-SystemIO.html</loc>
     
     <lastmod>2018-05-06T12:59:19.861Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
+    <loc>//blog.wangriyu.wang/2017/12-Dart%20IV.html</loc>
     
     <lastmod>2018-05-06T12:59:19.849Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
+    <loc>//blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
     
     <lastmod>2018-05-06T12:59:19.849Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/2017/12-Dart%20IV.html</loc>
-    
-    <lastmod>2018-05-06T12:59:19.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
-    
-    <lastmod>2018-05-06T12:59:19.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wangriyu.wang/about/index.html</loc>
+    <loc>//blog.wangriyu.wang/about/index.html</loc>
     
     <lastmod>2018-04-24T11:49:41.251Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang/tags/index.html</loc>
+    <loc>//blog.wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2018-03-14T07:41:34.110Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wangriyu.wang//404.html</loc>
+    <loc>//blog.wangriyu.wang//404.html</loc>
     
     <lastmod>2018-01-28T11:33:19.518Z</lastmod>
     
