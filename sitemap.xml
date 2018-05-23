@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.wangriyu.wang/about/index.html</loc>
+    
+    <lastmod>2018-05-23T05:46:28.196Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.wangriyu.wang/2018/04-http-pki.html</loc>
     
     <lastmod>2018-05-22T02:48:08.625Z</lastmod>
@@ -180,13 +187,6 @@
     <loc>//blog.wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2018-05-18T15:43:41.426Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.wangriyu.wang/about/index.html</loc>
-    
-    <lastmod>2018-04-24T11:49:41.251Z</lastmod>
     
   </url>
   
