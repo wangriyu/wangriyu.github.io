@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.wangriyu.wang/2018/03-http-tls.html</loc>
+    
+    <lastmod>2018-05-24T12:17:08.762Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2018/03-http-message.html</loc>
+    
+    <lastmod>2018-05-24T12:14:49.259Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.wangriyu.wang/2018/05-HTTP2.html</loc>
+    
+    <lastmod>2018-05-24T12:14:49.250Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.wangriyu.wang/about/index.html</loc>
     
     <lastmod>2018-05-23T05:46:28.196Z</lastmod>
@@ -44,13 +65,6 @@
   </url>
   
   <url>
-    <loc>//blog.wangriyu.wang/2018/03-http-message.html</loc>
-    
-    <lastmod>2018-05-22T02:48:08.573Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.wangriyu.wang/2018/04-go-rpc.html</loc>
     
     <lastmod>2018-05-22T02:48:08.562Z</lastmod>
@@ -86,23 +100,9 @@
   </url>
   
   <url>
-    <loc>//blog.wangriyu.wang/2018/03-http-tls.html</loc>
-    
-    <lastmod>2018-05-22T02:48:08.482Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
     
     <lastmod>2018-05-22T02:48:08.473Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.wangriyu.wang/2018/05-HTTP2.html</loc>
-    
-    <lastmod>2018-05-22T02:48:08.466Z</lastmod>
     
   </url>
   
