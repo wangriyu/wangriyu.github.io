@@ -1,518 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/03-http-message.html</loc>
-    <lastmod>2018-06-08T14:24:07.332Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP Message</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
-        
-        <tag>http 扩展阅读</tag>
-         
-         
-           
-             
-              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-06-08T14:24:07.332Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
-    <lastmod>2018-06-08T14:23:53.534Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Hexo 主题 Yelee</title>
-        <pubTime>2017-08-23T16:00:00.000Z</pubTime>
-        
-        <tag>Yelee</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-06-08T14:23:53.534Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
-    <lastmod>2018-06-08T14:23:27.616Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 I</title>
-        <pubTime>2017-10-04T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-06-08T14:23:27.616Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    <lastmod>2018-06-03T14:12:08.768Z</lastmod>
-    <data>
-        <display>
-        <title>博客搬家</title>
-        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-06-03T14:12:08.768Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/03-http-tls.html</loc>
-    <lastmod>2018-05-24T12:17:08.762Z</lastmod>
-    <data>
-        <display>
-        <title>SSL/TLS 详解</title>
-        <pubTime>2018-03-24T16:00:00.000Z</pubTime>
-        
-        <tag>http 扩展阅读</tag>
-         
-         
-           
-             
-              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-24T12:17:08.762Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
+    
     <lastmod>2018-05-24T12:14:49.250Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP2 详解</title>
-        <pubTime>2018-05-18T16:00:00.000Z</pubTime>
-        
-        <tag>http 扩展阅读</tag>
-         
-         
-           
-             
-              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/about/index.html</loc>
     
+    <lastmod>2018-05-23T05:46:28.196Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/04-http-pki.html</loc>
-    <lastmod>2018-05-22T02:48:08.625Z</lastmod>
-    <data>
-        <display>
-        <title>PKI 体系</title>
-        <pubTime>2018-04-02T16:00:00.000Z</pubTime>
-        
-        <tag>http 扩展阅读</tag>
-         
-         
-           
-             
-              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.625Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/05-JSNote2.html</loc>
-    <lastmod>2018-05-22T02:48:08.617Z</lastmod>
-    <data>
-        <display>
-        <title>0507-JS 笔记</title>
-        <pubTime>2017-05-06T16:00:00.000Z</pubTime>
-        
-        <tag>javaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://blog.wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.617Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
-    <lastmod>2018-05-22T02:48:08.607Z</lastmod>
-    <data>
-        <display>
-        <title>分享自用的一些软件、插件、网站和应用</title>
-        <pubTime>2017-09-13T16:00:00.000Z</pubTime>
-        
-        <tag>分享</tag>
-         
-        <tag>应用</tag>
-         
-        <tag>插件</tag>
-         
-         
-           
-             
-              <breadCrumb title="Share" url="https://blog.wangriyu.wang/categories/Share/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.607Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/08-SystemIO.html</loc>
-    <lastmod>2018-05-22T02:48:08.591Z</lastmod>
-    <data>
-        <display>
-        <title>系统 I/O</title>
-        <pubTime>2017-08-04T16:00:00.000Z</pubTime>
-        
-        <tag>深入理解计算机</tag>
-         
-         
-           
-             
-              <breadCrumb title="READ" url="https://blog.wangriyu.wang/categories/READ/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.591Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
-    <lastmod>2018-05-22T02:48:08.582Z</lastmod>
-    <data>
-        <display>
-        <title>masm for mac</title>
-        <pubTime>2017-11-23T16:00:00.000Z</pubTime>
-        
-        <tag>masm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="https://blog.wangriyu.wang/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.582Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
-    <lastmod>2018-05-22T02:48:08.562Z</lastmod>
-    <data>
-        <display>
-        <title>Golang RPC</title>
-        <pubTime>2018-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>go 源码</tag>
-         
-         
-           
-             
-              <breadCrumb title="go" url="https://blog.wangriyu.wang/categories/go/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.562Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
-    <lastmod>2018-05-22T02:48:08.549Z</lastmod>
-    <data>
-        <display>
-        <title>UEFI + GPT + Win10 + Ubuntu + rEFInd</title>
-        <pubTime>2017-12-13T16:00:00.000Z</pubTime>
-        
-        <tag>UEFI&amp;GPT</tag>
-         
-        <tag>win10&amp;Ubuntu 双系统</tag>
-         
-        <tag>rEFInd 引导美化</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer" url="https://blog.wangriyu.wang/categories/Computer/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.549Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/01-githubpage.html</loc>
-    <lastmod>2018-05-22T02:48:08.534Z</lastmod>
-    <data>
-        <display>
-        <title>GithubPages 绑定二级域名并开启 HTTPS</title>
-        <pubTime>2018-01-13T16:00:00.000Z</pubTime>
-        
-        <tag>Yelee</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.534Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/04-go-http.html</loc>
-    <lastmod>2018-05-22T02:48:08.520Z</lastmod>
-    <data>
-        <display>
-        <title>Golang http/server</title>
-        <pubTime>2018-04-19T16:00:00.000Z</pubTime>
-        
-        <tag>go 源码</tag>
-         
-         
-           
-             
-              <breadCrumb title="go" url="https://blog.wangriyu.wang/categories/go/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.520Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
-    <lastmod>2018-05-22T02:48:08.501Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 快速入门操作指南</title>
-        <pubTime>2017-10-14T16:00:00.000Z</pubTime>
-        
-        <tag>分享</tag>
-         
-        <tag>技巧</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="https://blog.wangriyu.wang/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.501Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
-    <lastmod>2018-05-22T02:48:08.473Z</lastmod>
-    <data>
-        <display>
-        <title>极具性价比的 Mac 存储扩展方案</title>
-        <pubTime>2017-12-23T16:00:00.000Z</pubTime>
-        
-        <tag>Mac 存储扩展</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="https://blog.wangriyu.wang/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-22T02:48:08.473Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
-    <lastmod>2018-05-18T16:12:53.107Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 V</title>
-        <pubTime>2017-12-28T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.107Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
-    <lastmod>2018-05-18T16:12:53.100Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 III</title>
-        <pubTime>2017-11-04T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.100Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
-    <lastmod>2018-05-18T16:12:53.062Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 II</title>
-        <pubTime>2017-10-25T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.062Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/12-Dart%20IV.html</loc>
-    <lastmod>2018-05-18T16:12:53.054Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 IV</title>
-        <pubTime>2017-11-30T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.054Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/04-JSNote1.html</loc>
-    <lastmod>2018-05-18T16:12:53.045Z</lastmod>
-    <data>
-        <display>
-        <title>0423-JS 笔记</title>
-        <pubTime>2017-04-22T16:00:00.000Z</pubTime>
-        
-        <tag>javaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://blog.wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.045Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/06-JSNote3.html</loc>
-    <lastmod>2018-05-18T16:12:53.014Z</lastmod>
-    <data>
-        <display>
-        <title>0611-JS 笔记</title>
-        <pubTime>2017-06-10T16:00:00.000Z</pubTime>
-        
-        <tag>javaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://blog.wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:53.014Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2017/08-Storage.html</loc>
-    <lastmod>2018-05-18T16:12:52.993Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器本地存储</title>
-        <pubTime>2017-08-14T16:00:00.000Z</pubTime>
-        
-        <tag>浏览器本地存储</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://blog.wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+    <lastmod>2018-05-18T16:12:52.993Z</lastmod>
+    
+  </url>
+  
   <url>
     <loc>https://blog.wangriyu.wang/2018/03-valine.html</loc>
+    
     <lastmod>2018-05-18T16:12:52.964Z</lastmod>
-    <data>
-        <display>
-        <title>更换博客评论系统</title>
-        <pubTime>2018-03-13T16:00:00.000Z</pubTime>
-        
-        <tag>Yelee</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang//404.html</loc>
     
+    <lastmod>2018-05-18T15:54:16.274Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
+    
+    <lastmod>2018-05-18T15:43:41.426Z</lastmod>
+    
+  </url>
+  
 </urlset>
