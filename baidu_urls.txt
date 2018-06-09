@@ -1,4 +1,6 @@
 https://blog.wangriyu.wang/2018/06-Tree.html
+https://blog.wangriyu.wang/2018/05-server-nextcloud.html
+https://blog.wangriyu.wang/2018/05-server-ftp.html
 https://blog.wangriyu.wang/2018/05-HTTP2.html
 https://blog.wangriyu.wang/2018/05-server-git.html
 https://blog.wangriyu.wang/2018/04-go-http.html

@@ -4,6 +4,74 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
+    <lastmod>2018-06-09T13:55:03.539Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS 搭建 FTP 服务</title>
+        <pubTime>2018-05-21T16:00:00.000Z</pubTime>
+        
+        <tag>server</tag>
+         
+        <tag>ftp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
+    <lastmod>2018-06-09T13:48:36.307Z</lastmod>
+    <data>
+        <display>
+        <title>搭建 docker 环境并用 docker 部署 nextcloud 网盘</title>
+        <pubTime>2018-05-28T16:00:00.000Z</pubTime>
+        
+        <tag>server</tag>
+         
+        <tag>nextcloud</tag>
+         
+        <tag>个人网盘</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
+    <lastmod>2018-06-09T09:31:17.315Z</lastmod>
+    <data>
+        <display>
+        <title>博客搬家</title>
+        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
+        
+        <tag>server</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2018/06-Tree.html</loc>
     <lastmod>2018-06-09T09:04:09.245Z</lastmod>
     <data>
@@ -21,26 +89,6 @@
            
              
               <breadCrumb title="数据结构和算法" url="https://blog.wangriyu.wang/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    <lastmod>2018-06-09T08:45:01.182Z</lastmod>
-    <data>
-        <display>
-        <title>博客搬家</title>
-        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
           
         </display>
     </data>
