@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>ALBUM</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen"/>
+  <script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <h1 class="header__title">相册</h1>
+</header>
+<div id="content" class="content content--center grid--loading">
+  <h3>2018-04-23</h3>
+  <hr />
+  <div id="box" class="grid grid--hidden">
+    <div class="grid__sizer"></div>
+  </div>
+</div>
+<a id="blog" title="返回博客" href="/">Blog</a>
+<a id="top" title="返回顶部" onclick="$('body,html').animate({scrollTop:0},1000)"></a>
+<script type="text/javascript" src="./imgs.js"></script>
+<script>
+for (let index in data) {
+  var box = document.getElementById('box')
+  for (var i = 0; i < data[index].length; i++) {
+    var gridItem = document.createElement('div')
+    gridItem.className = 'grid__item'
+    gridItem.innerHTML = '<a class="grid__link" rel="fancybox-thumb" href="' + data[index][i] + '"><img class="grid__img" src="' + data[index][i] + '" alt="" /></a>'
+    box.appendChild(gridItem)
+  }
+}
+</script>
+<script src="lib/imagesloaded.pkgd.min.js"></script>
+<script src="lib/masonry.pkgd.min.js"></script>
+<script src="lib/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  $('.grid__link').fancybox({
+    prevEffect: 'none',
+    nextEffect: 'none',
+    type: 'image'
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /pages/
+Disallow: /page/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /tags/
+Disallow: /404.html
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.bmp$
+Disallow: /*.gif$
