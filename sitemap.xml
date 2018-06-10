@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/06-Tree.html</loc>
+    
+    <lastmod>2018-06-10T02:26:56.512Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
     
     <lastmod>2018-06-09T14:39:44.009Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
     
     <lastmod>2018-06-09T09:31:17.315Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Tree.html</loc>
-    
-    <lastmod>2018-06-09T09:04:09.245Z</lastmod>
     
   </url>
   
