@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
+    <lastmod>2018-06-12T08:42:27.601Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP2 详解</title>
+        <pubTime>2018-05-18T16:00:00.000Z</pubTime>
+        
+        <tag>http 扩展阅读</tag>
+         
+        <tag>网络</tag>
+         
+         
+           
+             
+              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
     <lastmod>2018-06-11T01:18:22.264Z</lastmod>
     <data>
@@ -144,28 +166,6 @@
         <display>
         <title>SSL/TLS 详解</title>
         <pubTime>2018-03-24T16:00:00.000Z</pubTime>
-        
-        <tag>http 扩展阅读</tag>
-         
-        <tag>网络</tag>
-         
-         
-           
-             
-              <breadCrumb title="http" url="https://blog.wangriyu.wang/categories/http/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
-    <lastmod>2018-06-11T01:12:54.171Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP2 详解</title>
-        <pubTime>2018-05-18T16:00:00.000Z</pubTime>
         
         <tag>http 扩展阅读</tag>
          

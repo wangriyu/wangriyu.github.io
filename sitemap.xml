@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
+    
+    <lastmod>2018-06-12T08:42:27.601Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
     
     <lastmod>2018-06-11T01:18:22.264Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://blog.wangriyu.wang/2018/03-http-tls.html</loc>
     
     <lastmod>2018-06-11T01:13:03.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
-    
-    <lastmod>2018-06-11T01:12:54.171Z</lastmod>
     
   </url>
   
