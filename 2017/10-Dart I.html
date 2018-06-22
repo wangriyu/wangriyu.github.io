@@ -1,387 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
-
-    <!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鱼乐" />
-<meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"/>
-
-
-
-<meta name="description" content="A Tour of the Dart Language">
-<meta name="keywords" content="dart">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Dart 语法入门 I">
-<meta property="og:url" content="https://blog.wangriyu.wang/2017/10-Dart I.html">
-<meta property="og:site_name" content="Wangriyu’s Blog">
-<meta property="og:description" content="A Tour of the Dart Language">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-08T14:23:27.616Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dart 语法入门 I">
-<meta name="twitter:description" content="A Tour of the Dart Language">
-
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-<link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet">
-<script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script>
-
-
-    <link href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" type="text/css" href="/share/iconfont.css">
-    <link rel='stylesheet' href='/share/spongebob.min.css' type='text/css' media='all'/>
-
-
-
-<title>Dart 语法入门 I | Wangriyu’s Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-
-<link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
-
-<script>
-var yiliaConfig = {
-    fancybox: true,
-    isHome: false,
-    isPost: true,
-    isArchive: false,
-    isTag: false,
-    isCategory: false,
-    fancybox_js: "//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js",
-    search: true
-}
-</script>
-
-
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-<link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-
-<body>
-  <div id="container">
-    <div class="left-col">
-      <div class="backImg">
-    <img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px" />
-</div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic" data-aos="zoom-in">
-            <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鱼乐</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
-        
-
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
-
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>目标</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="//home.wangriyu.wang">主页</a></li>
-                        
-                            <li><a href="/archives/">归档</a></li>
-                        
-                            <li><a href="/pages/waterFallAlbum">相册</a></li>
-                        
-                            <li><a href="/about/">简历</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
-                            
-                                <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
-                            
-                                <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
-                            
-                                <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
-                            
-                                <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a>
-                            
-                        </ul>
-                      
-                        <ul class="social">
-                            <div style="position: absolute; top: 95%; left: 50%; margin-left: -30px;">
-                                <p style="display: block">
-                                    <a
-                                        class="donateIcon"
-                                        href="javascript:void(0)"
-                                        onmouseout="
-                                            var qr = document.getElementById('donate');
-                                            qr.style.display='none';
-                                        "
-                                        onmouseenter="
-                                            var qr = document.getElementById('donate');
-                                            qr.style.display='block';
-                                        ">
-                                        赏
-                                    </a>
-                                </p>
-                            </div>
-                        </ul>
-                      
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                    
-                        <section class="switch-part switch-part4">
-                    
-                        <div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div>
-                    </section>
-                
-            </div>
-        </div>
-    </header>
-    
-        <div id="donate">
-            <img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"/>
-            <div class="triangle"></div>
-        </div>
-    
-</div>
-    </div>
-    <script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script>
-    <script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script>
-    <div class="hide-left-col" title="隐藏侧栏">
-        <i class="fa fa-angle-double-left"></i>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic" data-aos="zoom-in">
-                <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1>
-            </hgroup>
-            
-                <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="//home.wangriyu.wang">主页</a></li>
-                
-                    <li><a href="/archives/">归档</a></li>
-                
-                    <li><a href="/pages/waterFallAlbum">相册</a></li>
-                
-                    <li><a href="/about/">简历</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <ul class="social">
-                    
-                        <a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
-                    
-                        <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
-                    
-                        <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                    
-                        <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
-                    
-                        <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
-                    
-                        <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
-                    
-                        <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
-                    
-                        <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a>
-                    
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
-</nav>
-      <div class="body-wrap"><article id="post-Dart I" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/10-Dart I.html" class="article-date">
-      <time datetime="2017-10-04T16:00:00.000Z" itemprop="datePublished">2017-10-05</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Dart 语法入门 I
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Dart/">Dart</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud" style="display: flex; flex-wrap: wrap">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dart/">dart</a></li></ul>
-        <span class="post-count">总字数2,038</span>
-        <span class="post-count">预计阅读9分钟</span>
-    </div>
-
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-          <h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 定义一个方法</span>
+<!DOCTYPE html><html lang="zh-Hans"><head><!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="author" content="鱼乐"><meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"><meta name="description" content="A Tour of the Dart Language"><meta name="keywords" content="dart"><meta property="og:type" content="article"><meta property="og:title" content="Dart 语法入门 I"><meta property="og:url" content="https://blog.wangriyu.wang/2017/10-Dart I.html"><meta property="og:site_name" content="Wangriyu’s Blog"><meta property="og:description" content="A Tour of the Dart Language"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2018-06-08T14:23:27.616Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Dart 语法入门 I"><meta name="twitter:description" content="A Tour of the Dart Language"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml"><link rel="shortcut icon" href="/favicon.ico"><link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet"><script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script><link href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet"><link rel="stylesheet" href="/css/style.css"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/share/iconfont.css"><link rel="stylesheet" href="/share/spongebob.min.css" type="text/css" media="all"><title>Dart 语法入门 I | Wangriyu’s Blog</title><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet"><script>var yiliaConfig={fancybox:!0,isHome:!1,isPost:!0,isArchive:!1,isTag:!1,isCategory:!1,fancybox_js:"//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js",search:!0}</script><script>yiliaConfig.jquery_ui=[!1]</script><script>yiliaConfig.rootUrl="/"</script><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css"><link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head></html><body><div id="container"><div class="left-col"><div class="backImg"><img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px"></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><form id="search-form"><input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false"> <i class="fa fa-times" onclick="resetSearch()"></i></form><div id="local-search-result"></div><p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p><div id="switch-btn" class="switch-btn"><div class="icon"><div class="icon-ctn"><div class="icon-wrap icon-house" data-idx="0"><div class="birdhouse"></div><div class="birdhouse_holes"></div></div><div class="icon-wrap icon-ribbon hide" data-idx="1"><div class="ribbon"></div></div><div class="icon-wrap icon-link hide" data-idx="2"><div class="loopback_l"></div><div class="loopback_r"></div></div><div class="icon-wrap icon-me hide" data-idx="3"><div class="user"></div><div class="shoulder"></div></div></div></div><div class="tips-box hide"><div class="tips-arrow"></div><ul class="tips-inner"><li>菜单</li><li>标签</li><li>友情链接</li><li>目标</li></ul></div></div><div id="switch-area" class="switch-area"><div class="switch-wrap"><section class="switch-part switch-part1"><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a></ul><ul class="social"><div style="position:absolute;top:95%;left:50%;margin-left:-30px"><p style="display:block"><a class="donateIcon" href="javascript:void(0)" onmouseout='var qr=document.getElementById("donate");qr.style.display="none"' onmouseenter='var qr=document.getElementById("donate");qr.style.display="block"'>赏</a></p></div></ul></nav></section><section class="switch-part switch-part2"><div class="widget tagcloud" id="js-tagcloud"><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul></div></section><section class="switch-part switch-part3"><div id="js-friends"><a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a> <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a> <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a></div></section><section class="switch-part switch-part4"><div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div></section></div></div></header><div id="donate"><img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"><div class="triangle"></div></div></div></div><script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script><script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script><div class="hide-left-col" title="隐藏侧栏"><i class="fa fa-angle-double-left"></i></div><div class="mid-col"><nav id="mobile-nav"><div class="overlay"><div class="slider-trigger"></div><h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li><div class="clearfix"></div></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a></ul></nav></header></div><link class="menu-list" tags="标签" friends="友情链接" about="目标"></nav><div class="body-wrap"><article id="post-Dart I" class="article article-type-post" itemscope itemprop="blogPost"><div class="article-meta"><a href="/2017/10-Dart I.html" class="article-date"><time datetime="2017-10-04T16:00:00.000Z" itemprop="datePublished">2017-10-05</time></a></div><div class="article-inner"><input type="hidden" class="isFancy"><header class="article-header"><h1 class="article-title" itemprop="name">Dart 语法入门 I</h1></header><div class="article-info article-info-post"><div class="article-category tagcloud"><a class="article-category-link" href="/categories/Dart/">Dart</a></div><div class="article-tag tagcloud" style="display:flex;flex-wrap:wrap"><ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dart/">dart</a></li></ul><span class="post-count">总字数2,038</span> <span class="post-count">预计阅读9分钟</span></div><div class="clearfix"></div></div><div class="article-entry" itemprop="articleBody"><h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 定义一个方法</span>
 <span class="token function">printNumber</span><span class="token punctuation">(</span>num aNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'The number is $aNumber.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -391,22 +9,7 @@ var yiliaConfig = {
   <span class="token keyword">var</span> number <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
   <span class="token function">printNumber</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// The number is 42</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="重要概念-Important-concepts"><a href="#重要概念-Important-concepts" class="headerlink" title="重要概念 Important concepts"></a>重要概念 Important concepts</h2><ul>
-<li>所有变量都可以看作对象 (object)，每个对象都是一个类的实例。<br>包括 numbers、function 和 null 都是对象。所有对象都继承自 Object 类。</li>
-<li>指定静态类型（比如代码示例中的 num）表明你想指定的变量用途。（未指定具体类型的变量在 debug 时会发现被指定为一个特殊的类型：dynamic）<br>为确保代码类型安全，查看 <a href="https://www.dartlang.org/guides/language/sound-dart" target="_blank" rel="noopener">稳定模式 Dart</a></li>
-<li>Dart 在运行前会解析所有代码。你可以先准备几点，比如使用类型和编译常量来捕获 errors 或者使代码运行更快。</li>
-<li>Dart 支持顶层方法，比如 main()。也可以绑定在一个类或者对象上（分别为静态和实例方法）。也可以在方法中定义方法。</li>
-<li>同理，Dart 也支持顶层变量，并且可以绑定到类或对象（静态和实例变量）。实例变量也称作字段或者属性。</li>
-<li>不同于 Java，Dart 没有关键字 public、protected 和 private。如果一个标识符以下划线 _ 开头，则它的库使私有的。详见 <a href="https://www.dartlang.org/guides/language/language-tour#libraries-and-visibility" target="_blank" rel="noopener">库和可见性</a></li>
-<li>标识符以字母和下划线 _ 开头，接着字母和数字的任意组合</li>
-<li>Dart 工具可以报告两种问题：警告 Warnings 和错误 errors。</li>
-<li>Dart 有两种运行模式：生产 (production) 和检查 (checked)。一般在检查模式开发和调试，最终部署到生产模式</li>
-<li>Production mode 是 Dart 程序一个速度优化的默认运行模式。Production mode 忽略断言语句（assert statements）和静态类型</li>
-<li>Checked mode 是开发人员友好的方式，可以帮助你在运行时捕捉一些类型的错误。例如，如果分配一个非数字来声明为一个 num 变量，然后在检查模式会抛出异常</li>
-</ul>
-<hr>
-<h2 id="变量-Variables"><a href="#变量-Variables" class="headerlink" title="变量 Variables"></a>变量 Variables</h2><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Voyager I'</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="重要概念-Important-concepts"><a href="#重要概念-Important-concepts" class="headerlink" title="重要概念 Important concepts"></a>重要概念 Important concepts</h2><ul><li>所有变量都可以看作对象 (object)，每个对象都是一个类的实例。<br>包括 numbers、function 和 null 都是对象。所有对象都继承自 Object 类。</li><li>指定静态类型（比如代码示例中的 num）表明你想指定的变量用途。（未指定具体类型的变量在 debug 时会发现被指定为一个特殊的类型：dynamic）<br>为确保代码类型安全，查看 <a href="https://www.dartlang.org/guides/language/sound-dart" target="_blank" rel="noopener">稳定模式 Dart</a></li><li>Dart 在运行前会解析所有代码。你可以先准备几点，比如使用类型和编译常量来捕获 errors 或者使代码运行更快。</li><li>Dart 支持顶层方法，比如 main()。也可以绑定在一个类或者对象上（分别为静态和实例方法）。也可以在方法中定义方法。</li><li>同理，Dart 也支持顶层变量，并且可以绑定到类或对象（静态和实例变量）。实例变量也称作字段或者属性。</li><li>不同于 Java，Dart 没有关键字 public、protected 和 private。如果一个标识符以下划线 _ 开头，则它的库使私有的。详见 <a href="https://www.dartlang.org/guides/language/language-tour#libraries-and-visibility" target="_blank" rel="noopener">库和可见性</a></li><li>标识符以字母和下划线 _ 开头，接着字母和数字的任意组合</li><li>Dart 工具可以报告两种问题：警告 Warnings 和错误 errors。</li><li>Dart 有两种运行模式：生产 (production) 和检查 (checked)。一般在检查模式开发和调试，最终部署到生产模式</li><li>Production mode 是 Dart 程序一个速度优化的默认运行模式。Production mode 忽略断言语句（assert statements）和静态类型</li><li>Checked mode 是开发人员友好的方式，可以帮助你在运行时捕捉一些类型的错误。例如，如果分配一个非数字来声明为一个 num 变量，然后在检查模式会抛出异常</li></ul><hr><h2 id="变量-Variables"><a href="#变量-Variables" class="headerlink" title="变量 Variables"></a>变量 Variables</h2><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Voyager I'</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> year <span class="token operator">=</span> <span class="token number">1977</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> antennaDiameter <span class="token operator">=</span> <span class="token number">3.7</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> flybyObjects <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Jupiter'</span><span class="token punctuation">,</span> <span class="token string">'Saturn'</span><span class="token punctuation">,</span> <span class="token string">'Uranus'</span><span class="token punctuation">,</span> <span class="token string">'Neptune'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -414,18 +17,13 @@ var yiliaConfig = {
   <span class="token string">'tags'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'saturn'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token string">'url'</span><span class="token punctuation">:</span> '<span class="token comment" spellcheck="true">//path/to/saturn.jpg'</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><p>未初始化的变量值为 null，即使指定了数字类型也是 null，因为 numbers 也是对象。</p>
-<pre class="line-numbers language-dart"><code class="language-dart">int lineCount<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><p>未初始化的变量值为 null，即使指定了数字类型也是 null，因为 numbers 也是对象。</p><pre class="line-numbers language-dart"><code class="language-dart">int lineCount<span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>lineCount <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// Variables (even if they will be numbers) are initially null.</span>
 <span class="token comment" spellcheck="true">// assert(condition) 方法只在检查模式下有用，表达式的值或者函数返回 true，则 assert 语句成功并继续执行代码。如果值为 false，则 assert 语句失败并抛出一个异常 (AssertionError)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="final-和-const"><a href="#final-和-const" class="headerlink" title="final 和 const"></a>final 和 const</h3><p>一个 final 变量只能设定一次且不能更改，一个 const 变量是编译时变量（const 变量是隐式 final 变量）。<br>一个 final 的顶层变量或者类变量，会在它第一次被调用时初始化。</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">final</span> name <span class="token operator">=</span> <span class="token string">'Bob'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Or: final String name = 'Bob';</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="final-和-const"><a href="#final-和-const" class="headerlink" title="final 和 const"></a>final 和 const</h3><p>一个 final 变量只能设定一次且不能更改，一个 const 变量是编译时变量（const 变量是隐式 final 变量）。<br>一个 final 的顶层变量或者类变量，会在它第一次被调用时初始化。</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">final</span> name <span class="token operator">=</span> <span class="token string">'Bob'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Or: final String name = 'Bob';</span>
 name <span class="token operator">=</span> <span class="token string">'Alice'</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Uncommenting this causes an error</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// [] 创建一个空数组，const [] 创建一个不可变空数组 (EIA)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// [] 创建一个空数组，const [] 创建一个不可变空数组 (EIA)</span>
 <span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// foo 当前是 EIA</span>
 <span class="token keyword">final</span> bar <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// bar 一直是 EIA</span>
 <span class="token keyword">const</span> baz <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// baz 是编译时的 EIA</span>
@@ -434,10 +32,7 @@ name <span class="token operator">=</span> <span class="token string">'Alice'</s
 foo <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">// 但 bar、baz 不能更改</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="可选的静态类型"><a href="#可选的静态类型" class="headerlink" title="可选的静态类型"></a>可选的静态类型</h3><p>变量类型包括：numbers、strings、booleans、lists（也就是数组）、maps、runs、symbols。<br>每个变量类型有自定义的构造函数，比如 new Map() 创建一个 map 变量。</p>
-<p><code>数字类型 numbers</code> 分 int（-2e53 ～ 2e53）和 double 型（IEEE 754 标准）, 支持 abs()、ceil() 等 <a href="https://api.dartlang.org/stable/dart-math/dart-math-library.html" target="_blank" rel="noopener">math 函数</a>。<br>int 型支持位运算，如&lt;&lt;、&gt;&gt;、&amp; 和 |</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 类型转换</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="可选的静态类型"><a href="#可选的静态类型" class="headerlink" title="可选的静态类型"></a>可选的静态类型</h3><p>变量类型包括：numbers、strings、booleans、lists（也就是数组）、maps、runs、symbols。<br>每个变量类型有自定义的构造函数，比如 new Map() 创建一个 map 变量。</p><p><code>数字类型 numbers</code> 分 int（-2e53 ～ 2e53）和 double 型（IEEE 754 标准）, 支持 abs()、ceil() 等 <a href="https://api.dartlang.org/stable/dart-math/dart-math-library.html" target="_blank" rel="noopener">math 函数</a>。<br>int 型支持位运算，如&lt;&lt;、&gt;&gt;、&amp; 和 |</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 类型转换</span>
 <span class="token comment" spellcheck="true">// String -> int</span>
 <span class="token keyword">var</span> one <span class="token operator">=</span> int<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>one <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -453,10 +48,7 @@ String oneAsString <span class="token operator">=</span> <span class="token numb
 <span class="token comment" spellcheck="true">// double -> String</span>
 String piAsString <span class="token operator">=</span> <span class="token number">3.14159</span><span class="token punctuation">.</span><span class="token function">toStringAsFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>piAsString <span class="token operator">==</span> <span class="token string">'3.14'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="字符串类型-Strings"><a href="#字符串类型-Strings" class="headerlink" title="字符串类型 Strings"></a>字符串类型 Strings</h3><p>Strings 是 UTF-16 代码单元的序列，可以使用单引号或双引号创建一个字符串。</p>
-<p>可以通过使用 ${expression} 把一个表达式的值放进字符串。如果表达式是一个标识符，你可以跳过{}。为了获得相应对象的字符串，Dart 调用对象的 toString（）方法。</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">'string interpolation'</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="字符串类型-Strings"><a href="#字符串类型-Strings" class="headerlink" title="字符串类型 Strings"></a>字符串类型 Strings</h3><p>Strings 是 UTF-16 代码单元的序列，可以使用单引号或双引号创建一个字符串。</p><p>可以通过使用 ${expression} 把一个表达式的值放进字符串。如果表达式是一个标识符，你可以跳过{}。为了获得相应对象的字符串，Dart 调用对象的 toString（）方法。</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">'string interpolation'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">assert</span><span class="token punctuation">(</span><span class="token string">'Dart has $s, which is very handy.'</span> <span class="token operator">==</span>
        <span class="token string">'Dart has string interpolation, '</span> <span class="token operator">+</span>
@@ -465,9 +57,7 @@ String piAsString <span class="token operator">=</span> <span class="token numbe
        <span class="token string">'${s.toUpperCase()} is very handy!'</span> <span class="token operator">==</span>
        <span class="token string">'That deserves all caps. '</span> <span class="token operator">+</span>
        <span class="token string">'STRING INTERPOLATION is very handy!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>可以利用相邻字符串或 + 运算符连接字符串：</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token string">'String '</span> <span class="token string">'concatenation'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以利用相邻字符串或 + 运算符连接字符串：</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token string">'String '</span> <span class="token string">'concatenation'</span>
          <span class="token string">" works even over line breaks."</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>s1 <span class="token operator">==</span> <span class="token string">'String concatenation works even over '</span>
              <span class="token string">'line breaks.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
@@ -475,23 +65,15 @@ String piAsString <span class="token operator">=</span> <span class="token numbe
 <span class="token keyword">var</span> s2 <span class="token operator">=</span> <span class="token string">'The + operator '</span>
          <span class="token operator">+</span> <span class="token string">'works, as well.'</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>s2 <span class="token operator">==</span> <span class="token string">'The + operator works, as well.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>使用三个单或双引号创建一个多行字符串</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token string">'''
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用三个单或双引号创建一个多行字符串</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token string">'''
 You can create
 multi-line strings like this one.
 '''</span><span class="token punctuation">;</span>
 
 <span class="token keyword">var</span> s2 <span class="token operator">=</span> <span class="token string">"""This is also a multi-line string."""</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>带有 r 的前缀来创建一个“raw”的字符串</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">r"In a raw string, even \n isn't special."</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>支持 Unicode 转义</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'Unicode escapes work: \u2665'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="布尔类型-booleans"><a href="#布尔类型-booleans" class="headerlink" title="布尔类型 booleans"></a>布尔类型 booleans</h3><p>不同于 javaScript，1、“aString”、someObject 都视为假的</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Bob'</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>带有 r 的前缀来创建一个“raw”的字符串</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">r"In a raw string, even \n isn't special."</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>支持 Unicode 转义</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'Unicode escapes work: \u2665'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="布尔类型-booleans"><a href="#布尔类型-booleans" class="headerlink" title="布尔类型 booleans"></a>布尔类型 booleans</h3><p>不同于 javaScript，1、“aString”、someObject 都视为假的</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Bob'</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// JavaScript 中会产生打印，而 Dart 中不会</span>
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'in javaScript, You have a name!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -505,9 +87,7 @@ multi-line strings like this one.
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'Dart in production mode prints this line.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 但在 checked 模式下会抛出一个异常，因为 1 不是一个 boolean</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Dart 的判断条件应该指定为布尔类型，不能使用 if（nonbooleanValue），这个在检查模式下会抛出异常</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 检查一个空字符串.</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Dart 的判断条件应该指定为布尔类型，不能使用 if（nonbooleanValue），这个在检查模式下会抛出异常</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token comment" spellcheck="true">// 检查一个空字符串.</span>
 <span class="token keyword">var</span> fullName <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>fullName<span class="token punctuation">.</span>isEmpty<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -522,9 +102,7 @@ multi-line strings like this one.
 <span class="token comment" spellcheck="true">// 检查 NaN.</span>
 <span class="token keyword">var</span> iMeantToDoThis <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>iMeantToDoThis<span class="token punctuation">.</span>isNaN<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="列表类型-List"><a href="#列表类型-List" class="headerlink" title="列表类型 List"></a>列表类型 List</h3><p>在 Dart，数组是列表对象，所以我们通常只是将其称为 lists。<br>常见用法与 javaScript 类似：</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apples'</span><span class="token punctuation">,</span> <span class="token string">'oranges'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 也可以用构造函数 new List('apples', 'oranges')</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="列表类型-List"><a href="#列表类型-List" class="headerlink" title="列表类型 List"></a>列表类型 List</h3><p>在 Dart，数组是列表对象，所以我们通常只是将其称为 lists。<br>常见用法与 javaScript 类似：</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apples'</span><span class="token punctuation">,</span> <span class="token string">'oranges'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 也可以用构造函数 new List('apples', 'oranges')</span>
 <span class="token comment" spellcheck="true">// 如果指定类型, new List&lt;String>('apples') 或者&lt;String>['apples'] 则只能存放字符类型, 否则在检查模式下加入非指定类型元素会抛出异常</span>
 
 fruits<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'kiwis'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 添加元素</span>
@@ -547,10 +125,7 @@ fruits<span class="token punctuation">.</span><span class="token function">remov
 <span class="token comment" spellcheck="true">// 清空列表</span>
 fruits<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">assert</span><span class="token punctuation">(</span>fruits<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>更多用法详见 <a href="https://www.dartlang.org/guides/language/language-tour#generics" target="_blank" rel="noopener">泛型 Generics</a> 和 <a href="https://www.dartlang.org/docs/dart-up-and-running/ch03.html#collections" target="_blank" rel="noopener">集合 Collections</a>。</p>
-<h3 id="Maps-类型"><a href="#Maps-类型" class="headerlink" title="Maps 类型"></a>Maps 类型</h3><p>一般情况下，map 是一个键值对组成的对象，这两个键和值可以是任何类型的对象。</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> gifts <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>更多用法详见 <a href="https://www.dartlang.org/guides/language/language-tour#generics" target="_blank" rel="noopener">泛型 Generics</a> 和 <a href="https://www.dartlang.org/docs/dart-up-and-running/ch03.html#collections" target="_blank" rel="noopener">集合 Collections</a>。</p><h3 id="Maps-类型"><a href="#Maps-类型" class="headerlink" title="Maps 类型"></a>Maps 类型</h3><p>一般情况下，map 是一个键值对组成的对象，这两个键和值可以是任何类型的对象。</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">var</span> gifts <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token string">'first'</span> <span class="token punctuation">:</span> <span class="token string">'partridge'</span><span class="token punctuation">,</span>
   <span class="token string">'second'</span><span class="token punctuation">:</span> <span class="token string">'turtledoves'</span><span class="token punctuation">,</span>
   <span class="token string">'fifth'</span> <span class="token punctuation">:</span> <span class="token string">'golden rings'</span>
@@ -582,9 +157,7 @@ nobleGases<span class="token punctuation">[</span><span class="token number">18<
   <span class="token number">18</span><span class="token punctuation">:</span> <span class="token string">'argon'</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 constantMap<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'Helium'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 会报错，因为不可更改</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Runes-符号类型"><a href="#Runes-符号类型" class="headerlink" title="Runes 符号类型"></a>Runes 符号类型</h3><p>在 Dart 中，runes 是字符串的 UTF-32 点。Unicode 给每个字符定义了一个值。因为 Dart 中的字符串是 UTF-16 单元的序列，所以表达 32 位 Unicode 值需要特定的语法来实现。<br>通常一个 Unicode 码的形式是 /uXXXX，XXXX 是 4 位 16 进制的值，比如 \u2665 代表 ♥ 这个符号，当指定多于或少于 4 位的 16 进制时用{}包裹，比如 \u{1f600}代表 😆 这个符号。<br>字符串的属性方法中 codeUnitAt 和 codeUnit 返回 16 位代码单元，runes 属性方法用于获取 String 类型的 runes 值：</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Runes-符号类型"><a href="#Runes-符号类型" class="headerlink" title="Runes 符号类型"></a>Runes 符号类型</h3><p>在 Dart 中，runes 是字符串的 UTF-32 点。Unicode 给每个字符定义了一个值。因为 Dart 中的字符串是 UTF-16 单元的序列，所以表达 32 位 Unicode 值需要特定的语法来实现。<br>通常一个 Unicode 码的形式是 /uXXXX，XXXX 是 4 位 16 进制的值，比如 \u2665 代表 ♥ 这个符号，当指定多于或少于 4 位的 16 进制时用{}包裹，比如 \u{1f600}代表 😆 这个符号。<br>字符串的属性方法中 codeUnitAt 和 codeUnit 返回 16 位代码单元，runes 属性方法用于获取 String 类型的 runes 值：</p><pre class="line-numbers language-dart"><code class="language-dart"><span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> clapping <span class="token operator">=</span> <span class="token string">'\u{1f44f}'</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span>clapping<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span>clapping<span class="token punctuation">.</span>codeUnits<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -599,301 +172,6 @@ constantMap<span class="token punctuation">[</span><span class="token number">2<
 <span class="token punctuation">[</span><span class="token number">55357</span><span class="token punctuation">,</span> <span class="token number">56399</span><span class="token punctuation">]</span>
 <span class="token punctuation">[</span><span class="token number">128079</span><span class="token punctuation">]</span>
 ♥  😅  😎  👻  🖖  👍
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="符号类型-symbols"><a href="#符号类型-symbols" class="headerlink" title="符号类型 symbols"></a>符号类型 symbols</h3><p>一个符号对象表示在 Dart 程序中声明的操作符或标识。你可能不会需要使用这些符号，但他们对于由名字指向的 API 是很有用的，因为时常要改变的是标识符的名字，而不是标识符的符号。</p>
-<p>为了得到符号的标识，使用符号的文本，只是＃后跟标识符：</p>
-<pre class="line-numbers language-dart"><code class="language-dart">#radix
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="符号类型-symbols"><a href="#符号类型-symbols" class="headerlink" title="符号类型 symbols"></a>符号类型 symbols</h3><p>一个符号对象表示在 Dart 程序中声明的操作符或标识。你可能不会需要使用这些符号，但他们对于由名字指向的 API 是很有用的，因为时常要改变的是标识符的名字，而不是标识符的符号。</p><p>为了得到符号的标识，使用符号的文本，只是＃后跟标识符：</p><pre class="line-numbers language-dart"><code class="language-dart">#radix
 #bar
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>更多详细信息见 <a href="https://www.dartlang.org/docs/dart-up-and-running/ch03.html#dartmirrors---reflection" target="_blank" rel="noopener">Dart: mirrors—reflection</a></p>
-
-          <script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script>
-<div id="aplayer"></div>
-<script src="/js/player.js"></script>
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/10-Dart I.html">Dart 语法入门 I</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p>
-        <p><span>发布时间:</span>2017-10-05, 00:00:00</p>
-        <p><span>最后更新:</span>2018-06-08, 22:23:27</p>
-        <p><span>原始链接:</span><a class="post-url" href="/2017/10-Dart I.html" title="Dart 语法入门 I">https://blog.wangriyu.wang/2017/10-Dart I.html</a></p>
-        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10-MacSkills.html">
-                    Mac 快速入门操作指南
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/09-ShareArtifact.html">
-                    分享自用的一些软件、插件、网站和应用
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码示例"><span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重要概念-Important-concepts"><span class="toc-text">重要概念 Important concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量-Variables"><span class="toc-text">变量 Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#默认值"><span class="toc-text">默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final-和-const"><span class="toc-text">final 和 const</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可选的静态类型"><span class="toc-text">可选的静态类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型-Strings"><span class="toc-text">字符串类型 Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔类型-booleans"><span class="toc-text">布尔类型 booleans</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表类型-List"><span class="toc-text">列表类型 List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maps-类型"><span class="toc-text">Maps 类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Runes-符号类型"><span class="toc-text">Runes 符号类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#符号类型-symbols"><span class="toc-text">符号类型 symbols</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-6 i,
-        .toc-level-6 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-        if ($(".left-col").is(":hidden")) {
-          $("#tocButton").attr("value", yiliaConfig.toc[1]);
-        }
-    </script>
-
-
-
-    <div class="share">
-    
-
-    
-
-    
-      <div class="social_share">
-        <ul id="social_list" class="social_icon_list"></ul>
-      </div>
-      <script>
-        var shareConfig = {
-          title: 'Dart 语法入门 I',
-          url: window.location.href,
-          author: '鱼乐',
-          img: 'https://src.wangriyu.wang/images/blog/avatar.jpg'
-        }
-      </script>
-      <script src="/share/qrcode.min.js"></script>
-      <script src="/js/spongebob.min.js"></script>
-    
-</div>
-
-
-
-
-    
-        <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
-    <div id="vcomment" class="comment"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <script>
-      new Valine({
-        el: '#vcomment',
-        notify: 'true',
-        verify: 'false',
-        app_id: "iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",
-        app_key: "lpS7UTUdJ4DkttQMlw4ulEFP",
-        placeholder: "Just do it !",
-        avatar: "retro"
-      });
-    </script>
-</section>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/10-MacSkills.html" title="上一篇: Mac 快速入门操作指南">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/09-ShareArtifact.html" title="下一篇: 分享自用的一些软件、插件、网站和应用">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2017-2018 冀-18010769-1
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i>
-            </div>
-        </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
-    </div>
-</footer>
-    </div>
-    <script type="application/javascript">
-      var hide = false, leftWidth = 300;
-      function hideLeftCol() {
-        if (hide) {
-          $(".left-col").width(leftWidth);
-          $(".left-col .intrude-less").css('display', '');
-          $("#tocButton").css('display', '');
-          ($('#switch-btn').css('display') === 'block' && $('#switch-area').css('display') === 'block') || $('#toc').slideDown(320);
-          $(".hide-left-col").css("left", leftWidth).html('<i class="fa fa-angle-double-left"></i>');
-          $(".mid-col").css("left", leftWidth)
-          $("#post-nav-button").css("left", leftWidth)
-          $("#post-nav-button > a:nth-child(2)").css("display", "block")
-          hide = false
-        } else {
-          $(".left-col").width(0);
-          $(".left-col .intrude-less").css('display', 'none');
-          $("#toc").css('display', 'none');
-          $("#tocButton").css('display', 'none');
-          $(".hide-left-col").css("left", 0).html('<i class="fa fa-angle-double-right"></i>');
-          $(".mid-col").css("left", 0)
-          $("#post-nav-button").css("left", 0)
-          $("#post-nav-button > a:nth-child(2)").css("display", "none")
-          if ($(".post-list").is(":visible")) {
-            $("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle();
-            $(".post-list").toggle();
-          }
-          hide = true
-        }
-      }
-      $(".hide-left-col").click(function() {
-        hideLeftCol()
-      });
-    </script>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date()
-    a = s.createElement(o), m = s.getElementsByTagName(o)[0]
-    a.async = 1
-    a.src = g
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
-
-  ga('create', 'UA-106179639-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-
-
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script>
-<script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-             post: ".copyright a[href]", 
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-    <script>
-        var originTitle = document.title;
-        var titleTime;
-        document.addEventListener("visibilitychange", function() {
-            if (document.hidden) {
-                document.title = "(つェ⊂)" + originTitle;
-                clearTimeout(titleTime);
-            }
-            else {
-                document.title = "(*´∇｀*)~ " + originTitle;
-                titleTime = setTimeout(function() {
-                    document.title = originTitle;
-                }, 2000);
-            }
-        })
-    </script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
-  
-  <script>
-    AOS.init({
-      easing: 'ease-out-back',
-      once: true,
-    });
-  </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
-</html>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>更多详细信息见 <a href="https://www.dartlang.org/docs/dart-up-and-running/ch03.html#dartmirrors---reflection" target="_blank" rel="noopener">Dart: mirrors—reflection</a></p><script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script><div id="aplayer"></div><script src="/js/player.js"></script></div></div><div class="copyright"><p><span>本文标题:</span><a href="/2017/10-Dart I.html">Dart 语法入门 I</a></p><p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p><p><span>发布时间:</span>2017-10-05, 00:00:00</p><p><span>最后更新:</span>2018-06-08, 22:23:27</p><p><span>原始链接:</span><a class="post-url" href="/2017/10-Dart I.html" title="Dart 语法入门 I">https://blog.wangriyu.wang/2017/10-Dart I.html</a></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p></div><nav id="article-nav"><div id="article-nav-newer" class="article-nav-title"><a href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></div><div id="article-nav-older" class="article-nav-title"><a href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></div></nav></article><div id="toc" class="toc-article"><strong class="toc-title">文章目录</strong><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码示例"><span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重要概念-Important-concepts"><span class="toc-text">重要概念 Important concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量-Variables"><span class="toc-text">变量 Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#默认值"><span class="toc-text">默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final-和-const"><span class="toc-text">final 和 const</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可选的静态类型"><span class="toc-text">可选的静态类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型-Strings"><span class="toc-text">字符串类型 Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔类型-booleans"><span class="toc-text">布尔类型 booleans</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表类型-List"><span class="toc-text">列表类型 List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maps-类型"><span class="toc-text">Maps 类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Runes-符号类型"><span class="toc-text">Runes 符号类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#符号类型-symbols"><span class="toc-text">符号类型 symbols</span></a></li></ol></li></ol></div><style>.left-col .switch-area,.left-col .switch-btn{display:none}.toc-level-6 i,.toc-level-6 ol{display:none!important}</style><input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录"><script>yiliaConfig.toc=["隐藏目录","显示目录",!0],$(".left-col").is(":hidden")&&$("#tocButton").attr("value",yiliaConfig.toc[1])</script><div class="share"><div class="social_share"><ul id="social_list" class="social_icon_list"></ul></div><script>var shareConfig={title:"Dart 语法入门 I",url:window.location.href,author:"鱼乐",img:"https://src.wangriyu.wang/images/blog/avatar.jpg"}</script><script src="/share/qrcode.min.js"></script><script src="/js/spongebob.min.js"></script></div><section id="comments" style="margin:2em;padding:2em;background:rgba(255,255,255,.5)"><div id="vcomment" class="comment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el:"#vcomment",notify:"true",verify:"false",app_id:"iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",app_key:"lpS7UTUdJ4DkttQMlw4ulEFP",placeholder:"Just do it !",avatar:"retro"})</script></section><div class="scroll" id="post-nav-button"><a href="/2017/10-MacSkills.html" title="上一篇: Mac 快速入门操作指南"><i class="fa fa-angle-left"></i> </a><a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a> <a href="/2017/09-ShareArtifact.html" title="下一篇: 分享自用的一些软件、插件、网站和应用"><i class="fa fa-angle-right"></i></a></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul><script></script></div><footer id="footer"><div class="outer"><div id="footer-info"><div class="footer-left"><i class="fa fa-copyright"></i> 2017-2018 冀-18010769-1</div><div class="footer-right"><a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a> Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i></div></div><div class="visit"><span id="busuanzi_container_site_pv" style="display:none"><span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span> </span></span><span>| </span><span id="busuanzi_container_page_pv" style="display:none"><span id="page-visit" title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span></span></span></div></div></footer></div><script type="application/javascript">var hide=!1,leftWidth=300;function hideLeftCol(){hide?($(".left-col").width(leftWidth),$(".left-col .intrude-less").css("display",""),$("#tocButton").css("display",""),"block"===$("#switch-btn").css("display")&&"block"===$("#switch-area").css("display")||$("#toc").slideDown(320),$(".hide-left-col").css("left",leftWidth).html('<i class="fa fa-angle-double-left"></i>'),$(".mid-col").css("left",leftWidth),$("#post-nav-button").css("left",leftWidth),$("#post-nav-button > a:nth-child(2)").css("display","block"),hide=!1):($(".left-col").width(0),$(".left-col .intrude-less").css("display","none"),$("#toc").css("display","none"),$("#tocButton").css("display","none"),$(".hide-left-col").css("left",0).html('<i class="fa fa-angle-double-right"></i>'),$(".mid-col").css("left",0),$("#post-nav-button").css("left",0),$("#post-nav-button > a:nth-child(2)").css("display","none"),$(".post-list").is(":visible")&&($("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle(),$(".post-list").toggle()),hide=!0)}$(".hide-left-col").click(function(){hideLeftCol()})</script><script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script><script type="text/javascript">!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script"),ga("create","UA-106179639-1","auto"),ga("send","pageview")</script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script><script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="scroll" id="scroll"><a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a> <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a> <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a></div><script>var oOpenInNew={post:".copyright a[href]",friends:"#js-friends a",socail:".social a"};for(var x in oOpenInNew)$(oOpenInNew[x]).attr("target","_blank")</script><script>var titleTime,originTitle=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="(つェ⊂)"+originTitle,clearTimeout(titleTime)):(document.title="(*´∇｀*)~ "+originTitle,titleTime=setTimeout(function(){document.title=originTitle},2e3))})</script><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>AOS.init({easing:"ease-out-back",once:!0})</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
