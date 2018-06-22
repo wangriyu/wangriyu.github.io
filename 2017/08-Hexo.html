@@ -1,10 +1,422 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="author" content="鱼乐"><meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"><meta name="description" content="更换博客主题 Yelee 的前前后后"><meta name="keywords" content="Yelee"><meta property="og:type" content="article"><meta property="og:title" content="使用 Hexo 主题 Yelee"><meta property="og:url" content="https://blog.wangriyu.wang/2017/08-Hexo.html"><meta property="og:site_name" content="Wangriyu’s Blog"><meta property="og:description" content="更换博客主题 Yelee 的前前后后"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/miniArchives.png"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/list.png"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/error.png"><meta property="og:updated_time" content="2018-06-17T12:53:29.456Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用 Hexo 主题 Yelee"><meta name="twitter:description" content="更换博客主题 Yelee 的前前后后"><meta name="twitter:image" content="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml"><link rel="shortcut icon" href="/favicon.ico"><link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet"><script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script><link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet"><link rel="stylesheet" href="/css/style.css"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/pages/share/iconfont.css"><link rel="stylesheet" href="/pages/share/spongebob.min.css" type="text/css" media="all"><title>使用 Hexo 主题 Yelee | Wangriyu’s Blog</title><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet"><script>var yiliaConfig={fancybox:!0,isHome:!1,isPost:!0,isArchive:!1,isTag:!1,isCategory:!1,fancybox_js:"//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",search:!0}</script><script>yiliaConfig.jquery_ui=[!1]</script><script>yiliaConfig.rootUrl="/"</script><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css"><link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head></html><body><div id="container"><div class="left-col"><div class="backImg"><img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px"></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><form id="search-form"><input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false"> <i class="fa fa-times" onclick="resetSearch()"></i></form><div id="local-search-result"></div><p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p><div id="switch-btn" class="switch-btn"><div class="icon"><div class="icon-ctn"><div class="icon-wrap icon-house" data-idx="0"><div class="birdhouse"></div><div class="birdhouse_holes"></div></div><div class="icon-wrap icon-ribbon hide" data-idx="1"><div class="ribbon"></div></div><div class="icon-wrap icon-link hide" data-idx="2"><div class="loopback_l"></div><div class="loopback_r"></div></div><div class="icon-wrap icon-me hide" data-idx="3"><div class="user"></div><div class="shoulder"></div></div></div></div><div class="tips-box hide"><div class="tips-arrow"></div><ul class="tips-inner"><li>菜单</li><li>标签</li><li>友情链接</li><li>目标</li></ul></div></div><div id="switch-area" class="switch-area"><div class="switch-wrap"><section class="switch-part switch-part1"><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a></ul><ul class="social"><div style="position:absolute;top:95%;left:50%;margin-left:-30px"><p style="display:block"><a class="donateIcon" href="javascript:void(0)" onmouseout='var qr=document.getElementById("donate");qr.style.display="none"' onmouseenter='var qr=document.getElementById("donate");qr.style.display="block"'>赏</a></p></div></ul></nav></section><section class="switch-part switch-part2"><div class="widget tagcloud" id="js-tagcloud"><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul></div></section><section class="switch-part switch-part3"><div id="js-friends"><a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a> <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a> <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a></div></section><section class="switch-part switch-part4"><div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div></section></div></div></header><div id="donate"><img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"><div class="triangle"></div></div></div></div><script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script><script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script><div class="hide-left-col" title="隐藏侧栏"><i class="fa fa-angle-double-left"></i></div><div class="mid-col"><nav id="mobile-nav"><div class="overlay"><div class="slider-trigger"></div><h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li><div class="clearfix"></div></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a></ul></nav></header></div><link class="menu-list" tags="标签" friends="友情链接" about="目标"></nav><div class="body-wrap"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost"><div class="article-meta"><a href="/2017/08-Hexo.html" class="article-date"><time datetime="2017-08-23T16:00:00.000Z" itemprop="datePublished">2017-08-24</time></a></div><div class="article-inner"><input type="hidden" class="isFancy"><header class="article-header"><h1 class="article-title" itemprop="name">使用 Hexo 主题 Yelee</h1></header><div class="article-info article-info-post"><div class="article-category tagcloud"><a class="article-category-link" href="/categories/Web/">Web</a></div><div class="article-tag tagcloud" style="display:flex;flex-wrap:wrap"><ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Yelee/">Yelee</a></li></ul><span class="post-count">总字数4,905</span> <span class="post-count">预计阅读25分钟</span></div><div class="clearfix"></div></div><div class="article-entry" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前使用的是 next 主题，虽然 next 很强大，但是 next 的样式并不是我很喜欢的类型。<br>后来无意间在别人博客上看到这种双栏主题，而且还有各种动画效果，作为颜控立马被吸引了，然后发现类似的双栏博客有好几个，像 yilia、spfk、yelee 等。<br>后者好像都是在 yilia 的基础上修改的，而我选择了 yelee，因为我更喜欢其色调，并且作者很贴心地写了 <a href="http://moxfive.coding.me/yelee" title="Yelee 主题使用说明 " target="_blank" rel="noopener">gitbook 操作指南</a>，这对刚接触博客的小白我来说真是福音。<br>感谢作者提供了这么好的主题，后来使用上碰到的一些问题和修改，我都一一列举在下面，以后如果还有修改我还会更新。</p><hr><p>按照 gitbook 的教程我完成博客的基础配置，效果基本上已经很满足了，但是测试上发现有些小问题，作为强迫症，修改之。</p><h2 id="代码块前后留白问题："><a href="#代码块前后留白问题：" class="headerlink" title="代码块前后留白问题："></a>代码块前后留白问题：</h2><p>代码块中的代码空行消失，都被挤到前后了，issue 上有人解决了：<br><img src="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png" alt="代码显示错位"></p><hr><p>然后是页面跳转问题，我希望的是本站内的链接和标签都在本窗口打开，外站的都在新标签页打开，<br>但是像搜索结果和迷你文章列表等点击会在新标签页打开，得做如下修改：</p><h2 id="取消搜索结果跳转新标签页："><a href="#取消搜索结果跳转新标签页：" class="headerlink" title="取消搜索结果跳转新标签页："></a>取消搜索结果跳转新标签页：</h2><p><strong>目标文件：themes/yelee/source/js/search.js</strong></p><p>找到</p><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// show search results</span>
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="鱼乐" />
+<meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"/>
+
+
+
+<meta name="description" content="更换博客主题 Yelee 的前前后后">
+<meta name="keywords" content="Yelee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo 主题 Yelee">
+<meta property="og:url" content="https://blog.wangriyu.wang/2017/08-Hexo.html">
+<meta property="og:site_name" content="Wangriyu’s Blog">
+<meta property="og:description" content="更换博客主题 Yelee 的前前后后">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/miniArchives.png">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/list.png">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/hexo/error.png">
+<meta property="og:updated_time" content="2018-06-17T12:53:29.456Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Hexo 主题 Yelee">
+<meta name="twitter:description" content="更换博客主题 Yelee 的前前后后">
+<meta name="twitter:image" content="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet">
+<script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script>
+
+
+    <link href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="/share/iconfont.css">
+    <link rel='stylesheet' href='/share/spongebob.min.css' type='text/css' media='all'/>
+
+
+
+<title>使用 Hexo 主题 Yelee | Wangriyu’s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+<link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+
+<script>
+var yiliaConfig = {
+    fancybox: true,
+    isHome: false,
+    isPost: true,
+    isArchive: false,
+    isTag: false,
+    isCategory: false,
+    fancybox_js: "//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js",
+    search: true
+}
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+<link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="backImg">
+    <img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px" />
+</div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic" data-aos="zoom-in">
+            <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">鱼乐</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>目标</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="//home.wangriyu.wang">主页</a></li>
+                        
+                            <li><a href="/archives/">归档</a></li>
+                        
+                            <li><a href="/pages/waterFallAlbum">相册</a></li>
+                        
+                            <li><a href="/about/">简历</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
+                            
+                                <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
+                            
+                                <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
+                            
+                                <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a>
+                            
+                        </ul>
+                      
+                        <ul class="social">
+                            <div style="position: absolute; top: 95%; left: 50%; margin-left: -30px;">
+                                <p style="display: block">
+                                    <a
+                                        class="donateIcon"
+                                        href="javascript:void(0)"
+                                        onmouseout="
+                                            var qr = document.getElementById('donate');
+                                            qr.style.display='none';
+                                        "
+                                        onmouseenter="
+                                            var qr = document.getElementById('donate');
+                                            qr.style.display='block';
+                                        ">
+                                        赏
+                                    </a>
+                                </p>
+                            </div>
+                        </ul>
+                      
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                    
+                        <section class="switch-part switch-part4">
+                    
+                        <div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div>
+                    </section>
+                
+            </div>
+        </div>
+    </header>
+    
+        <div id="donate">
+            <img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"/>
+            <div class="triangle"></div>
+        </div>
+    
+</div>
+    </div>
+    <script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script>
+    <script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script>
+    <div class="hide-left-col" title="隐藏侧栏">
+        <i class="fa fa-angle-double-left"></i>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic" data-aos="zoom-in">
+                <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1>
+            </hgroup>
+            
+                <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="//home.wangriyu.wang">主页</a></li>
+                
+                    <li><a href="/archives/">归档</a></li>
+                
+                    <li><a href="/pages/waterFallAlbum">相册</a></li>
+                
+                    <li><a href="/about/">简历</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <ul class="social">
+                    
+                        <a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
+                    
+                        <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
+                    
+                        <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                    
+                        <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
+                    
+                        <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
+                    
+                        <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
+                    
+                        <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
+                    
+                        <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a>
+                    
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
+</nav>
+      <div class="body-wrap"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08-Hexo.html" class="article-date">
+      <time datetime="2017-08-23T16:00:00.000Z" itemprop="datePublished">2017-08-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用 Hexo 主题 Yelee
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud" style="display: flex; flex-wrap: wrap">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Yelee/">Yelee</a></li></ul>
+        <span class="post-count">总字数4,905</span>
+        <span class="post-count">预计阅读25分钟</span>
+    </div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前使用的是 next 主题，虽然 next 很强大，但是 next 的样式并不是我很喜欢的类型。<br>后来无意间在别人博客上看到这种双栏主题，而且还有各种动画效果，作为颜控立马被吸引了，然后发现类似的双栏博客有好几个，像 yilia、spfk、yelee 等。<br>后者好像都是在 yilia 的基础上修改的，而我选择了 yelee，因为我更喜欢其色调，并且作者很贴心地写了 <a href="http://moxfive.coding.me/yelee" title="Yelee 主题使用说明 " target="_blank" rel="noopener">gitbook 操作指南</a>，这对刚接触博客的小白我来说真是福音。<br>感谢作者提供了这么好的主题，后来使用上碰到的一些问题和修改，我都一一列举在下面，以后如果还有修改我还会更新。</p>
+<hr>
+<p>按照 gitbook 的教程我完成博客的基础配置，效果基本上已经很满足了，但是测试上发现有些小问题，作为强迫症，修改之。</p>
+<h2 id="代码块前后留白问题："><a href="#代码块前后留白问题：" class="headerlink" title="代码块前后留白问题："></a>代码块前后留白问题：</h2><p>代码块中的代码空行消失，都被挤到前后了，issue 上有人解决了：<br><img src="https://src.wangriyu.wang/images/blog/hexo/CodeSpace.png" alt="代码显示错位"></p>
+<hr>
+<p>然后是页面跳转问题，我希望的是本站内的链接和标签都在本窗口打开，外站的都在新标签页打开，<br>但是像搜索结果和迷你文章列表等点击会在新标签页打开，得做如下修改：</p>
+<h2 id="取消搜索结果跳转新标签页："><a href="#取消搜索结果跳转新标签页：" class="headerlink" title="取消搜索结果跳转新标签页："></a>取消搜索结果跳转新标签页：</h2><p><strong>目标文件：themes/yelee/source/js/search.js</strong></p>
+<p>找到</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// show search results</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>isMatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     str <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"&lt;li>&lt;a href='"</span><span class="token operator">+</span> data_url <span class="token operator">+</span><span class="token string">"' class='search-result-title' target='_blank'>"</span><span class="token operator">+</span> <span class="token string">"> "</span> <span class="token operator">+</span> data_title <span class="token operator">+</span><span class="token string">"&lt;/a>"</span><span class="token punctuation">;</span>
     <span class="token operator">...</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>删除 <code>target=&#39;_blank&#39;</code> 字段</p><hr><h2 id="取消迷你文章在新窗口打开"><a href="#取消迷你文章在新窗口打开" class="headerlink" title="取消迷你文章在新窗口打开"></a>取消迷你文章在新窗口打开</h2><p><img src="https://src.wangriyu.wang/images/blog/hexo/miniArchives.png" alt="迷你文章列表"></p><p><strong>目标文件：themes/yelee/layout/_partial/open-in-new-tab.ejs</strong></p><p>找到</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.open_in_new.mini_archives)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span> miniArchives: "a.post-list-link", <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>将 <code>theme.open_in_new.mini_archives</code> 直接改为 false</p><p>我在 _config.yml 里设置 mini_archives 好像不起作用</p><hr><p><strong>下面的是我自己的一些修改，如有需要可供参考</strong></p><blockquote><p>我的所有修改记录都放在仓库里了：<a href="https://github.com/wangriyu/hexo-theme-yelee" title=" 点击访问 " target="_blank" rel="noopener">github</a></p></blockquote><h2 id="添加文章字数统计"><a href="#添加文章字数统计" class="headerlink" title="添加文章字数统计"></a>添加文章字数统计</h2><p>用到的插件是 <a href="https://github.com/willin/hexo-wordcount" title=" 点击访问 " target="_blank" rel="noopener">hexo-wordcount</a></p><p>安装很简单，一条命令 <code>npm i --save hexo-wordcount</code> 即可解决，<br>下面的配置是信息显示位置和样式，仅供参考，也可以自行修改</p><p><strong>目标文件：themes/yelee/layout/_partial/post/tag.ejs</strong><br>修改如下:</p><pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;% if (post.tags &amp;&amp; post.tags.length){ %></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>删除 <code>target=&#39;_blank&#39;</code> 字段</p>
+<hr>
+<h2 id="取消迷你文章在新窗口打开"><a href="#取消迷你文章在新窗口打开" class="headerlink" title="取消迷你文章在新窗口打开"></a>取消迷你文章在新窗口打开</h2><p><img src="https://src.wangriyu.wang/images/blog/hexo/miniArchives.png" alt="迷你文章列表"></p>
+<p><strong>目标文件：themes/yelee/layout/_partial/open-in-new-tab.ejs</strong></p>
+<p>找到</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.open_in_new.mini_archives)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span> miniArchives: "a.post-list-link", <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将 <code>theme.open_in_new.mini_archives</code> 直接改为 false</p>
+<p>我在 _config.yml 里设置 mini_archives 好像不起作用</p>
+<hr>
+<p><strong>下面的是我自己的一些修改，如有需要可供参考</strong></p>
+<blockquote>
+<p>我的所有修改记录都放在仓库里了：<a href="https://github.com/wangriyu/hexo-theme-yelee" title=" 点击访问 " target="_blank" rel="noopener">github</a></p>
+</blockquote>
+<h2 id="添加文章字数统计"><a href="#添加文章字数统计" class="headerlink" title="添加文章字数统计"></a>添加文章字数统计</h2><p>用到的插件是 <a href="https://github.com/willin/hexo-wordcount" title=" 点击访问 " target="_blank" rel="noopener">hexo-wordcount</a></p>
+<p>安装很简单，一条命令 <code>npm i --save hexo-wordcount</code> 即可解决，<br>下面的配置是信息显示位置和样式，仅供参考，也可以自行修改</p>
+<p><strong>目标文件：themes/yelee/layout/_partial/post/tag.ejs</strong><br>修改如下:</p>
+<pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;% if (post.tags &amp;&amp; post.tags.length){ %></span>
 <span class="token deleted">-    &lt;div class="article-tag tagcloud"></span>
 <span class="token inserted">+    &lt;div class="article-tag tagcloud" style="display: flex; flex-wrap: wrap"></span>
         &lt;%-
@@ -17,7 +429,10 @@
 <span class="token inserted">+       &lt;span class="post-count">预计阅读&lt;%= min2read(post.content) %>分钟&lt;/span></span>
     &lt;/div>
 <span class="token deleted">&lt;% } %></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>添加样式：<br><strong>目标文件：themes/yelee/source/css/_partial/tagcloud.styl</strong></p><p>找到</p><pre class="line-numbers language-sass"><code class="language-sass"><span class="token property-line"><span class="token property">.article-tag</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token property">before,</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>添加样式：<br><strong>目标文件：themes/yelee/source/css/_partial/tagcloud.styl</strong></p>
+<p>找到</p>
+<pre class="line-numbers language-sass"><code class="language-sass"><span class="token property-line"><span class="token property">.article-tag</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token property">before,</span></span>
 <span class="token property-line"><span class="token property">.article-category</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token property">before</span></span>
     <span class="token selector">float left</span>
     <span class="token selector">color </span><span class="token hexcode">#999</span>
@@ -31,7 +446,9 @@
 
 <span class="token property-line"><span class="token property">.article-category</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token property">before</span></span>
     <span class="token selector">content </span><span class="token string">"\f02d"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在 <code>.article-category::before</code> 前插入：</p><pre class="line-numbers language-sass"><code class="language-sass"><span class="token number">.</span><span class="token selector">article-tag</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>.article-category::before</code> 前插入：</p>
+<pre class="line-numbers language-sass"><code class="language-sass"><span class="token number">.</span><span class="token selector">article-tag</span>
     <span class="token number">.</span><span class="token selector">article-tag-list</span>
         <span class="token selector">display flex</span>
         <span class="token selector">flex-wrap wrap</span>
@@ -43,7 +460,17 @@
 <span class="token property-line">        <span class="token property">&amp;</span><span class="token punctuation">:</span><span class="token property">before</span></span>
             <span class="token selector">content </span><span class="token string">"\27A4"</span>
             <span class="token selector">margin-left </span><span class="token number">1</span><span class="token selector">em</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>content: “\27A4” 是 unicode 图标编码，可以换成其他的</p><p><a href="https://unicode-table.com/cn" title=" 点击访问 " target="_blank" rel="noopener">unicode 图标</a></p><p><a href="http://fontawesome.io/icons" title=" 点击访问 " target="_blank" rel="noopener">Font Awesome Icon</a></p><hr><h2 id="添加音乐播放器"><a href="#添加音乐播放器" class="headerlink" title="添加音乐播放器"></a>添加音乐播放器</h2><p>我知道的有三种形式、两种样式的播放器添加方式</p><ul><li>网易云 <code>iframe</code> 标签<br>到网易云网页上找喜欢的歌，点击生产外链播放器，获取 <code>iframe</code> 标签代码，粘贴到想放的地方即可，也可以直接贴在 markdown 文本中，<br>我就是这样在每篇文章中插入一首歌;</li></ul><p>如果不能正常打开生成外链的页面，只需要把歌曲或者歌单的 id（页面地址就有）记下来就好，标签格式如下</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>content: “\27A4” 是 unicode 图标编码，可以换成其他的</p>
+<p><a href="https://unicode-table.com/cn" title=" 点击访问 " target="_blank" rel="noopener">unicode 图标</a></p>
+<p><a href="http://fontawesome.io/icons" title=" 点击访问 " target="_blank" rel="noopener">Font Awesome Icon</a></p>
+<hr>
+<h2 id="添加音乐播放器"><a href="#添加音乐播放器" class="headerlink" title="添加音乐播放器"></a>添加音乐播放器</h2><p>我知道的有三种形式、两种样式的播放器添加方式</p>
+<ul>
+<li>网易云 <code>iframe</code> 标签<br>到网易云网页上找喜欢的歌，点击生产外链播放器，获取 <code>iframe</code> 标签代码，粘贴到想放的地方即可，也可以直接贴在 markdown 文本中，<br>我就是这样在每篇文章中插入一首歌;</li>
+</ul>
+<p>如果不能正常打开生成外链的页面，只需要把歌曲或者歌单的 id（页面地址就有）记下来就好，标签格式如下</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span>
   <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span>
   <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>
   <span class="token attr-name">marginwidth</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>
@@ -52,16 +479,32 @@
   <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span>450</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//music.163.com/outchain/player?type<span class="token punctuation">=</span>0&amp;id<span class="token punctuation">=</span>883067320&amp;auto<span class="token punctuation">=</span>1&amp;height<span class="token punctuation">=</span>430<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> // 歌曲 type=2，歌单 type=0，id 填对应 id
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>使用 aplayer 插件 <a href="https://github.com/MoePlayer/hexo-tag-aplayer" title=" 点击访问 " target="_blank" rel="noopener">hexo-tag-aplayer</a></li></ul><p>安装：</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> --save hexo-tag-aplayer
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用：</p><pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token punctuation">{</span>% aplayer title author url <span class="token punctuation">[</span>picture_url, narrow, autoplay, width<span class="token punctuation">:</span>xxx, lrc<span class="token punctuation">:</span>xxx<span class="token punctuation">]</span> %<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 aplayer 库</li></ul><p>在主题的 _config.yml 文件底部添加两个库：</p><pre class="line-numbers language-diff"><code class="language-diff">CDN
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>使用 aplayer 插件 <a href="https://github.com/MoePlayer/hexo-tag-aplayer" title=" 点击访问 " target="_blank" rel="noopener">hexo-tag-aplayer</a></li>
+</ul>
+<p>安装：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> --save hexo-tag-aplayer
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>使用：</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token punctuation">{</span>% aplayer title author url <span class="token punctuation">[</span>picture_url, narrow, autoplay, width<span class="token punctuation">:</span>xxx, lrc<span class="token punctuation">:</span>xxx<span class="token punctuation">]</span> %<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>使用 aplayer 库</li>
+</ul>
+<p>在主题的 _config.yml 文件底部添加两个库：</p>
+<pre class="line-numbers language-diff"><code class="language-diff">CDN
   ...
 <span class="token inserted">+  aplayer: //cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js</span>
 <span class="token inserted">+  meting: //unpkg.com/meting@1.0.1/dist/Meting.min.js</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong>目标文件：themes/yelee/layout/_partial/head.ejs</strong><br>在 jquery 后面导入库</p><pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;script src="&lt;%- theme.CDN.jquery %>">&lt;/script></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>目标文件：themes/yelee/layout/_partial/head.ejs</strong><br>在 jquery 后面导入库</p>
+<pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;script src="&lt;%- theme.CDN.jquery %>">&lt;/script></span>
 <span class="token inserted">+ &lt;script src="&lt;%- theme.CDN.aplayer %>">&lt;/script></span>
 <span class="token inserted">+ &lt;script src="&lt;%- theme.CDN.meting %>">&lt;/script></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>使用：粘贴以下代码生成播放器</p><pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token selector">&lt;div</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>使用：粘贴以下代码生成播放器</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token selector">&lt;div</span>
   <span class="token variable-declaration"><span class="token variable">class="aplayer"</span></span>
   <span class="token variable-declaration"><span class="token variable">data-id="883067320"</span>   </span><span class="token comment" spellcheck="true">// 歌曲 / 专辑 / 歌单 ID</span>
   <span class="token variable-declaration"><span class="token variable">data-server="netease"</span> </span><span class="token comment" spellcheck="true">// 音乐平台：netease、tencent、xiami、kugou、baidu</span>
@@ -70,7 +513,9 @@
   <span class="token variable-declaration"><span class="token variable">data-autoplay="true"</span>  </span><span class="token comment" spellcheck="true">// 自动播放</span>
   >
 &lt;/div>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="简化添加音乐的方法"><a href="#简化添加音乐的方法" class="headerlink" title="简化添加音乐的方法"></a>简化添加音乐的方法</h2><p>我喜欢在每篇文章放不同的歌曲，如果按上面的方法添加，每次都得在文章前粘贴一段代码，而且主页加载时也会加载两个 CDN 库，影响加载速度</p><pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token selector">&lt;div</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="简化添加音乐的方法"><a href="#简化添加音乐的方法" class="headerlink" title="简化添加音乐的方法"></a>简化添加音乐的方法</h2><p>我喜欢在每篇文章放不同的歌曲，如果按上面的方法添加，每次都得在文章前粘贴一段代码，而且主页加载时也会加载两个 CDN 库，影响加载速度</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token selector">&lt;div</span>
   <span class="token variable-declaration"><span class="token variable">class="aplayer"</span></span>
   <span class="token variable-declaration"><span class="token variable">data-id="883067320"</span> </span><span class="token comment" spellcheck="true">// 歌曲 ID</span>
   <span class="token variable-declaration"><span class="token variable">data-server="netease"</span></span>
@@ -78,7 +523,12 @@
   <span class="token variable-declaration"><span class="token variable">data-mode="random"</span></span>
   <span class="token variable-declaration"><span class="token variable">data-autoplay="true"</span></span>
 />
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>下面简化一下步骤</p><ol><li>修改 <code>/themes/yelee/layout/_partial/article.ejs</code> 如下</li></ol><pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;div class="article-entry" itemprop="articleBody"></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>下面简化一下步骤</p>
+<ol>
+<li>修改 <code>/themes/yelee/layout/_partial/article.ejs</code> 如下</li>
+</ol>
+<pre class="line-numbers language-diff"><code class="language-diff"><span class="token deleted">&lt;div class="article-entry" itemprop="articleBody"></span>
   &lt;% if (index &amp;&amp; (post.description || post.excerpt)){ %>
       &lt;% if (post.description){ %>
           &lt;%- post.description %>
@@ -95,7 +545,12 @@
     &lt;%- post.content %>
   &lt;% } %>
 <span class="token deleted">&lt;/div></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="2"><li>在 <code>/themes/yelee/layout/post/</code> 下创建 <code>player.ejs</code> 文件</li></ol><p>player:</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- theme.CDN.aplayer %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>在 <code>/themes/yelee/layout/post/</code> 下创建 <code>player.ejs</code> 文件</li>
+</ol>
+<p>player:</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- theme.CDN.aplayer %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- theme.CDN.player %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>aplayer<span class="token punctuation">"</span></span> <span class="token attr-name">data-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span> post.music %<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">data-server</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>netease<span class="token punctuation">"</span></span> <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song<span class="token punctuation">"</span></span> <span class="token attr-name">data-autoplay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -107,7 +562,12 @@
     $(".aplayer").remove();
   }
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这里引入了 cdn 库，如果上文在 head 也引入这两个文件，那可以把 head 里的删了</p><ol start="3"><li>每篇文章要加音乐时只需在顶部引入 <code>music: 歌曲 ID</code></li></ol><pre class="line-numbers language-stylus"><code class="language-stylus">-----------
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里引入了 cdn 库，如果上文在 head 也引入这两个文件，那可以把 head 里的删了</p>
+<ol start="3">
+<li>每篇文章要加音乐时只需在顶部引入 <code>music: 歌曲 ID</code></li>
+</ol>
+<pre class="line-numbers language-stylus"><code class="language-stylus">-----------
 
 <span class="token property-declaration"><span class="token property">title</span><span class="token punctuation">:</span> 使用 Hexo 主题 Yelee</span>
 <span class="token property-declaration"><span class="token property">date</span><span class="token punctuation">:</span> <span class="token number">2017</span><span class="token operator">-</span><span class="token number">08</span><span class="token operator">-</span><span class="token number">24</span></span>
@@ -118,7 +578,10 @@
 <span class="token property-declaration"><span class="token property">tags</span><span class="token punctuation">:</span> Yelee</span>
 
 ---
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="修改头像动画"><a href="#修改头像动画" class="headerlink" title="修改头像动画"></a>修改头像动画</h2><p><strong>目标文件：themes/yelee/source/css/_partial/main.styl</strong></p><p>修改头像为旋转效果：</p><pre class="line-numbers language-css"><code class="language-css">    <span class="token number">...</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改头像动画"><a href="#修改头像动画" class="headerlink" title="修改头像动画"></a>修改头像动画</h2><p><strong>目标文件：themes/yelee/source/css/_partial/main.styl</strong></p>
+<p>修改头像为旋转效果：</p>
+<pre class="line-numbers language-css"><code class="language-css">    <span class="token number">...</span>
     // <span class="token property">animation</span><span class="token punctuation">:</span> profilepic <span class="token number">.15</span>s linear infinite alternate<span class="token punctuation">;</span>
     // <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> profilepic <span class="token number">.15</span>s linear infinite alternate<span class="token punctuation">;</span>
     <span class="token property">animation</span><span class="token punctuation">:</span> profilepic <span class="token number">5</span>s linear infinite<span class="token punctuation">;</span>
@@ -136,19 +599,28 @@
         <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">0</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>animation: name duration timing-function delay iteration-count direction;</code><br>animation 是 CSS 动画属性：第一个参数是用 @keyframes 定义的动画，第二个参数是单次动画持续时间，<br>第三个是动画的速度曲线，第四个参数是动画开始之前的延迟，第五个是动画应该播放的次数，最后一个规定是否应该轮流反向播放动画</p><h2 id="添加多合一打赏"><a href="#添加多合一打赏" class="headerlink" title="添加多合一打赏"></a>添加多合一打赏</h2><p>实现原理和源码见博文: <a href="https://mkblog.cn/922/" target="_blank" rel="noopener">https://mkblog.cn/922/</a></p><p>给 yelee 的配置文件 <code>_config.yml</code> 加上：</p><pre class="line-numbers language-stylus"><code class="language-stylus"># 打赏
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>animation: name duration timing-function delay iteration-count direction;</code><br>animation 是 CSS 动画属性：第一个参数是用 @keyframes 定义的动画，第二个参数是单次动画持续时间，<br>第三个是动画的速度曲线，第四个参数是动画开始之前的延迟，第五个是动画应该播放的次数，最后一个规定是否应该轮流反向播放动画</p>
+<h2 id="添加多合一打赏"><a href="#添加多合一打赏" class="headerlink" title="添加多合一打赏"></a>添加多合一打赏</h2><p>实现原理和源码见博文: <a href="https://mkblog.cn/922/" target="_blank" rel="noopener">https://mkblog.cn/922/</a></p>
+<p>给 yelee 的配置文件 <code>_config.yml</code> 加上：</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"># 打赏
 # 将 on 改为 false 去掉打赏
 donate<span class="token punctuation">:</span>
   <span class="token property-declaration"><span class="token property">on</span><span class="token punctuation">:</span> <span class="token boolean">true</span></span>
   <span class="token property-declaration"><span class="token property">multipay</span><span class="token punctuation">:</span> <span class="token operator">/</span>img<span class="token operator">/</span>multipay<span class="token operator">.</span>png</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>multipay.png 上的二维码指向链接 <a href="https://blog.wangriyu.wang/pages/donate">https://blog.wangriyu.wang/pages/donate</a> , 然后根据用户的 userAgent 转向不同服务</p><p><strong>目标文件：themes/yelee/layout/_partial/left-col.ejs</strong><br>找到</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>header-nav<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>multipay.png 上的二维码指向链接 <a href="https://blog.wangriyu.wang/pages/donate">https://blog.wangriyu.wang/pages/donate</a> , 然后根据用户的 userAgent 转向不同服务</p>
+<p><strong>目标文件：themes/yelee/layout/_partial/left-col.ejs</strong><br>找到</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>header-nav<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>social<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">for</span> <span class="token attr-name">(var</span> <span class="token attr-name">i</span> <span class="token attr-name">in</span> <span class="token attr-name">theme.subnav){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa &lt;%<span class="token punctuation">=</span> i %<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(theme.subnav[i]) %<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span> i %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%}%</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在 <code>&lt;/ul&gt;</code> 下添加：</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.donate.on)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>&lt;/ul&gt;</code> 下添加：</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.donate.on)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>social<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">95%</span><span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> -<span class="token number">30</span>px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span> block</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -169,13 +641,17 @@ donate<span class="token punctuation">:</span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在 <code>left-col.ejs</code> 文件末尾 <code>&lt;/div&gt;</code> 之前添加：</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.donate.multipay)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>left-col.ejs</code> 文件末尾 <code>&lt;/div&gt;</code> 之前添加：</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if</span> <span class="token attr-name">(theme.donate.multipay)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>donate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>multipay<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span>theme.donate.multipay%<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>250px<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span>theme.author%<span class="token punctuation">></span> Multipay<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>triangle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>目标文件：themes/yelee/source/css/_partial/customise/social-icon.styl</strong><br>在顶部找到找到</p><pre class="line-numbers language-sass"><code class="language-sass"><span class="token selector">#header </span><span class="token number">.</span><span class="token selector">header-nav </span><span class="token number">.</span><span class="token selector">social</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>目标文件：themes/yelee/source/css/_partial/customise/social-icon.styl</strong><br>在顶部找到找到</p>
+<pre class="line-numbers language-sass"><code class="language-sass"><span class="token selector">#header </span><span class="token number">.</span><span class="token selector">header-nav </span><span class="token number">.</span><span class="token selector">social</span>
     <span class="token selector">margin-top </span><span class="token number">10</span><span class="token selector">px</span>
     <span class="token selector">text-align center</span>
     <span class="token selector">font-family Arial</span>
@@ -195,7 +671,9 @@ donate<span class="token punctuation">:</span>
 <span class="token property-line">        <span class="token property">&amp;</span><span class="token punctuation">:</span><span class="token property">hover</span></span>
             <span class="token selector">opacity </span><span class="token number">1</span>
             <span class="token selector">transform </span><span class="token function">scale</span><span class="token selector">(</span><span class="token number">1.1</span><span class="token selector">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在 <code>a</code> 标签的样式后面加上</p><pre class="line-numbers language-sass"><code class="language-sass"><span class="token number">.</span><span class="token selector">donateIcon</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>a</code> 标签的样式后面加上</p>
+<pre class="line-numbers language-sass"><code class="language-sass"><span class="token number">.</span><span class="token selector">donateIcon</span>
     <span class="token selector">display block</span>
     <span class="token selector">width </span><span class="token number">56</span><span class="token selector">px</span>
     <span class="token selector">margin auto</span>
@@ -213,7 +691,9 @@ donate<span class="token punctuation">:</span>
     <span class="token selector">-moz-transition </span><span class="token number">0.4</span><span class="token selector">s ease-in-out</span>
     <span class="token selector">-ms-transition </span><span class="token number">0.4</span><span class="token selector">s ease-in-out</span>
     <span class="token selector">transition </span><span class="token number">0.4</span><span class="token selector">s ease-in-out</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>目标文件：themes/yelee/source/css/_partial/main.styl</strong><br>找到 <code>intrude-less</code> 并加上 donate 标签的样式：</p><pre class="line-numbers language-diff"><code class="language-diff">.intrude-less {
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>目标文件：themes/yelee/source/css/_partial/main.styl</strong><br>找到 <code>intrude-less</code> 并加上 donate 标签的样式：</p>
+<pre class="line-numbers language-diff"><code class="language-diff">.intrude-less {
     width: 76%;
     text-align: center;
     margin: 112px auto 0;
@@ -235,7 +715,9 @@ donate<span class="token punctuation">:</span>
 <span class="token inserted">+       }</span>
 <span class="token inserted">+   }</span>
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="修改移动端背景"><a href="#修改移动端背景" class="headerlink" title="修改移动端背景"></a>修改移动端背景</h2><p><strong>目标文件：themes/yelee/layout/_partial/background.ejs</strong></p><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>background_image<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改移动端背景"><a href="#修改移动端背景" class="headerlink" title="修改移动端背景"></a>修改移动端背景</h2><p><strong>目标文件：themes/yelee/layout/_partial/background.ejs</strong></p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>background_image<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>script<span class="token operator">></span>
     <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">var</span> iPad <span class="token operator">=</span> window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'iPad'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -263,7 +745,12 @@ donate<span class="token punctuation">:</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="修改列表显示的-bug"><a href="#修改列表显示的-bug" class="headerlink" title="修改列表显示的 bug"></a>修改列表显示的 bug</h2><p>bug 如下：Expressions 和 xScope 的前缀消失<br><img src="https://src.wangriyu.wang/images/blog/hexo/list.png" alt="image"></p><p>markdown 中编写无序列表时，比如 “- [列表名]”, 如果列表名前两个字符含 ‘x’, 则列表前缀消失</p><p>排查之后发现是 main.js 里对无序列表进行了判断，若出现 “- [ ]” 或者 “- [x]”，则解析成复选框的样式，需要修改判断条件</p><p><strong>目标文件：themes/yelee/source/js/main.js</strong></p><pre class="line-numbers language-diff"><code class="language-diff">// Task lists in markdown
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改列表显示的-bug"><a href="#修改列表显示的-bug" class="headerlink" title="修改列表显示的 bug"></a>修改列表显示的 bug</h2><p>bug 如下：Expressions 和 xScope 的前缀消失<br><img src="https://src.wangriyu.wang/images/blog/hexo/list.png" alt="image"></p>
+<p>markdown 中编写无序列表时，比如 “- [列表名]”, 如果列表名前两个字符含 ‘x’, 则列表前缀消失</p>
+<p>排查之后发现是 main.js 里对无序列表进行了判断，若出现 “- [ ]” 或者 “- [x]”，则解析成复选框的样式，需要修改判断条件</p>
+<p><strong>目标文件：themes/yelee/source/js/main.js</strong></p>
+<pre class="line-numbers language-diff"><code class="language-diff">// Task lists in markdown
 $('ul > li').each(function() {
     var taskList = {
 <span class="token deleted">-       field: this.textContent.substring(0, 2),</span>
@@ -276,7 +763,11 @@ $('ul > li').each(function() {
     }
     ...
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="添加-404-文字特效"><a href="#添加-404-文字特效" class="headerlink" title="添加 404 文字特效"></a>添加 404 文字特效</h2><p>之前在 CodePen 上看到这个文字特效: <a href="https://codepen.io/Chokcoco/pen/RVxbWW?editors=1100" target="_blank" rel="noopener">https://codepen.io/Chokcoco/pen/RVxbWW?editors=1100</a><br>感觉很适合用来做 404 特效，便加到 404 页面，但原代码不能直接用，改了半天总算适配到自己的博客上，<a href="/pages/shake.html">点击查看效果</a></p><p>如果没有 404 页面，先用 Hexo 命令新建一个名为 404 的页面: <code>hexo new page 404</code></p><p>将 <code>/source/404/index.md</code> 文件的内容修改如下:</p><pre class="line-numbers language-markup"><code class="language-markup">---------
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="添加-404-文字特效"><a href="#添加-404-文字特效" class="headerlink" title="添加 404 文字特效"></a>添加 404 文字特效</h2><p>之前在 CodePen 上看到这个文字特效: <a href="https://codepen.io/Chokcoco/pen/RVxbWW?editors=1100" target="_blank" rel="noopener">https://codepen.io/Chokcoco/pen/RVxbWW?editors=1100</a><br>感觉很适合用来做 404 特效，便加到 404 页面，但原代码不能直接用，改了半天总算适配到自己的博客上，<a href="/pages/shake.html">点击查看效果</a></p>
+<p>如果没有 404 页面，先用 Hexo 命令新建一个名为 404 的页面: <code>hexo new page 404</code></p>
+<p>将 <code>/source/404/index.md</code> 文件的内容修改如下:</p>
+<pre class="line-numbers language-markup"><code class="language-markup">---------
 
 toc: false
 comments: false
@@ -295,7 +786,9 @@ permalink: /404
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>errAfter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>404 Not Found<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>修改样式: <code>themes/yelee/source/css/_partial/article.styl</code><br>在 <code>.article-entry</code> 子级中加上如下样式:</p><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.error</span> </span><span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>修改样式: <code>themes/yelee/source/css/_partial/article.styl</code><br>在 <code>.article-entry</code> 子级中加上如下样式:</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.error</span> </span><span class="token punctuation">{</span>
   <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
   <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">150</span>px<span class="token punctuation">;</span>
   <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
@@ -518,7 +1011,9 @@ permalink: /404
     <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-<span class="token number">50%</span>, -<span class="token number">50%</span><span class="token punctuation">)</span> <span class="token function">skewX</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下：</p><pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token comment" spellcheck="true">//  单个文件夹下全部文件：skip_render: test/*</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下：</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token comment" spellcheck="true">//  单个文件夹下全部文件：skip_render: test/*</span>
 <span class="token comment" spellcheck="true">//  单个文件夹下指定类型文件：skip_render: test/*.html</span>
 <span class="token comment" spellcheck="true">//  单个文件夹下全部文件以及子目录:skip_render: test/**</span>
 <span class="token comment" spellcheck="true">//  多个文件夹以及各种复杂情况：</span>
@@ -527,7 +1022,10 @@ permalink: /404
 <span class="token comment" spellcheck="true">//      - `test2/**`</span>
 
 比如 skip_render<span class="token punctuation">:</span> pages/** 代表 source/pages/ 目录下所有东西都不会被修改
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>后来我又把 404 特效换成这个效果：<a href="/pages/yun.html">点击查看</a></p><p>将 <code>/source/404/index.md</code> 文件的内容修改如下:</p><pre class="line-numbers language-javascript"><code class="language-javascript">
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>后来我又把 404 特效换成这个效果：<a href="/pages/yun.html">点击查看</a></p>
+<p>将 <code>/source/404/index.md</code> 文件的内容修改如下:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">
 <span class="token operator">--</span><span class="token operator">-</span>
 
 toc<span class="token punctuation">:</span> <span class="token boolean">false</span>
@@ -773,7 +1271,9 @@ permalink<span class="token punctuation">:</span> <span class="token operator">/
     <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>同样在 <code>.article-entry</code> 子级中加上如下样式:</p><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#notFound</span> </span><span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同样在 <code>.article-entry</code> 子级中加上如下样式:</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#notFound</span> </span><span class="token punctuation">{</span>
   <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
   <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
   <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
@@ -802,8 +1302,15 @@ permalink<span class="token punctuation">:</span> <span class="token operator">/
     <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">120%</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>最终效果: <a href="/404.html">点击查看</a></p><h2 id="压缩优化静态文件"><a href="#压缩优化静态文件" class="headerlink" title="压缩优化静态文件"></a>压缩优化静态文件</h2><p>使用 <a href="https://github.com/chenzhutian/hexo-all-minifier" target="_blank" rel="noopener">hexo-all-minifier</a> 插件压缩 js、html、css 和图片</p><p>在博客目录安装插件 <code>npm install hexo-all-minifier --save</code></p><p>对于 Mac 用户，可能还需要安装以下依赖:</p><pre class="line-numbers language-bash"><code class="language-bash">$ brew <span class="token function">install</span> libtool automake autoconf nasm
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在站点配置文件 <code>_config.yml</code> 中添加插件配置</p><pre class="line-numbers language-sass"><code class="language-sass"><span class="token selector">### hexo_all_minifier: https://github</span><span class="token number">.</span><span class="token selector">com/chenzhutian/hexo-all-minifier</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最终效果: <a href="/404.html">点击查看</a></p>
+<h2 id="压缩优化静态文件"><a href="#压缩优化静态文件" class="headerlink" title="压缩优化静态文件"></a>压缩优化静态文件</h2><p>使用 <a href="https://github.com/chenzhutian/hexo-all-minifier" target="_blank" rel="noopener">hexo-all-minifier</a> 插件压缩 js、html、css 和图片</p>
+<p>在博客目录安装插件 <code>npm install hexo-all-minifier --save</code></p>
+<p>对于 Mac 用户，可能还需要安装以下依赖:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ brew <span class="token function">install</span> libtool automake autoconf nasm
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在站点配置文件 <code>_config.yml</code> 中添加插件配置</p>
+<pre class="line-numbers language-sass"><code class="language-sass"><span class="token selector">### hexo_all_minifier: https://github</span><span class="token number">.</span><span class="token selector">com/chenzhutian/hexo-all-minifier</span>
 <span class="token property-line"><span class="token property">all_minifier</span><span class="token punctuation">:</span> true</span>
 <span class="token property-line"><span class="token property">html_minifier</span><span class="token punctuation">:</span></span>
 <span class="token property-line">  <span class="token property">enable</span><span class="token punctuation">:</span> true</span>
@@ -829,19 +1336,38 @@ permalink<span class="token punctuation">:</span> <span class="token operator">/
 <span class="token property-line">  <span class="token property">progressive</span><span class="token punctuation">:</span> true <span class="token operator">/</span><span class="token operator">/</span> 无损转换为渐进式</span>
 <span class="token property-line">  <span class="token property">silent</span><span class="token punctuation">:</span> false</span>
 <span class="token property-line">  <span class="token property">exclude</span><span class="token punctuation">:</span> <span class="token operator">/</span><span class="token operator">/</span> 排除指定类型的图片文件，比如 gif,jpg, png, 或 svg，默认为 null</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s --watch --debug</code> 命令查看加载信息</p><h2 id="添加谷歌站长并提交站点地图"><a href="#添加谷歌站长并提交站点地图" class="headerlink" title="添加谷歌站长并提交站点地图"></a>添加谷歌站长并提交站点地图</h2><p>验证网址：<a href="https://www.google.com/webmasters/tools/" target="_blank" rel="noopener">Search Console</a></p><p>然后安装 sitemap 生成器 <code>npm install hexo-generator-sitemap --save</code>，</p><p>在站点配置文件 <code>_config.yml</code> 中加上</p><pre class="line-numbers language-stylus"><code class="language-stylus">### sitemap
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s --watch --debug</code> 命令查看加载信息</p>
+<h2 id="添加谷歌站长并提交站点地图"><a href="#添加谷歌站长并提交站点地图" class="headerlink" title="添加谷歌站长并提交站点地图"></a>添加谷歌站长并提交站点地图</h2><p>验证网址：<a href="https://www.google.com/webmasters/tools/" target="_blank" rel="noopener">Search Console</a></p>
+<p>然后安装 sitemap 生成器 <code>npm install hexo-generator-sitemap --save</code>，</p>
+<p>在站点配置文件 <code>_config.yml</code> 中加上</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus">### sitemap
 sitemap<span class="token punctuation">:</span>
   <span class="token property-declaration"><span class="token property">path</span><span class="token punctuation">:</span> sitemap<span class="token operator">.</span>xml</span>
   <span class="token property-declaration"><span class="token property">template</span><span class="token punctuation">:</span> <span class="token operator">.</span><span class="token operator">/</span>sitemap_template<span class="token operator">.</span>xml</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>部署一遍博客目录下会多出一个 <code>sitemap.xml</code> 文件, 到谷歌站长里添加站点地图即可</p><p>这里提一点，搜索引擎会抓取路径在三级以内的地址，如果路径太多可能抓取不到，但 hexo 文章的路径默认会加上日期，比如 <code>http://wangriyu.wang/2017/08/24/Hexo/</code>，<br>在站点配置文件中修改一下 permalink(默认是:year/:month/:day/:title/)：</p><pre class="line-numbers language-stylus"><code class="language-stylus"># URL
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>部署一遍博客目录下会多出一个 <code>sitemap.xml</code> 文件, 到谷歌站长里添加站点地图即可</p>
+<p>这里提一点，搜索引擎会抓取路径在三级以内的地址，如果路径太多可能抓取不到，但 hexo 文章的路径默认会加上日期，比如 <code>http://wangriyu.wang/2017/08/24/Hexo/</code>，<br>在站点配置文件中修改一下 permalink(默认是:year/:month/:day/:title/)：</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"># URL
 ## If your site is put in a subdirectory, set url as 'http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//yoursite.com/child' and root as '/child/'</span>
 <span class="token property-declaration"><span class="token property">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span></span><span class="token comment" spellcheck="true">//wangriyu.wang</span>
 <span class="token property-declaration"><span class="token property">root</span><span class="token punctuation">:</span> <span class="token operator">/</span></span>
 <span class="token property-declaration"><span class="token property">permalink</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title<span class="token operator">.</span>html</span>
 permalink_defaults<span class="token punctuation">:</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>现在就不会加上日期了</p><h2 id="使用七牛云图床"><a href="#使用七牛云图床" class="headerlink" title="使用七牛云图床"></a>使用七牛云图床</h2><p><a href="https://portal.qiniu.com" target="_blank" rel="noopener">https://portal.qiniu.com</a><br>注册七牛云账号，进入对象存储，点击内容管理，上传图片或其他一些资源，上传完成便可以使用产生的外链来代替站内的图片资源，<br>七牛云还提供了图片处理的服务，添加水印、裁剪缩放等</p><h2 id="使用-Sentry-io-的错误收集服务"><a href="#使用-Sentry-io-的错误收集服务" class="headerlink" title="使用 Sentry.io 的错误收集服务"></a>使用 <a href="https://sentry.io" title=" 点击访问 " target="_blank" rel="noopener">Sentry.io</a> 的错误收集服务</h2><p>添加 CDN 库：<code>sentry: //cdn.ravenjs.com/3.18.1/raven.min.js</code></p><p>在 head.ejs 中加入以下代码</p><pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- theme.CDN.sentry %<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>anonymous<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在就不会加上日期了</p>
+<h2 id="使用七牛云图床"><a href="#使用七牛云图床" class="headerlink" title="使用七牛云图床"></a>使用七牛云图床</h2><p><a href="https://portal.qiniu.com" target="_blank" rel="noopener">https://portal.qiniu.com</a><br>注册七牛云账号，进入对象存储，点击内容管理，上传图片或其他一些资源，上传完成便可以使用产生的外链来代替站内的图片资源，<br>七牛云还提供了图片处理的服务，添加水印、裁剪缩放等</p>
+<h2 id="使用-Sentry-io-的错误收集服务"><a href="#使用-Sentry-io-的错误收集服务" class="headerlink" title="使用 Sentry.io 的错误收集服务"></a>使用 <a href="https://sentry.io" title=" 点击访问 " target="_blank" rel="noopener">Sentry.io</a> 的错误收集服务</h2><p>添加 CDN 库：<code>sentry: //cdn.ravenjs.com/3.18.1/raven.min.js</code></p>
+<p>在 head.ejs 中加入以下代码</p>
+<pre class="line-numbers language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- theme.CDN.sentry %<span class="token punctuation">></span><span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>anonymous<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>Raven.config(' 服务地址 ').install()<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>服务地址改为注册得到的地址，例如 <a href="https://XXXXXXXXXXXX@sentry.io/XXXXXX" target="_blank" rel="noopener">https://XXXXXXXXXXXX@sentry.io/XXXXXX</a></p><p>之后打开 sentry 的网站查看，如果出现错误会一一记录下来<br><img src="https://src.wangriyu.wang/images/blog/hexo/error.png" alt="image"></p><p>该网站支持很多语言，可以嵌入到很多东西中，方便收集错误，但是不建议长期放在网站上，感觉会影响性能</p><h2 id="添加二次元人物"><a href="#添加二次元人物" class="headerlink" title="添加二次元人物"></a>添加二次元人物</h2><p>安装插件 <code>npm install -save hexo-helper-live2d</code></p><p>在站点配置文件 <code>_config.yml</code> 中添加:</p><pre class="line-numbers language-stylus"><code class="language-stylus">## live2d<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//github.com/EYHN/hexo-helper-live2d</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>服务地址改为注册得到的地址，例如 <a href="https://XXXXXXXXXXXX@sentry.io/XXXXXX" target="_blank" rel="noopener">https://XXXXXXXXXXXX@sentry.io/XXXXXX</a></p>
+<p>之后打开 sentry 的网站查看，如果出现错误会一一记录下来<br><img src="https://src.wangriyu.wang/images/blog/hexo/error.png" alt="image"></p>
+<p>该网站支持很多语言，可以嵌入到很多东西中，方便收集错误，但是不建议长期放在网站上，感觉会影响性能</p>
+<h2 id="添加二次元人物"><a href="#添加二次元人物" class="headerlink" title="添加二次元人物"></a>添加二次元人物</h2><p>安装插件 <code>npm install -save hexo-helper-live2d</code></p>
+<p>在站点配置文件 <code>_config.yml</code> 中添加:</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus">## live2d<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//github.com/EYHN/hexo-helper-live2d</span>
 live2d<span class="token punctuation">:</span>
   <span class="token property-declaration"><span class="token property">enable</span><span class="token punctuation">:</span> <span class="token boolean">true</span></span>
   <span class="token property-declaration"><span class="token property">scriptFrom</span><span class="token punctuation">:</span> local</span>
@@ -862,7 +1388,9 @@ live2d<span class="token punctuation">:</span>
   react<span class="token punctuation">:</span>
     <span class="token property-declaration"><span class="token property">opacityDefault</span><span class="token punctuation">:</span> <span class="token number">0.9</span></span>
     <span class="token property-declaration"><span class="token property">opacityOnHover</span><span class="token punctuation">:</span> <span class="token number">0.3</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="更换图片背景为动态背景"><a href="#更换图片背景为动态背景" class="headerlink" title="更换图片背景为动态背景"></a>更换图片背景为动态背景</h2><p>在 <code>layout.ejs</code> 文件中的 left-col 和 mid-col 之间插入</p><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="更换图片背景为动态背景"><a href="#更换图片背景为动态背景" class="headerlink" title="更换图片背景为动态背景"></a>更换图片背景为动态背景</h2><p>在 <code>layout.ejs</code> 文件中的 left-col 和 mid-col 之间插入</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span>script<span class="token operator">></span>
   <span class="token keyword">var</span> userAgent <span class="token operator">=</span> window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">;</span>
   <span class="token function">bubbly</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -877,4 +1405,299 @@ live2d<span class="token punctuation">:</span>
     shadowColor<span class="token punctuation">:</span> <span class="token string">"#0ff"</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后把 <code>after-footer</code> 文件中的 <code>&lt;%- partial(&#39;_partial/background&#39;) %&gt;</code> 删掉</p><h2 id="推荐几个工具网站"><a href="#推荐几个工具网站" class="headerlink" title="推荐几个工具网站"></a>推荐几个工具网站</h2><p><a href="https://zhitu.isux.us/" title=" 点击访问 " target="_blank" rel="noopener">智图</a>：压缩图片很方便</p><p><a href="https://clipchamp.com/zh-Hans/dashboard" title=" 点击访问 " target="_blank" rel="noopener">ClipChamp.com</a>: 在线压缩转换视频</p><p><a href="https://gifs.com/" title=" 点击访问 " target="_blank" rel="noopener">Gifs.com</a>：视频转 gif，压缩截取等</p><script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script><div id="aplayer"></div><script src="/js/player.js"></script></div></div><div class="copyright"><p><span>本文标题:</span><a href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></p><p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p><p><span>发布时间:</span>2017-08-24, 00:00:00</p><p><span>最后更新:</span>2018-06-17, 20:53:29</p><p><span>原始链接:</span><a class="post-url" href="/2017/08-Hexo.html" title="使用 Hexo 主题 Yelee">https://blog.wangriyu.wang/2017/08-Hexo.html</a></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p></div><nav id="article-nav"><div id="article-nav-newer" class="article-nav-title"><a href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></div><div id="article-nav-older" class="article-nav-title"><a href="/2017/08-Storage.html">浏览器本地存储</a></div></nav></article><div id="toc" class="toc-article"><strong class="toc-title">文章目录</strong><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码块前后留白问题："><span class="toc-text">代码块前后留白问题：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取消搜索结果跳转新标签页："><span class="toc-text">取消搜索结果跳转新标签页：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取消迷你文章在新窗口打开"><span class="toc-text">取消迷你文章在新窗口打开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加文章字数统计"><span class="toc-text">添加文章字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加音乐播放器"><span class="toc-text">添加音乐播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简化添加音乐的方法"><span class="toc-text">简化添加音乐的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改头像动画"><span class="toc-text">修改头像动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加多合一打赏"><span class="toc-text">添加多合一打赏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改移动端背景"><span class="toc-text">修改移动端背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改列表显示的-bug"><span class="toc-text">修改列表显示的 bug</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-404-文字特效"><span class="toc-text">添加 404 文字特效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#压缩优化静态文件"><span class="toc-text">压缩优化静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加谷歌站长并提交站点地图"><span class="toc-text">添加谷歌站长并提交站点地图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用七牛云图床"><span class="toc-text">使用七牛云图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-Sentry-io-的错误收集服务"><span class="toc-text">使用 Sentry.io 的错误收集服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加二次元人物"><span class="toc-text">添加二次元人物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换图片背景为动态背景"><span class="toc-text">更换图片背景为动态背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推荐几个工具网站"><span class="toc-text">推荐几个工具网站</span></a></li></ol></div><style>.left-col .switch-area,.left-col .switch-btn{display:none}.toc-level-6 i,.toc-level-6 ol{display:none!important}</style><input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录"><script>yiliaConfig.toc=["隐藏目录","显示目录",!0],$(".left-col").is(":hidden")&&$("#tocButton").attr("value",yiliaConfig.toc[1])</script><div class="share"><div class="social_share"><ul id="social_list" class="social_icon_list"></ul></div><div id="modal-container"><div class="modal-background"><div class="modal"><h2>Copy Link !</h2><p id="link"></p><svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"><rect x="0" y="0" fill="none" width="360" height="162" rx="3" ry="3"></rect></svg></div></div></div><script src="/pages/share/qrcode.min.js"></script><script>var title="使用 Hexo 主题 Yelee",url=window.location.href,author="鱼乐",img="https://src.wangriyu.wang/images/blog/avatar.jpg",config=[{name:"facebook",set:!0,api:`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(url)}`,title:"Share this article on Facebook",icon:"icon-facebook"},{name:"wechat",set:!0,api:"weixin://",icon:"icon-wechat"},{name:"twitter",set:!0,api:`https://twitter.com/intent/tweet?source=webclient&amp;original_referer=${encodeURI(url)}&amp;text=${encodeURI(title)}&amp;url=${encodeURI(url)}&amp;related=${encodeURI(author)}&amp;via=${encodeURI(author)}`,title:"Share this article on Twitter",icon:"icon-twitter"},{name:"weibo",set:!0,api:`http://v.t.sina.com.cn/share/share.php?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;content=utf8&amp;pic=${encodeURI(img)}`,title:"Share this article on Weibo",icon:"icon-weibo"},{name:"qq",set:!0,api:`http://connect.qq.com/widget/shareqq/index.html?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;pics=${encodeURI(img)}`,title:"Share this article on QQ",icon:"icon-qq"},{name:"qzone",set:!0,api:`http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;pics=${encodeURI(img)}`,title:"Share this article on Qzone",icon:"icon-CN_tencentqzone"},{name:"douban",set:!0,api:`http://www.douban.com/recommend/?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;image=${encodeURI(img)}`,title:"Share this article on Douban",icon:"icon-douban"},{name:"youdao",set:!0,api:`http://note.youdao.com/memory/?title=${encodeURI(title)}&amp;pic=${encodeURI(img)}&amp;url=${encodeURI(url)}`,title:"Share this article on YoudaoNote",icon:"icon-youdaoyunbiji"},{name:"google",set:!0,api:`https://plus.google.com/share?url=${encodeURI(url)}`,title:"Share this article on Google+",icon:"icon-googleplus"},{name:"linkedin",set:!0,api:`https://www.linkedin.com/shareArticle?title=${encodeURI(title)}&amp;url=${encodeURI(url)}`,title:"Share this article on LinkedIn",icon:"icon-linkedin"},{name:"copy",set:!0,title:"Copy the link of this article",icon:"icon-link"},{name:"mail",set:!0,api:`mailto:?subject=${encodeURI(title)}&quot;&amp;body=permalink:${encodeURI(url)}`,title:"Share this article by email",icon:"icon-email"}];var ul=document.getElementById('social_list');config.forEach(function(e){if(JSON.stringify(e)!=='{}'&&e.name&&e.set){let li=document.createElement('li');li.setAttribute('class',`li_item link_${e.name}`);switch(e.name){case'wechat':{li.innerHTML=`<a class="item"href="${e.api}"><i class="iconfont ${e.icon}"></i><div id="qrcode"></div></a>`;break}case'copy':{li.innerHTML=`<span id="copyBtn"class="item"title="${e.title}"><i class="iconfont ${e.icon}"></i><span class="social_name">Copy link</span><textarea id="selection" style="display: none">${url}</textarea></span>`;break}default:{li.innerHTML=`<a class='item'href="${e.api}"rel="nofollow"target="_blank"title='${e.title}'><i class="iconfont ${e.icon}"></i><span class="social_name">${e.name==='qq'?'QQ':e.name}</span></a>`}}ul.appendChild(li)}});document.getElementById('copyBtn').onclick=function(){var input=document.createElement("input");input.setAttribute("readonly","readonly");input.setAttribute("value",url);document.body.appendChild(input);if(!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){input.setSelectionRange(0,input.value.length);document.getElementById('link').textContent = url}else{document.getElementById("selection").select()}document.execCommand("copy")||(document.getElementById("link").textContent="Failed！");document.getElementById("modal-container").setAttribute("class","sketch");document.body.removeChild(input)};document.getElementById('copyBtn').oncopy=function(event){if(!-[1,]){if(window.clipboardData){window.clipboardData.setData('Text',url);document.getElementById('link').textContent=window.clipboardData.getData('Text')}}else{event.preventDefault();if(event.clipboardData){event.clipboardData.setData('text/plain',url);document.getElementById('link').textContent=event.clipboardData.getData('text')}}};document.getElementById('modal-container').onclick=function hideModal(){document.getElementById('modal-container').setAttribute('class','sketch out')};document.onload=(function genQRCode(url){return new QRCode('qrcode',{text:url,width:128,height:128,colorDark:'#666',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.M})})(`${encodeURI(url)}#.WthZlpz1y-Y.wechat`)</script></div><section id="comments" style="margin:2em;padding:2em;background:rgba(255,255,255,.5)"><div id="vcomment" class="comment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el:"#vcomment",notify:"true",verify:"false",app_id:"iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",app_key:"lpS7UTUdJ4DkttQMlw4ulEFP",placeholder:"Just do it !",avatar:"retro"})</script></section><div class="scroll" id="post-nav-button"><a href="/2017/09-ShareArtifact.html" title="上一篇: 分享自用的一些软件、插件、网站和应用"><i class="fa fa-angle-left"></i> </a><a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a> <a href="/2017/08-Storage.html" title="下一篇: 浏览器本地存储"><i class="fa fa-angle-right"></i></a></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul><script></script></div><footer id="footer"><div class="outer"><div id="footer-info"><div class="footer-left"><i class="fa fa-copyright"></i> 2017-2018 冀-18010769-1</div><div class="footer-right"><a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a> Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i></div></div><div class="visit"><span id="busuanzi_container_site_pv" style="display:none"><span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span> </span></span><span>| </span><span id="busuanzi_container_page_pv" style="display:none"><span id="page-visit" title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span></span></span></div></div></footer></div><script type="application/javascript">var hide=!1,leftWidth=300;function hideLeftCol(){hide?($(".left-col").width(leftWidth),$(".left-col .intrude-less").css("display",""),$("#tocButton").css("display",""),"block"===$("#switch-btn").css("display")&&"block"===$("#switch-area").css("display")||$("#toc").slideDown(320),$(".hide-left-col").css("left",leftWidth).html('<i class="fa fa-angle-double-left"></i>'),$(".mid-col").css("left",leftWidth),$("#post-nav-button").css("left",leftWidth),$("#post-nav-button > a:nth-child(2)").css("display","block"),hide=!1):($(".left-col").width(0),$(".left-col .intrude-less").css("display","none"),$("#toc").css("display","none"),$("#tocButton").css("display","none"),$(".hide-left-col").css("left",0).html('<i class="fa fa-angle-double-right"></i>'),$(".mid-col").css("left",0),$("#post-nav-button").css("left",0),$("#post-nav-button > a:nth-child(2)").css("display","none"),$(".post-list").is(":visible")&&($("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle(),$(".post-list").toggle()),hide=!0)}$(".hide-left-col").click(function(){hideLeftCol()})</script><script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script><script type="text/javascript">!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script"),ga("create","UA-106179639-1","auto"),ga("send","pageview")</script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script><script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="scroll" id="scroll"><a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a> <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a> <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a></div><script>var oOpenInNew={post:".copyright a[href]",friends:"#js-friends a",socail:".social a"};for(var x in oOpenInNew)$(oOpenInNew[x]).attr("target","_blank")</script><script>var titleTime,originTitle=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="(つェ⊂)"+originTitle,clearTimeout(titleTime)):(document.title="(*´∇｀*)~ "+originTitle,titleTime=setTimeout(function(){document.title=originTitle},2e3))})</script><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>AOS.init({easing:"ease-out-back",once:!0})</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后把 <code>after-footer</code> 文件中的 <code>&lt;%- partial(&#39;_partial/background&#39;) %&gt;</code> 删掉</p>
+<h2 id="推荐几个工具网站"><a href="#推荐几个工具网站" class="headerlink" title="推荐几个工具网站"></a>推荐几个工具网站</h2><p><a href="https://zhitu.isux.us/" title=" 点击访问 " target="_blank" rel="noopener">智图</a>：压缩图片很方便</p>
+<p><a href="https://clipchamp.com/zh-Hans/dashboard" title=" 点击访问 " target="_blank" rel="noopener">ClipChamp.com</a>: 在线压缩转换视频</p>
+<p><a href="https://gifs.com/" title=" 点击访问 " target="_blank" rel="noopener">Gifs.com</a>：视频转 gif，压缩截取等</p>
+
+          <script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script>
+<div id="aplayer"></div>
+<script src="/js/player.js"></script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p>
+        <p><span>发布时间:</span>2017-08-24, 00:00:00</p>
+        <p><span>最后更新:</span>2018-06-17, 20:53:29</p>
+        <p><span>原始链接:</span><a class="post-url" href="/2017/08-Hexo.html" title="使用 Hexo 主题 Yelee">https://blog.wangriyu.wang/2017/08-Hexo.html</a></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/09-ShareArtifact.html">
+                    分享自用的一些软件、插件、网站和应用
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/08-Storage.html">
+                    浏览器本地存储
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码块前后留白问题："><span class="toc-text">代码块前后留白问题：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取消搜索结果跳转新标签页："><span class="toc-text">取消搜索结果跳转新标签页：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取消迷你文章在新窗口打开"><span class="toc-text">取消迷你文章在新窗口打开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加文章字数统计"><span class="toc-text">添加文章字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加音乐播放器"><span class="toc-text">添加音乐播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简化添加音乐的方法"><span class="toc-text">简化添加音乐的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改头像动画"><span class="toc-text">修改头像动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加多合一打赏"><span class="toc-text">添加多合一打赏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改移动端背景"><span class="toc-text">修改移动端背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改列表显示的-bug"><span class="toc-text">修改列表显示的 bug</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-404-文字特效"><span class="toc-text">添加 404 文字特效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#压缩优化静态文件"><span class="toc-text">压缩优化静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加谷歌站长并提交站点地图"><span class="toc-text">添加谷歌站长并提交站点地图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用七牛云图床"><span class="toc-text">使用七牛云图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-Sentry-io-的错误收集服务"><span class="toc-text">使用 Sentry.io 的错误收集服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加二次元人物"><span class="toc-text">添加二次元人物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换图片背景为动态背景"><span class="toc-text">更换图片背景为动态背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推荐几个工具网站"><span class="toc-text">推荐几个工具网站</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+        if ($(".left-col").is(":hidden")) {
+          $("#tocButton").attr("value", yiliaConfig.toc[1]);
+        }
+    </script>
+
+
+
+    <div class="share">
+    
+
+    
+
+    
+      <div class="social_share">
+        <ul id="social_list" class="social_icon_list"></ul>
+      </div>
+      <script>
+        var shareConfig = {
+          title: '使用 Hexo 主题 Yelee',
+          url: window.location.href,
+          author: '鱼乐',
+          img: 'https://src.wangriyu.wang/images/blog/avatar.jpg'
+        }
+      </script>
+      <script src="/share/qrcode.min.js"></script>
+      <script src="/js/spongebob.min.js"></script>
+    
+</div>
+
+
+
+
+    
+        <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: 'true',
+        verify: 'false',
+        app_id: "iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",
+        app_key: "lpS7UTUdJ4DkttQMlw4ulEFP",
+        placeholder: "Just do it !",
+        avatar: "retro"
+      });
+    </script>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/09-ShareArtifact.html" title="上一篇: 分享自用的一些软件、插件、网站和应用">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/08-Storage.html" title="下一篇: 浏览器本地存储">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 冀-18010769-1
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script type="application/javascript">
+      var hide = false, leftWidth = 300;
+      function hideLeftCol() {
+        if (hide) {
+          $(".left-col").width(leftWidth);
+          $(".left-col .intrude-less").css('display', '');
+          $("#tocButton").css('display', '');
+          ($('#switch-btn').css('display') === 'block' && $('#switch-area').css('display') === 'block') || $('#toc').slideDown(320);
+          $(".hide-left-col").css("left", leftWidth).html('<i class="fa fa-angle-double-left"></i>');
+          $(".mid-col").css("left", leftWidth)
+          $("#post-nav-button").css("left", leftWidth)
+          $("#post-nav-button > a:nth-child(2)").css("display", "block")
+          hide = false
+        } else {
+          $(".left-col").width(0);
+          $(".left-col .intrude-less").css('display', 'none');
+          $("#toc").css('display', 'none');
+          $("#tocButton").css('display', 'none');
+          $(".hide-left-col").css("left", 0).html('<i class="fa fa-angle-double-right"></i>');
+          $(".mid-col").css("left", 0)
+          $("#post-nav-button").css("left", 0)
+          $("#post-nav-button > a:nth-child(2)").css("display", "none")
+          if ($(".post-list").is(":visible")) {
+            $("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle();
+            $(".post-list").toggle();
+          }
+          hide = true
+        }
+      }
+      $(".hide-left-col").click(function() {
+        hideLeftCol()
+      });
+    </script>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date()
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0]
+    a.async = 1
+    a.src = g
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+
+  ga('create', 'UA-106179639-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+             post: ".copyright a[href]", 
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂)" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*)~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+  
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      once: true,
+    });
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+</html>

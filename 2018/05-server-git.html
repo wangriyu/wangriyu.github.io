@@ -1,5 +1,396 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="author" content="鱼乐"><meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"><meta name="description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署"><meta name="keywords" content="hexo,git"><meta property="og:type" content="article"><meta property="og:title" content="博客搬家"><meta property="og:url" content="https://blog.wangriyu.wang/2018/05-server-git.html"><meta property="og:site_name" content="Wangriyu’s Blog"><meta property="og:description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/certbot.png"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/blog.png"><meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/home.png"><meta property="og:updated_time" content="2018-06-17T13:04:09.522Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="博客搬家"><meta name="twitter:description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署"><meta name="twitter:image" content="https://src.wangriyu.wang/images/blog/server/certbot.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml"><link rel="shortcut icon" href="/favicon.ico"><link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet"><script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script><link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet"><link rel="stylesheet" href="/css/style.css"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/pages/share/iconfont.css"><link rel="stylesheet" href="/pages/share/spongebob.min.css" type="text/css" media="all"><title>博客搬家 | Wangriyu’s Blog</title><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet"><script>var yiliaConfig={fancybox:!0,isHome:!1,isPost:!0,isArchive:!1,isTag:!1,isCategory:!1,fancybox_js:"//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",search:!0}</script><script>yiliaConfig.jquery_ui=[!1]</script><script>yiliaConfig.rootUrl="/"</script><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css"><link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head></html><body><div id="container"><div class="left-col"><div class="backImg"><img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px"></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><form id="search-form"><input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false"> <i class="fa fa-times" onclick="resetSearch()"></i></form><div id="local-search-result"></div><p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p><div id="switch-btn" class="switch-btn"><div class="icon"><div class="icon-ctn"><div class="icon-wrap icon-house" data-idx="0"><div class="birdhouse"></div><div class="birdhouse_holes"></div></div><div class="icon-wrap icon-ribbon hide" data-idx="1"><div class="ribbon"></div></div><div class="icon-wrap icon-link hide" data-idx="2"><div class="loopback_l"></div><div class="loopback_r"></div></div><div class="icon-wrap icon-me hide" data-idx="3"><div class="user"></div><div class="shoulder"></div></div></div></div><div class="tips-box hide"><div class="tips-arrow"></div><ul class="tips-inner"><li>菜单</li><li>标签</li><li>友情链接</li><li>目标</li></ul></div></div><div id="switch-area" class="switch-area"><div class="switch-wrap"><section class="switch-part switch-part1"><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a></ul><ul class="social"><div style="position:absolute;top:95%;left:50%;margin-left:-30px"><p style="display:block"><a class="donateIcon" href="javascript:void(0)" onmouseout='var qr=document.getElementById("donate");qr.style.display="none"' onmouseenter='var qr=document.getElementById("donate");qr.style.display="block"'>赏</a></p></div></ul></nav></section><section class="switch-part switch-part2"><div class="widget tagcloud" id="js-tagcloud"><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul></div></section><section class="switch-part switch-part3"><div id="js-friends"><a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a> <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a> <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a> <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a> <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a></div></section><section class="switch-part switch-part4"><div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div></section></div></div></header><div id="donate"><img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"><div class="triangle"></div></div></div></div><script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script><script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script><div class="hide-left-col" title="隐藏侧栏"><i class="fa fa-angle-double-left"></i></div><div class="mid-col"><nav id="mobile-nav"><div class="overlay"><div class="slider-trigger"></div><h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1></div><div class="intrude-less"><header id="header" class="inner"><a href="/" class="profilepic" data-aos="zoom-in"><img src="//src.wangriyu.wang/images/blog/avatar.jpg"></a><hgroup><h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1></hgroup><p class="header-subtitle">子非鱼，安知鱼之乐也！</p><nav class="header-menu"><ul><li><a href="//home.wangriyu.wang">主页</a></li><li><a href="/archives/">归档</a></li><li><a href="/pages/waterFallAlbum">相册</a></li><li><a href="/about/">简历</a></li><li><a href="/tags/">标签云</a></li><div class="clearfix"></div></ul></nav><nav class="header-nav"><ul class="social"><a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a> <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a> <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a> <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a> <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a> <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a> <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a> <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a></ul></nav></header></div><link class="menu-list" tags="标签" friends="友情链接" about="目标"></nav><div class="body-wrap"><article id="post-server-git" class="article article-type-post" itemscope itemprop="blogPost"><div class="article-meta"><a href="/2018/05-server-git.html" class="article-date"><time datetime="2018-05-16T16:00:00.000Z" itemprop="datePublished">2018-05-17</time></a></div><div class="article-inner"><input type="hidden" class="isFancy"><header class="article-header"><h1 class="article-title" itemprop="name">博客搬家</h1></header><div class="article-info article-info-post"><div class="article-category tagcloud"><a class="article-category-link" href="/categories/Server/">Server</a></div><div class="article-tag tagcloud" style="display:flex;flex-wrap:wrap"><ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul><span class="post-count">总字数2,243</span> <span class="post-count">预计阅读10分钟</span></div><div class="clearfix"></div></div><div class="article-entry" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>3 月份腾讯云搞了一波活动，我也跟了一波车，花了 360 换了五年的服务器，美滋滋！虽然后来四月份阿里云也出了活动，我是更喜欢阿里云的，但是这波也不算亏。有了服务器之后做的第一件事就是把博客搬到服务器上，其实两个月前就弄好了，后来又折腾服务器去了，本来想等各种东西都折腾一遍后再写这篇博客，但是一拖拖到现在，罪过罪过！</p><blockquote><p>系统环境为 CentOS 7.4，默认用户为 root</p></blockquote><h2 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h2><p>新系统需要安装更新和一些常用工具</p><pre class="line-numbers language-bash"><code class="language-bash">$ yum -y update
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if IE]><style>body{display:none;}</style><script>alert('IE浏览器下无法展示效果，请更换浏览器！');var headNode=document.getElementsByTagName('head')[0];var refresh=document.createElement('meta');refresh.setAttribute('http-equiv','Refresh');refresh.setAttribute('Content','0; url=http://outdatedbrowser.com/');headNode.appendChild(refresh);</script><![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="鱼乐" />
+<meta name="shenma-site-verification" content="cd3048846de29809263b063b8e307624_1527169631"/>
+
+
+
+<meta name="description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署">
+<meta name="keywords" content="hexo,git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搬家">
+<meta property="og:url" content="https://blog.wangriyu.wang/2018/05-server-git.html">
+<meta property="og:site_name" content="Wangriyu’s Blog">
+<meta property="og:description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/certbot.png">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/blog.png">
+<meta property="og:image" content="https://src.wangriyu.wang/images/blog/server/home.png">
+<meta property="og:updated_time" content="2018-06-17T13:04:09.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客搬家">
+<meta name="twitter:description" content="把博客从 github 搬到自己的服务器上，如何搭建 git 服务并用 git 部署">
+<meta name="twitter:image" content="https://src.wangriyu.wang/images/blog/server/certbot.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Wangriyu’s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+<link href="//src.wangriyu.wang/lib/aos/2.2.0/aos.css" rel="stylesheet">
+<script src="//src.wangriyu.wang/lib/aos/2.2.0/aos.js"></script>
+
+
+    <link href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="/share/iconfont.css">
+    <link rel='stylesheet' href='/share/spongebob.min.css' type='text/css' media='all'/>
+
+
+
+<title>博客搬家 | Wangriyu’s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+<link href="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+
+<script>
+var yiliaConfig = {
+    fancybox: true,
+    isHome: false,
+    isPost: true,
+    isArchive: false,
+    isTag: false,
+    isCategory: false,
+    fancybox_js: "//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js",
+    search: true
+}
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+<link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="backImg">
+    <img src="//src.wangriyu.wang/images/blog/yule.jpg" width="300px" height="330px" />
+</div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic" data-aos="zoom-in">
+            <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">鱼乐</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>目标</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="//home.wangriyu.wang">主页</a></li>
+                        
+                            <li><a href="/archives/">归档</a></li>
+                        
+                            <li><a href="/pages/waterFallAlbum">相册</a></li>
+                        
+                            <li><a href="/about/">简历</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wangriyu" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
+                            
+                                <a class="fa 网易云音乐" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
+                            
+                                <a class="fa 掘金" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
+                            
+                                <a class="fa Facebook" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
+                            
+                                <a class="fa Twitter" href="https://twitter.com/kClownduo" title="Twitter"></a>
+                            
+                        </ul>
+                      
+                        <ul class="social">
+                            <div style="position: absolute; top: 95%; left: 50%; margin-left: -30px;">
+                                <p style="display: block">
+                                    <a
+                                        class="donateIcon"
+                                        href="javascript:void(0)"
+                                        onmouseout="
+                                            var qr = document.getElementById('donate');
+                                            qr.style.display='none';
+                                        "
+                                        onmouseenter="
+                                            var qr = document.getElementById('donate');
+                                            qr.style.display='block';
+                                        ">
+                                        赏
+                                    </a>
+                                </p>
+                            </div>
+                        </ul>
+                      
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aplayer/">Aplayer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-存储扩展/">Mac 存储扩展</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UEFI-GPT/">UEFI&GPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dart/">dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go-源码/">go 源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-扩展阅读/">http 扩展阅读</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/masm/">masm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextcloud/">nextcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rEFInd-引导美化/">rEFInd 引导美化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10-Ubuntu-双系统/">win10&Ubuntu 双系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人网盘/">个人网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用/">应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件/">插件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器本地存储/">浏览器本地存储</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解计算机/">深入理解计算机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络/">网络</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/TechCatsLab">TechCatsLab</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/yangchenglong11">YangChengLong</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/Jsharkc">LiuJiaChang</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/yusank">YusanKurban</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/sunanxiang">SunAnXiang</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/DoubleWoodH">LinHao</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/ShiChao1996">ShiChao</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/Txiaozhe">TangXiaoJi</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/LLLeon">JiaChenHui</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                    
+                        <section class="switch-part switch-part4">
+                    
+                        <div id="js-aboutme">不悲不喜，不卑不亢，努力成为一个更好的程序猿！</div>
+                    </section>
+                
+            </div>
+        </div>
+    </header>
+    
+        <div id="donate">
+            <img id="multipay" src="//src.wangriyu.wang/images/blog/multipay.png" width="250px" alt="鱼乐 Multipay"/>
+            <div class="triangle"></div>
+        </div>
+    
+</div>
+    </div>
+    <script type="text/javascript" src="//src.wangriyu.wang/lib/bubbly-bg/1.0.0/bubbly-bg.js"></script>
+    <script>var userAgent=window.navigator.userAgent;bubbly({blur:1,bubbleFunc:()=>`hsla(${Math.random() * 50}, 100%, 50%, .3)`,bubbles:userAgent.match(/AppleWebKit.*Mobile.*/)?20:50,colorStart:"#fff4e6",colorStop:"#ffe9e4",compose:"source-over"});</script>
+    <div class="hide-left-col" title="隐藏侧栏">
+        <i class="fa fa-angle-double-left"></i>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鱼乐</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic" data-aos="zoom-in">
+                <img src="//src.wangriyu.wang/images/blog/avatar.jpg">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">鱼乐</a></h1>
+            </hgroup>
+            
+                <p class="header-subtitle">子非鱼，安知鱼之乐也！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="//home.wangriyu.wang">主页</a></li>
+                
+                    <li><a href="/archives/">归档</a></li>
+                
+                    <li><a href="/pages/waterFallAlbum">相册</a></li>
+                
+                    <li><a href="/about/">简历</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <ul class="social">
+                    
+                        <a class="fa Email" target="_blank" href="mailto:wangriyu1997@gmail.com" title="Email"></a>
+                    
+                        <a class="fa GitHub" target="_blank" href="https://github.com/wangriyu" title="GitHub"></a>
+                    
+                        <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                    
+                        <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/ke-lao-en-clown/activities" title="知乎"></a>
+                    
+                        <a class="fa 网易云音乐" target="_blank" href="https://music.163.com/#/user/home?id=102244407" title="网易云音乐"></a>
+                    
+                        <a class="fa 掘金" target="_blank" href="https://juejin.im/user/58c3744bda2f605609683d66" title="掘金"></a>
+                    
+                        <a class="fa Facebook" target="_blank" href="https://www.facebook.com/riyu.wang.7" title="Facebook"></a>
+                    
+                        <a class="fa Twitter" target="_blank" href="https://twitter.com/kClownduo" title="Twitter"></a>
+                    
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="目标"/>
+</nav>
+      <div class="body-wrap"><article id="post-server-git" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05-server-git.html" class="article-date">
+      <time datetime="2018-05-16T16:00:00.000Z" itemprop="datePublished">2018-05-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      博客搬家
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Server/">Server</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud" style="display: flex; flex-wrap: wrap">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+        <span class="post-count">总字数2,243</span>
+        <span class="post-count">预计阅读10分钟</span>
+    </div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>3 月份腾讯云搞了一波活动，我也跟了一波车，花了 360 换了五年的服务器，美滋滋！虽然后来四月份阿里云也出了活动，我是更喜欢阿里云的，但是这波也不算亏。有了服务器之后做的第一件事就是把博客搬到服务器上，其实两个月前就弄好了，后来又折腾服务器去了，本来想等各种东西都折腾一遍后再写这篇博客，但是一拖拖到现在，罪过罪过！</p>
+<blockquote>
+<p>系统环境为 CentOS 7.4，默认用户为 root</p>
+</blockquote>
+<h2 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h2><p>新系统需要安装更新和一些常用工具</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum -y update
 // 安装 node 和 <span class="token function">npm</span>
 $ yum <span class="token function">install</span> epel-release
 $ yum <span class="token function">install</span> nodejs
@@ -14,32 +405,64 @@ $ n stable
 // 安装 <span class="token function">git</span>
 $ yum <span class="token function">install</span> <span class="token function">git</span>
 $ <span class="token function">git</span> --version
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="修改域名解析"><a href="#修改域名解析" class="headerlink" title="修改域名解析"></a>修改域名解析</h2><p>原本域名是解析到 wangriyu.github.io 上，现在改为 A 类 ip 地址，填服务器的公有 ip</p><h2 id="设置-webserver"><a href="#设置-webserver" class="headerlink" title="设置 webserver"></a>设置 webserver</h2><h3 id="安装最新版-nginx"><a href="#安装最新版-nginx" class="headerlink" title="安装最新版 nginx"></a>安装最新版 nginx</h3><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">vi</span> /etc/yum.repos.d/nginx.repo
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>写入以下内容，baseurl 根据系统修改如果是 centos 6 的话把当中的 7 改成 6，输入 <code>cat /etc/centos-release</code> 或者 <code>hostnamectl</code> 可以查看系统版本信息</p><pre class="line-numbers language-vim"><code class="language-vim"><span class="token punctuation">[</span>nginx<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改域名解析"><a href="#修改域名解析" class="headerlink" title="修改域名解析"></a>修改域名解析</h2><p>原本域名是解析到 wangriyu.github.io 上，现在改为 A 类 ip 地址，填服务器的公有 ip</p>
+<h2 id="设置-webserver"><a href="#设置-webserver" class="headerlink" title="设置 webserver"></a>设置 webserver</h2><h3 id="安装最新版-nginx"><a href="#安装最新版-nginx" class="headerlink" title="安装最新版 nginx"></a>安装最新版 nginx</h3><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">vi</span> /etc/yum.repos.d/nginx.repo
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>写入以下内容，baseurl 根据系统修改如果是 centos 6 的话把当中的 7 改成 6，输入 <code>cat /etc/centos-release</code> 或者 <code>hostnamectl</code> 可以查看系统版本信息</p>
+<pre class="line-numbers language-vim"><code class="language-vim"><span class="token punctuation">[</span>nginx<span class="token punctuation">]</span>
 name<span class="token operator">=</span>nginx repo
 baseurl<span class="token operator">=</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>nginx<span class="token operator">.</span>org<span class="token operator">/</span>packages<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>$basearch<span class="token operator">/</span>
 gpgcheck<span class="token operator">=</span><span class="token number">0</span>
 enabled<span class="token operator">=</span><span class="token number">0</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>清空缓存</p><pre class="line-numbers language-bash"><code class="language-bash">$ yum clean all
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>清空缓存</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum clean all
 $ yum makecache
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>输入 list 可以查看是否包含最新版本</p><pre class="line-numbers language-bash"><code class="language-bash">$ yum list <span class="token operator">|</span> <span class="token function">grep</span> nginx
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后安装</p><pre class="line-numbers language-bash"><code class="language-bash">$ yum <span class="token function">install</span> -y nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>输入 list 可以查看是否包含最新版本</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum list <span class="token operator">|</span> <span class="token function">grep</span> nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后安装</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum <span class="token function">install</span> -y nginx
 $ nginx -V <span class="token comment" spellcheck="true"># 查看版本</span>
 $ rpm -ql nginx <span class="token comment" spellcheck="true"># 列出nginx的安装文件</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>启动服务并设置开机自启动</p><pre class="line-numbers language-bash"><code class="language-bash">$ systemctl start nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>启动服务并设置开机自启动</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ systemctl start nginx
 $ systemctl <span class="token function">enable</span> nginx
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>此时访问服务器 ip 应该可以看到 nginx 的默认欢迎页了</p><h3 id="添加-Let’-Encrypt-通配符证书"><a href="#添加-Let’-Encrypt-通配符证书" class="headerlink" title="添加 Let’ Encrypt 通配符证书"></a>添加 Let’ Encrypt 通配符证书</h3><blockquote><p>国内的域名需要先备案，不然最后生成证书的时候可能会失败</p></blockquote><p>使用 CertBot 来生成证书，不同系统的方法可以到官网看: <a href="https://certbot.eff.org/lets-encrypt/centosrhel7-nginx" target="_blank" rel="noopener">https://certbot.eff.org/lets-encrypt/centosrhel7-nginx</a></p><p>安装 Certbot</p><pre class="line-numbers language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> yum-utils
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>此时访问服务器 ip 应该可以看到 nginx 的默认欢迎页了</p>
+<h3 id="添加-Let’-Encrypt-通配符证书"><a href="#添加-Let’-Encrypt-通配符证书" class="headerlink" title="添加 Let’ Encrypt 通配符证书"></a>添加 Let’ Encrypt 通配符证书</h3><blockquote>
+<p>国内的域名需要先备案，不然最后生成证书的时候可能会失败</p>
+</blockquote>
+<p>使用 CertBot 来生成证书，不同系统的方法可以到官网看: <a href="https://certbot.eff.org/lets-encrypt/centosrhel7-nginx" target="_blank" rel="noopener">https://certbot.eff.org/lets-encrypt/centosrhel7-nginx</a></p>
+<p>安装 Certbot</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum -y <span class="token function">install</span> yum-utils
 $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
 $ yum <span class="token function">install</span> certbot-nginx
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>生成证书</p><pre class="line-numbers language-bash"><code class="language-bash">$ certbot certonly --manual -d *.wangriyu.wang -d wangriyu.wang --agree-tos --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>第一步会要求你去添加一条 TXT DNS 解析记录，添加完后最好多等几分钟，等 DNS 生效再进入下一步，<br>如果验证失败了需要重新解析</p><p><img src="https://src.wangriyu.wang/images/blog/server/certbot.png" alt="image"></p><p>证书创建好后会输出证书位置，可以到 nginx 里设置虚拟机的 ssl_certificate 和 ssl_certificate_key 为生成的证书位置</p><pre class="line-numbers language-bash"><code class="language-bash">$ certbot certificates // 查看本地证书信息
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>生成证书</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ certbot certonly --manual -d *.wangriyu.wang -d wangriyu.wang --agree-tos --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>第一步会要求你去添加一条 TXT DNS 解析记录，添加完后最好多等几分钟，等 DNS 生效再进入下一步，<br>如果验证失败了需要重新解析</p>
+<p><img src="https://src.wangriyu.wang/images/blog/server/certbot.png" alt="image"></p>
+<p>证书创建好后会输出证书位置，可以到 nginx 里设置虚拟机的 ssl_certificate 和 ssl_certificate_key 为生成的证书位置</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ certbot certificates // 查看本地证书信息
 
 $ certbot delete // 删除证书
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>Let’s Encrypt 证书只有 90 天有效期，快到期时可以用 <code>certbot renew</code> 更新证书，更简单的做法是添加一个 cron 任务</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">crontab</span> -e
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Let’s Encrypt 证书只有 90 天有效期，快到期时可以用 <code>certbot renew</code> 更新证书，更简单的做法是添加一个 cron 任务</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">crontab</span> -e
 写入 30 0 1 * * root /usr/bin/certbot renew --renew-hook <span class="token string">"/usr/sbin/nginx -s reload"</span>
 $ <span class="token function">crontab</span> -l <span class="token comment" spellcheck="true"># 查看所有任务</span>
 $ <span class="token function">service</span> crond restart
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>每个月 1 号 0 点 30 分会自动执行该任务并重载 nginx</p><blockquote><p>如果之后使用 certbot 出现 ImportError: ‘pyOpenSSL’ module missing required functionality. Try upgrading to v0.14 or newer. 错误<br>依次输入以下命令修复</p></blockquote><pre class="line-numbers language-bash"><code class="language-bash">$ pip uninstall requests
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>每个月 1 号 0 点 30 分会自动执行该任务并重载 nginx</p>
+<blockquote>
+<p>如果之后使用 certbot 出现 ImportError: ‘pyOpenSSL’ module missing required functionality. Try upgrading to v0.14 or newer. 错误<br>依次输入以下命令修复</p>
+</blockquote>
+<pre class="line-numbers language-bash"><code class="language-bash">$ pip uninstall requests
 $ pip uninstall urllib3
 $ yum remove python-urllib3
 $ yum remove python-requests
@@ -47,7 +470,8 @@ $ yum remove certbot
 $ yum <span class="token function">install</span> python-urllib3
 $ yum <span class="token function">install</span> python-requests
 $ yum <span class="token function">install</span> certbot
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="配置服务器和虚拟机"><a href="#配置服务器和虚拟机" class="headerlink" title="配置服务器和虚拟机"></a>配置服务器和虚拟机</h3><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> /etc/nginx
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="配置服务器和虚拟机"><a href="#配置服务器和虚拟机" class="headerlink" title="配置服务器和虚拟机"></a>配置服务器和虚拟机</h3><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> /etc/nginx
 $ tree <span class="token keyword">.</span>
 ├── conf.d <span class="token comment" spellcheck="true"># 虚拟机文件，最好一个域名一个文件</span>
 │   ├── default.conf
@@ -58,7 +482,12 @@ $ tree <span class="token keyword">.</span>
 ├── ssl
 │   └── dhparam.pem
 └── <span class="token punctuation">..</span>.
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>详细的设置我这不多说，上网搜一下 nginx 配置大把教程，我这里贴一下我的配置，仅作参考</p><ul><li>nginx.conf</li></ul><pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">http</span> <span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>详细的设置我这不多说，上网搜一下 nginx 配置大把教程，我这里贴一下我的配置，仅作参考</p>
+<ul>
+<li>nginx.conf</li>
+</ul>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">http</span> <span class="token punctuation">{</span>
     <span class="token keyword">include</span>       <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>mime<span class="token punctuation">.</span><span class="token keyword">types</span><span class="token punctuation">;</span>
     <span class="token keyword">default_type</span>  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
 
@@ -90,7 +519,11 @@ $ tree <span class="token keyword">.</span>
 
     <span class="token keyword">include</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>blog.wangriyu.wang.conf</li></ul><pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>blog.wangriyu.wang.conf</li>
+</ul>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
      <span class="token keyword">server_name</span>  blog<span class="token punctuation">.</span>wangriyu<span class="token punctuation">.</span>wang<span class="token punctuation">;</span>
 
      <span class="token comment" spellcheck="true"># Load configuration files for the default server block.</span>
@@ -173,7 +606,11 @@ $ tree <span class="token keyword">.</span>
     <span class="token keyword">server_name</span>  blog<span class="token punctuation">.</span>wangriyu<span class="token punctuation">.</span>wang<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">404</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># managed by Certbot</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>wangriyu.wang.conf</li></ul><pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>wangriyu.wang.conf</li>
+</ul>
+<pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span>
     <span class="token keyword">server_name</span> wangriyu<span class="token punctuation">.</span>wang<span class="token punctuation">;</span>
 
     <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
@@ -181,40 +618,368 @@ $ tree <span class="token keyword">.</span>
 
     <span class="token keyword">return</span> <span class="token number">301</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>blog<span class="token punctuation">.</span>wangriyu<span class="token punctuation">.</span>wang<span class="token variable">$request_uri</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>关于 nginx 的配置推荐看下屈大大的博客: <a href="https://imququ.com/post/my-nginx-conf-for-wpo.html" target="_blank" rel="noopener">Nginx 配置之性能篇</a> 和 <a href="https://imququ.com/post/my-nginx-conf-for-security.html" target="_blank" rel="noopener">Nginx 配置之安全篇</a></p><p>通过优化 SEO 分数比 githubpage 要高得多</p><p><img src="https://src.wangriyu.wang/images/blog/server/blog.png" alt="image"></p><p><img src="https://src.wangriyu.wang/images/blog/server/home.png" alt="image"></p><p>nginx 访问的目录要存放博客生成的静态文件，接下来会介绍如何使用 git 部署</p><h2 id="搭建-Git-服务"><a href="#搭建-Git-服务" class="headerlink" title="搭建 Git 服务"></a>搭建 Git 服务</h2><p>之前博客是托管在 github 上的，我是在本地编辑完后再 push 到远端。现在放到服务器上，若用 git 部署，需要在服务器上搭建 Git 服务。</p><h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>创建一个 git 专用的用户</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">useradd</span> -m <span class="token function">git</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>关于 nginx 的配置推荐看下屈大大的博客: <a href="https://imququ.com/post/my-nginx-conf-for-wpo.html" target="_blank" rel="noopener">Nginx 配置之性能篇</a> 和 <a href="https://imququ.com/post/my-nginx-conf-for-security.html" target="_blank" rel="noopener">Nginx 配置之安全篇</a></p>
+<p>通过优化 SEO 分数比 githubpage 要高得多</p>
+<p><img src="https://src.wangriyu.wang/images/blog/server/blog.png" alt="image"></p>
+<p><img src="https://src.wangriyu.wang/images/blog/server/home.png" alt="image"></p>
+<p>nginx 访问的目录要存放博客生成的静态文件，接下来会介绍如何使用 git 部署</p>
+<h2 id="搭建-Git-服务"><a href="#搭建-Git-服务" class="headerlink" title="搭建 Git 服务"></a>搭建 Git 服务</h2><p>之前博客是托管在 github 上的，我是在本地编辑完后再 push 到远端。现在放到服务器上，若用 git 部署，需要在服务器上搭建 Git 服务。</p>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>创建一个 git 专用的用户</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">useradd</span> -m <span class="token function">git</span>
 $ <span class="token function">passwd</span> <span class="token function">git</span> <span class="token comment" spellcheck="true"># 设置密码，之后部署时登录用</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>禁用 git 用户的 shell 登录权限</p><p>出于安全考虑，我们要让 git 用户不能通过 shell 登录。可以编辑 /etc/passwd 来实现，在 /etc/passwd 中找到类似下面的一行：</p><pre class="line-numbers language-vim"><code class="language-vim">git<span class="token punctuation">:</span><span class="token keyword">x</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token punctuation">:</span><span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>bash
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>将 bash 改为 git-shell，可以通过 <code>which git-shell</code> 获取</p><pre class="line-numbers language-vim"><code class="language-vim">git<span class="token punctuation">:</span><span class="token keyword">x</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token punctuation">:</span><span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>git<span class="token operator">-</span><span class="token keyword">shell</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这样 git 用户可以通过 ssh 正常使用 git，但是无法登录 sehll</p><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个 git 仓库地址比如 <code>/data/git-repo</code>。然后在这个文件夹里创建 blog.git 这个仓库。</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">mkdir</span> /data/git-repo
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>禁用 git 用户的 shell 登录权限</p>
+<p>出于安全考虑，我们要让 git 用户不能通过 shell 登录。可以编辑 /etc/passwd 来实现，在 /etc/passwd 中找到类似下面的一行：</p>
+<pre class="line-numbers language-vim"><code class="language-vim">git<span class="token punctuation">:</span><span class="token keyword">x</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token punctuation">:</span><span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将 bash 改为 git-shell，可以通过 <code>which git-shell</code> 获取</p>
+<pre class="line-numbers language-vim"><code class="language-vim">git<span class="token punctuation">:</span><span class="token keyword">x</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token number">1001</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token punctuation">:</span><span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>git<span class="token operator">-</span><span class="token keyword">shell</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样 git 用户可以通过 ssh 正常使用 git，但是无法登录 sehll</p>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>新建一个 git 仓库地址比如 <code>/data/git-repo</code>。然后在这个文件夹里创建 blog.git 这个仓库。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">mkdir</span> /data/git-repo
 $ <span class="token function">cd</span> /data/git-repo
 $ <span class="token function">git</span> init --bare blog.git
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>然后进入 blog.git 可以看到 hooks 文件夹，可以再这里面写 Git Hook 脚本，不了解钩子的可以看下 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener">Git 钩子</a></p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> blog.git/hooks
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后进入 blog.git 可以看到 hooks 文件夹，可以再这里面写 Git Hook 脚本，不了解钩子的可以看下 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener">Git 钩子</a></p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> blog.git/hooks
 $ <span class="token function">vi</span> post-update
 
 写入:
 
 <span class="token comment" spellcheck="true">#!/bin/sh</span>
 <span class="token function">git</span> --work-tree<span class="token operator">=</span>/www/website --git-dir<span class="token operator">=</span>/data/git-repo/blog.git checkout -f
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>worktree 就是我们要放置静态文件的目录，每次这个裸库收到 git 更新时会把文件更新到 worktree，这样 nginx 就可以访问新部署的文件了</p><p>如果 post-update 不是可执行权限，输入 <code>chmod +x post-update</code> 设置为可执行</p><h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h3><p>这里要注意的一点是除了要设置仓库的所有者和可读写权限外，还要设置工作目录，即静态文件存放的地方，要不然钩子函数可能更新不了工作目录</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">chown</span> -R git:git /data/git-repo/blog.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>worktree 就是我们要放置静态文件的目录，每次这个裸库收到 git 更新时会把文件更新到 worktree，这样 nginx 就可以访问新部署的文件了</p>
+<p>如果 post-update 不是可执行权限，输入 <code>chmod +x post-update</code> 设置为可执行</p>
+<h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h3><p>这里要注意的一点是除了要设置仓库的所有者和可读写权限外，还要设置工作目录，即静态文件存放的地方，要不然钩子函数可能更新不了工作目录</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">chown</span> -R git:git /data/git-repo/blog.git
 $ <span class="token function">chmod</span> 755 /data/git-repo/blog.git
 
 $ <span class="token function">chown</span> -R git:git /www/website
 $ <span class="token function">chmod</span> 755 /www/website
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>到本地使用 git 克隆服务器上的仓库测试一下是否可用:</p><pre class="line-numbers language-git"><code class="language-git"><span class="token command">$ git clone git@&lt;CVM IP>:/data/git-repo/blog.git</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>到此服务器的配置应该已经结束</p><h2 id="测试本地编辑部署"><a href="#测试本地编辑部署" class="headerlink" title="测试本地编辑部署"></a>测试本地编辑部署</h2><p>到 hexo 博客目录，编辑站点配置文件 <code>_config.yml</code> 的 deploy 选项</p><pre class="line-numbers language-stylus"><code class="language-stylus">deploy<span class="token punctuation">:</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>到本地使用 git 克隆服务器上的仓库测试一下是否可用:</p>
+<pre class="line-numbers language-git"><code class="language-git"><span class="token command">$ git clone git@&lt;CVM IP>:/data/git-repo/blog.git</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>到此服务器的配置应该已经结束</p>
+<h2 id="测试本地编辑部署"><a href="#测试本地编辑部署" class="headerlink" title="测试本地编辑部署"></a>测试本地编辑部署</h2><p>到 hexo 博客目录，编辑站点配置文件 <code>_config.yml</code> 的 deploy 选项</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus">deploy<span class="token punctuation">:</span>
   - type<span class="token punctuation">:</span> git
     repo<span class="token punctuation">:</span>
       <span class="token property-declaration"><span class="token property">github</span><span class="token punctuation">:</span> git@github<span class="token operator">.</span>com<span class="token punctuation">:</span>wangriyu<span class="token operator">/</span>wangriyu<span class="token operator">.</span>github<span class="token operator">.</span>io<span class="token operator">.</span>git</span>
       <span class="token property-declaration"><span class="token property">server</span><span class="token punctuation">:</span> git@<span class="token operator">&lt;</span>CVM IP<span class="token operator">></span><span class="token punctuation">:</span><span class="token operator">/</span>data<span class="token operator">/</span>git-repo<span class="token operator">/</span>blog<span class="token operator">.</span>git</span>
     <span class="token property-declaration"><span class="token property">branch</span><span class="token punctuation">:</span> master</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>之后同样使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 命令，然后输入 git 用户的密码就可部署到服务器上了</p><p>如果不想每次都输密码可以去创建一个密钥放到本地，这里就不叙述了</p><h2 id="升级-vim"><a href="#升级-vim" class="headerlink" title="升级 vim"></a>升级 vim</h2><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> /etc/yum.repos.d/
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>之后同样使用 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 命令，然后输入 git 用户的密码就可部署到服务器上了</p>
+<p>如果不想每次都输密码可以去创建一个密钥放到本地，这里就不叙述了</p>
+<h2 id="升级-vim"><a href="#升级-vim" class="headerlink" title="升级 vim"></a>升级 vim</h2><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> /etc/yum.repos.d/
 $ <span class="token function">wget</span> https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo
 $ rpm --import https://copr-be.cloud.fedoraproject.org/results/mcepl/vim8/pubkey.gpg
 $ yum update vim
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>如果 update vim 报错:</p><pre class="line-numbers language-stylus"><code class="language-stylus">Transaction check error<span class="token punctuation">:</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果 update vim 报错:</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus">Transaction check error<span class="token punctuation">:</span>
   <span class="token property-declaration"><span class="token property">file</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>man<span class="token operator">/</span>man1<span class="token operator">/</span>vim<span class="token operator">.</span><span class="token number">1</span><span class="token operator">.</span>gz from install of vim-common-<span class="token number">2</span><span class="token punctuation">:</span><span class="token number">8.0</span><span class="token operator">.</span><span class="token number">1735</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token operator">.</span><span class="token number">96</span><span class="token operator">.</span>el7<span class="token operator">.</span>centos<span class="token operator">.</span>x86_64 conflicts with file from package vim-minimal-<span class="token number">2</span><span class="token punctuation">:</span><span class="token number">7.4</span><span class="token operator">.</span><span class="token number">160</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">.</span>el7<span class="token operator">.</span>x86_64</span>
 
 <span class="token property-declaration"><span class="token property">Error</span> Summary</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>先执行一下 <code>yum erase vim-minimal</code> 再 <code>yum update vim</code></p><p>如果升级后发现只能用 <code>vim</code> 命令不能用 <code>vi</code>，设置如下</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">ls</span> -l /usr/bin <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">vi</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>先执行一下 <code>yum erase vim-minimal</code> 再 <code>yum update vim</code></p>
+<p>如果升级后发现只能用 <code>vim</code> 命令不能用 <code>vi</code>，设置如下</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">ls</span> -l /usr/bin <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">vi</span>
 $ <span class="token function">cp</span> /usr/bin/vim /usr/bin/vi
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>推荐安装 oh-my-zsh，配合 <a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting</a> 插件和合适的主题，可以大大改善 shell 使用体验</p><p>接下来会写几篇折腾服务器的博客，比如搭建 FTP、nextcloud、docker 等等</p><script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script><div id="aplayer"></div><script src="/js/player.js"></script></div></div><div class="copyright"><p><span>本文标题:</span><a href="/2018/05-server-git.html">博客搬家</a></p><p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p><p><span>发布时间:</span>2018-05-17, 00:00:00</p><p><span>最后更新:</span>2018-06-17, 21:04:09</p><p><span>原始链接:</span><a class="post-url" href="/2018/05-server-git.html" title="博客搬家">https://blog.wangriyu.wang/2018/05-server-git.html</a></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p></div><nav id="article-nav"><div id="article-nav-newer" class="article-nav-title"><a href="/2018/05-HTTP2.html">HTTP2 详解</a></div><div id="article-nav-older" class="article-nav-title"><a href="/2018/04-go-http.html">Golang http/server</a></div></nav></article><div id="toc" class="toc-article"><strong class="toc-title">文章目录</strong><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统初始化"><span class="toc-text">系统初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改域名解析"><span class="toc-text">修改域名解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置-webserver"><span class="toc-text">设置 webserver</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装最新版-nginx"><span class="toc-text">安装最新版 nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-Let’-Encrypt-通配符证书"><span class="toc-text">添加 Let’ Encrypt 通配符证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置服务器和虚拟机"><span class="toc-text">配置服务器和虚拟机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建-Git-服务"><span class="toc-text">搭建 Git 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户"><span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置权限"><span class="toc-text">设置权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试本地编辑部署"><span class="toc-text">测试本地编辑部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级-vim"><span class="toc-text">升级 vim</span></a></li></ol></div><style>.left-col .switch-area,.left-col .switch-btn{display:none}.toc-level-6 i,.toc-level-6 ol{display:none!important}</style><input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录"><script>yiliaConfig.toc=["隐藏目录","显示目录",!0],$(".left-col").is(":hidden")&&$("#tocButton").attr("value",yiliaConfig.toc[1])</script><div class="share"><div class="social_share"><ul id="social_list" class="social_icon_list"></ul></div><div id="modal-container"><div class="modal-background"><div class="modal"><h2>Copy Link !</h2><p id="link"></p><svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"><rect x="0" y="0" fill="none" width="360" height="162" rx="3" ry="3"></rect></svg></div></div></div><script src="/pages/share/qrcode.min.js"></script><script>var title="博客搬家",url=window.location.href,author="鱼乐",img="https://src.wangriyu.wang/images/blog/avatar.jpg",config=[{name:"facebook",set:!0,api:`https://www.facebook.com/sharer/sharer.php?u=${encodeURI(url)}`,title:"Share this article on Facebook",icon:"icon-facebook"},{name:"wechat",set:!0,api:"weixin://",icon:"icon-wechat"},{name:"twitter",set:!0,api:`https://twitter.com/intent/tweet?source=webclient&amp;original_referer=${encodeURI(url)}&amp;text=${encodeURI(title)}&amp;url=${encodeURI(url)}&amp;related=${encodeURI(author)}&amp;via=${encodeURI(author)}`,title:"Share this article on Twitter",icon:"icon-twitter"},{name:"weibo",set:!0,api:`http://v.t.sina.com.cn/share/share.php?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;content=utf8&amp;pic=${encodeURI(img)}`,title:"Share this article on Weibo",icon:"icon-weibo"},{name:"qq",set:!0,api:`http://connect.qq.com/widget/shareqq/index.html?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;pics=${encodeURI(img)}`,title:"Share this article on QQ",icon:"icon-qq"},{name:"qzone",set:!0,api:`http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;pics=${encodeURI(img)}`,title:"Share this article on Qzone",icon:"icon-CN_tencentqzone"},{name:"douban",set:!0,api:`http://www.douban.com/recommend/?url=${encodeURI(url)}&amp;title=${encodeURI(title)}&amp;image=${encodeURI(img)}`,title:"Share this article on Douban",icon:"icon-douban"},{name:"youdao",set:!0,api:`http://note.youdao.com/memory/?title=${encodeURI(title)}&amp;pic=${encodeURI(img)}&amp;url=${encodeURI(url)}`,title:"Share this article on YoudaoNote",icon:"icon-youdaoyunbiji"},{name:"google",set:!0,api:`https://plus.google.com/share?url=${encodeURI(url)}`,title:"Share this article on Google+",icon:"icon-googleplus"},{name:"linkedin",set:!0,api:`https://www.linkedin.com/shareArticle?title=${encodeURI(title)}&amp;url=${encodeURI(url)}`,title:"Share this article on LinkedIn",icon:"icon-linkedin"},{name:"copy",set:!0,title:"Copy the link of this article",icon:"icon-link"},{name:"mail",set:!0,api:`mailto:?subject=${encodeURI(title)}&quot;&amp;body=permalink:${encodeURI(url)}`,title:"Share this article by email",icon:"icon-email"}];var ul=document.getElementById('social_list');config.forEach(function(e){if(JSON.stringify(e)!=='{}'&&e.name&&e.set){let li=document.createElement('li');li.setAttribute('class',`li_item link_${e.name}`);switch(e.name){case'wechat':{li.innerHTML=`<a class="item"href="${e.api}"><i class="iconfont ${e.icon}"></i><div id="qrcode"></div></a>`;break}case'copy':{li.innerHTML=`<span id="copyBtn"class="item"title="${e.title}"><i class="iconfont ${e.icon}"></i><span class="social_name">Copy link</span><textarea id="selection" style="display: none">${url}</textarea></span>`;break}default:{li.innerHTML=`<a class='item'href="${e.api}"rel="nofollow"target="_blank"title='${e.title}'><i class="iconfont ${e.icon}"></i><span class="social_name">${e.name==='qq'?'QQ':e.name}</span></a>`}}ul.appendChild(li)}});document.getElementById('copyBtn').onclick=function(){var input=document.createElement("input");input.setAttribute("readonly","readonly");input.setAttribute("value",url);document.body.appendChild(input);if(!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){input.setSelectionRange(0,input.value.length);document.getElementById('link').textContent = url}else{document.getElementById("selection").select()}document.execCommand("copy")||(document.getElementById("link").textContent="Failed！");document.getElementById("modal-container").setAttribute("class","sketch");document.body.removeChild(input)};document.getElementById('copyBtn').oncopy=function(event){if(!-[1,]){if(window.clipboardData){window.clipboardData.setData('Text',url);document.getElementById('link').textContent=window.clipboardData.getData('Text')}}else{event.preventDefault();if(event.clipboardData){event.clipboardData.setData('text/plain',url);document.getElementById('link').textContent=event.clipboardData.getData('text')}}};document.getElementById('modal-container').onclick=function hideModal(){document.getElementById('modal-container').setAttribute('class','sketch out')};document.onload=(function genQRCode(url){return new QRCode('qrcode',{text:url,width:128,height:128,colorDark:'#666',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.M})})(`${encodeURI(url)}#.WthZlpz1y-Y.wechat`)</script></div><section id="comments" style="margin:2em;padding:2em;background:rgba(255,255,255,.5)"><div id="vcomment" class="comment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el:"#vcomment",notify:"true",verify:"false",app_id:"iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",app_key:"lpS7UTUdJ4DkttQMlw4ulEFP",placeholder:"Just do it !",avatar:"retro"})</script></section><div class="scroll" id="post-nav-button"><a href="/2018/05-HTTP2.html" title="上一篇: HTTP2 详解"><i class="fa fa-angle-left"></i> </a><a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a> <a href="/2018/04-go-http.html" title="下一篇: Golang http/server"><i class="fa fa-angle-right"></i></a></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul><script></script></div><footer id="footer"><div class="outer"><div id="footer-info"><div class="footer-left"><i class="fa fa-copyright"></i> 2017-2018 冀-18010769-1</div><div class="footer-right"><a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a> Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i></div></div><div class="visit"><span id="busuanzi_container_site_pv" style="display:none"><span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span> </span></span><span>| </span><span id="busuanzi_container_page_pv" style="display:none"><span id="page-visit" title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span></span></span></div></div></footer></div><script type="application/javascript">var hide=!1,leftWidth=300;function hideLeftCol(){hide?($(".left-col").width(leftWidth),$(".left-col .intrude-less").css("display",""),$("#tocButton").css("display",""),"block"===$("#switch-btn").css("display")&&"block"===$("#switch-area").css("display")||$("#toc").slideDown(320),$(".hide-left-col").css("left",leftWidth).html('<i class="fa fa-angle-double-left"></i>'),$(".mid-col").css("left",leftWidth),$("#post-nav-button").css("left",leftWidth),$("#post-nav-button > a:nth-child(2)").css("display","block"),hide=!1):($(".left-col").width(0),$(".left-col .intrude-less").css("display","none"),$("#toc").css("display","none"),$("#tocButton").css("display","none"),$(".hide-left-col").css("left",0).html('<i class="fa fa-angle-double-right"></i>'),$(".mid-col").css("left",0),$("#post-nav-button").css("left",0),$("#post-nav-button > a:nth-child(2)").css("display","none"),$(".post-list").is(":visible")&&($("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle(),$(".post-list").toggle()),hide=!0)}$(".hide-left-col").click(function(){hideLeftCol()})</script><script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script><script type="text/javascript">!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject="ga",e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script"),ga("create","UA-106179639-1","auto"),ga("send","pageview")</script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script><script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="scroll" id="scroll"><a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a> <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a> <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a></div><script>var oOpenInNew={post:".copyright a[href]",friends:"#js-friends a",socail:".social a"};for(var x in oOpenInNew)$(oOpenInNew[x]).attr("target","_blank")</script><script>var titleTime,originTitle=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="(つェ⊂)"+originTitle,clearTimeout(titleTime)):(document.title="(*´∇｀*)~ "+originTitle,titleTime=setTimeout(function(){document.title=originTitle},2e3))})</script><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>AOS.init({easing:"ease-out-back",once:!0})</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>推荐安装 oh-my-zsh，配合 <a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting</a> 插件和合适的主题，可以大大改善 shell 使用体验</p>
+<p>接下来会写几篇折腾服务器的博客，比如搭建 FTP、nextcloud、docker 等等</p>
+
+          <script src="//src.wangriyu.wang/lib/Aplayer/1.10.1/APlayer.min.js"></script>
+<div id="aplayer"></div>
+<script src="/js/player.js"></script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/05-server-git.html">博客搬家</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">鱼乐</a></p>
+        <p><span>发布时间:</span>2018-05-17, 00:00:00</p>
+        <p><span>最后更新:</span>2018-06-17, 21:04:09</p>
+        <p><span>原始链接:</span><a class="post-url" href="/2018/05-server-git.html" title="博客搬家">https://blog.wangriyu.wang/2018/05-server-git.html</a></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。</p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/05-HTTP2.html">
+                    HTTP2 详解
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/04-go-http.html">
+                    Golang http/server
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统初始化"><span class="toc-text">系统初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改域名解析"><span class="toc-text">修改域名解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置-webserver"><span class="toc-text">设置 webserver</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装最新版-nginx"><span class="toc-text">安装最新版 nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-Let’-Encrypt-通配符证书"><span class="toc-text">添加 Let’ Encrypt 通配符证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置服务器和虚拟机"><span class="toc-text">配置服务器和虚拟机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建-Git-服务"><span class="toc-text">搭建 Git 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户"><span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置权限"><span class="toc-text">设置权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试本地编辑部署"><span class="toc-text">测试本地编辑部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级-vim"><span class="toc-text">升级 vim</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+        if ($(".left-col").is(":hidden")) {
+          $("#tocButton").attr("value", yiliaConfig.toc[1]);
+        }
+    </script>
+
+
+
+    <div class="share">
+    
+
+    
+
+    
+      <div class="social_share">
+        <ul id="social_list" class="social_icon_list"></ul>
+      </div>
+      <script>
+        var shareConfig = {
+          title: '博客搬家',
+          url: window.location.href,
+          author: '鱼乐',
+          img: 'https://src.wangriyu.wang/images/blog/avatar.jpg'
+        }
+      </script>
+      <script src="/share/qrcode.min.js"></script>
+      <script src="/js/spongebob.min.js"></script>
+    
+</div>
+
+
+
+
+    
+        <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: 'true',
+        verify: 'false',
+        app_id: "iOiLPXAowPOMaotX1WyfeCWc-gzGzoHsz",
+        app_key: "lpS7UTUdJ4DkttQMlw4ulEFP",
+        placeholder: "Just do it !",
+        avatar: "retro"
+      });
+    </script>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/05-HTTP2.html" title="上一篇: HTTP2 详解">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/04-go-http.html" title="下一篇: Golang http/server">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06-Hash.html">数据结构 - 哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Tree.html">数据结构 - 树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06-Aplayer.html">使用 Aplayer 导致博客目录跳转失效</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-nextcloud.html">搭建 docker 环境并用 docker 部署 nextcloud 网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-ftp.html">CentOS 搭建 FTP 服务</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-HTTP2.html">HTTP2 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05-server-git.html">博客搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-http.html">Golang http/server</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-go-rpc.html">Golang RPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04-http-pki.html">PKI 体系</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-tls.html">SSL/TLS 详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-http-message.html">HTTP Message</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03-valine.html">更换博客评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01-githubpage.html">GithubPages 绑定二级域名并开启 HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart V.html">Dart 语法入门 V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-MacStorageExpansion.html">极具性价比的 Mac 存储扩展方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Win+Ubuntu.html">UEFI + GPT + Win10 + Ubuntu + rEFInd</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12-Dart IV.html">Dart 语法入门 IV</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-masm.html">masm for mac</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11-Dart III.html">Dart 语法入门 III</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart II.html">Dart 语法入门 II</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-MacSkills.html">Mac 快速入门操作指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10-Dart I.html">Dart 语法入门 I</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09-ShareArtifact.html">分享自用的一些软件、插件、网站和应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Hexo.html">使用 Hexo 主题 Yelee</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-Storage.html">浏览器本地存储</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08-SystemIO.html">系统 I/O</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06-JSNote3.html">0611-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05-JSNote2.html">0507-JS 笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04-JSNote1.html">0423-JS 笔记</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 冀-18010769-1
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    <script type="application/javascript">
+      var hide = false, leftWidth = 300;
+      function hideLeftCol() {
+        if (hide) {
+          $(".left-col").width(leftWidth);
+          $(".left-col .intrude-less").css('display', '');
+          $("#tocButton").css('display', '');
+          ($('#switch-btn').css('display') === 'block' && $('#switch-area').css('display') === 'block') || $('#toc').slideDown(320);
+          $(".hide-left-col").css("left", leftWidth).html('<i class="fa fa-angle-double-left"></i>');
+          $(".mid-col").css("left", leftWidth)
+          $("#post-nav-button").css("left", leftWidth)
+          $("#post-nav-button > a:nth-child(2)").css("display", "block")
+          hide = false
+        } else {
+          $(".left-col").width(0);
+          $(".left-col .intrude-less").css('display', 'none');
+          $("#toc").css('display', 'none');
+          $("#tocButton").css('display', 'none');
+          $(".hide-left-col").css("left", 0).html('<i class="fa fa-angle-double-right"></i>');
+          $(".mid-col").css("left", 0)
+          $("#post-nav-button").css("left", 0)
+          $("#post-nav-button > a:nth-child(2)").css("display", "none")
+          if ($(".post-list").is(":visible")) {
+            $("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle();
+            $(".post-list").toggle();
+          }
+          hide = true
+        }
+      }
+      $(".hide-left-col").click(function() {
+        hideLeftCol()
+      });
+    </script>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date()
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0]
+    a.async = 1
+    a.src = g
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+
+  ga('create', 'UA-106179639-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[["$$","$$"],["$","$"],["\\(","\\)"]],processEscapes:!0,skipTags:["script","noscript","style","textarea","pre","code"]}}),MathJax.Hub.Queue(function(){var a,e=MathJax.Hub.getAllJax();for(a=0;a<e.length;a+=1)e[a].SourceElement().parentNode.className+=" has-jax"})</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+             post: ".copyright a[href]", 
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂)" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*)~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+  
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      once: true,
+    });
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/izumi.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":-50,"vOffset":-85},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.3},"pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+</html>
