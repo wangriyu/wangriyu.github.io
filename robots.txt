@@ -8,5 +8,6 @@ Disallow: /404.html
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
 Disallow: /*.png$
-Disallow: /*.bmp$
 Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.pdf$
