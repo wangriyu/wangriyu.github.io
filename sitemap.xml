@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
+    
+    <lastmod>2018-06-25T03:03:37.036Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
     
     <lastmod>2018-06-23T09:38:55.093Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://blog.wangriyu.wang/2017/08-Storage.html</loc>
     
     <lastmod>2018-06-17T13:36:39.572Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
-    
-    <lastmod>2018-06-17T13:30:13.606Z</lastmod>
     
   </url>
   

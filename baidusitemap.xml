@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
+    <lastmod>2018-06-25T03:03:37.036Z</lastmod>
+    <data>
+        <display>
+        <title>Mac 快速入门操作指南</title>
+        <pubTime>2017-10-14T16:00:00.000Z</pubTime>
+        
+        <tag>分享</tag>
+         
+        <tag>技巧</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="https://blog.wangriyu.wang/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2017/09-ShareArtifact.html</loc>
     <lastmod>2018-06-23T09:38:55.093Z</lastmod>
     <data>
@@ -229,28 +251,6 @@
            
              
               <breadCrumb title="笔记" url="https://blog.wangriyu.wang/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
-    <lastmod>2018-06-17T13:30:13.606Z</lastmod>
-    <data>
-        <display>
-        <title>Mac 快速入门操作指南</title>
-        <pubTime>2017-10-14T16:00:00.000Z</pubTime>
-        
-        <tag>分享</tag>
-         
-        <tag>技巧</tag>
-         
-         
-           
-             
-              <breadCrumb title="Mac" url="https://blog.wangriyu.wang/categories/Mac/"/>
           
         </display>
     </data>
