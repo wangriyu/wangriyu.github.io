@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/06-Distribution.html</loc>
+    
+    <lastmod>2018-06-29T08:57:07.143Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/03-http-message.html</loc>
+    
+    <lastmod>2018-06-29T05:58:51.222Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/03-http-tls.html</loc>
+    
+    <lastmod>2018-06-29T05:58:30.436Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2017/10-MacSkills.html</loc>
     
     <lastmod>2018-06-25T03:03:37.036Z</lastmod>
@@ -89,20 +110,6 @@
     <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
     
     <lastmod>2018-06-17T13:17:41.471Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/03-http-message.html</loc>
-    
-    <lastmod>2018-06-17T13:13:19.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/03-http-tls.html</loc>
-    
-    <lastmod>2018-06-17T13:08:52.784Z</lastmod>
     
   </url>
   
