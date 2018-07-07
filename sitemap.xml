@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
+    
+    <lastmod>2018-07-07T08:04:55.234Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/06-Distribution.html</loc>
     
     <lastmod>2018-06-29T08:57:07.143Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
     
     <lastmod>2018-06-17T12:53:55.374Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
-    
-    <lastmod>2018-06-17T12:48:09.990Z</lastmod>
     
   </url>
   

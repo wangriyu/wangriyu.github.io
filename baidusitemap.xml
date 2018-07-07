@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
+    <lastmod>2018-07-07T08:04:55.234Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Aplayer 导致博客目录跳转失效</title>
+        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
+        
+        <tag>Aplayer</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2018/06-Distribution.html</loc>
     <lastmod>2018-06-29T08:57:07.143Z</lastmod>
     <data>
@@ -451,26 +471,6 @@
            
              
               <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
-    <lastmod>2018-06-17T12:48:09.990Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Aplayer 导致博客目录跳转失效</title>
-        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
-        
-        <tag>Aplayer</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
           
         </display>
     </data>
