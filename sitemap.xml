@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
+    
+    <lastmod>2018-07-07T14:03:34.518Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/03-valine.html</loc>
+    
+    <lastmod>2018-07-07T12:16:21.219Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
     
     <lastmod>2018-07-07T08:04:55.234Z</lastmod>
@@ -44,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
-    
-    <lastmod>2018-06-23T09:38:04.386Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.wangriyu.wang/2018/06-share.html</loc>
     
     <lastmod>2018-06-23T09:29:24.270Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/03-valine.html</loc>
-    
-    <lastmod>2018-06-23T08:31:05.366Z</lastmod>
     
   </url>
   
