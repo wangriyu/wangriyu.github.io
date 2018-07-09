@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/about/index.html</loc>
+    
+    <lastmod>2018-07-09T06:41:40.075Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2017/08-Hexo.html</loc>
     
     <lastmod>2018-07-07T14:13:41.967Z</lastmod>
@@ -173,13 +180,6 @@
     <loc>https://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
     
     <lastmod>2018-06-08T14:23:27.616Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/about/index.html</loc>
-    
-    <lastmod>2018-05-23T05:46:28.196Z</lastmod>
     
   </url>
   
