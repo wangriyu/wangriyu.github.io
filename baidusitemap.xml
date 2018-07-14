@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
+    <lastmod>2018-07-14T12:10:15.109Z</lastmod>
+    <data>
+        <display>
+        <title>博客搬家</title>
+        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
     <lastmod>2018-07-12T12:56:07.894Z</lastmod>
     <data>
@@ -406,28 +428,6 @@
            
              
               <breadCrumb title="go" url="https://blog.wangriyu.wang/categories/go/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    <lastmod>2018-06-17T13:04:09.522Z</lastmod>
-    <data>
-        <display>
-        <title>博客搬家</title>
-        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
           
         </display>
     </data>
