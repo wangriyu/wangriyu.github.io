@@ -1,3 +1,4 @@
+https://blog.wangriyu.wang/2018/08-Linux_libc.html
 https://blog.wangriyu.wang/2018/07-root.html
 https://blog.wangriyu.wang/2018/06-Distribution.html
 https://blog.wangriyu.wang/2018/06-share.html
@@ -27,4 +28,3 @@ https://blog.wangriyu.wang/2017/10-Dart I.html
 https://blog.wangriyu.wang/2017/09-ShareArtifact.html
 https://blog.wangriyu.wang/2017/08-Hexo.html
 https://blog.wangriyu.wang/2017/08-Storage.html
-https://blog.wangriyu.wang/2017/08-SystemIO.html
