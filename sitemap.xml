@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
+    
+    <lastmod>2018-08-21T09:04:03.759Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/08-Linux_libc.html</loc>
     
     <lastmod>2018-08-19T13:55:21.175Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://blog.wangriyu.wang/2018/03-valine.html</loc>
     
     <lastmod>2018-07-29T04:27:27.827Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    
-    <lastmod>2018-07-29T04:27:27.826Z</lastmod>
     
   </url>
   
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
     
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     
