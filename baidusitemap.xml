@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://blog.wangriyu.wang/2018/08-Jenkins.html</loc>
-    <lastmod>2018-08-27T11:50:35.784Z</lastmod>
+    <lastmod>2018-08-27T11:58:14.275Z</lastmod>
     <data>
         <display>
         <title>Jenkins + Ansible 实现 Golang 自动化编译部署</title>
@@ -135,7 +135,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://blog.wangriyu.wang/2018/03-valine.html</loc>
     <lastmod>2018-07-29T04:27:27.827Z</lastmod>
@@ -155,6 +154,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
@@ -398,14 +398,14 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     <data>
         <display>
-        <title>masm for mac</title>
-        <pubTime>2017-11-23T16:00:00.000Z</pubTime>
+        <title>极具性价比的 Mac 存储扩展方案</title>
+        <pubTime>2017-12-23T16:00:00.000Z</pubTime>
         
-        <tag>masm</tag>
+        <tag>Mac 存储扩展</tag>
          
          
            
@@ -418,14 +418,14 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     <data>
         <display>
-        <title>极具性价比的 Mac 存储扩展方案</title>
-        <pubTime>2017-12-23T16:00:00.000Z</pubTime>
+        <title>masm for mac</title>
+        <pubTime>2017-11-23T16:00:00.000Z</pubTime>
         
-        <tag>Mac 存储扩展</tag>
+        <tag>masm</tag>
          
          
            
