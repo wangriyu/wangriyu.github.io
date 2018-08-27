@@ -1,3 +1,4 @@
+https://blog.wangriyu.wang/2018/08-Jenkins.html
 https://blog.wangriyu.wang/2018/08-ELK.html
 https://blog.wangriyu.wang/2018/08-Linux_libc.html
 https://blog.wangriyu.wang/2018/07-root.html
@@ -27,4 +28,3 @@ https://blog.wangriyu.wang/2017/10-Dart II.html
 https://blog.wangriyu.wang/2017/10-MacSkills.html
 https://blog.wangriyu.wang/2017/10-Dart I.html
 https://blog.wangriyu.wang/2017/09-ShareArtifact.html
-https://blog.wangriyu.wang/2017/08-Hexo.html

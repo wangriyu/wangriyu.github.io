@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/08-Jenkins.html</loc>
+    
+    <lastmod>2018-08-27T11:41:36.811Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/08-ELK.html</loc>
     
-    <lastmod>2018-08-26T16:16:21.812Z</lastmod>
+    <lastmod>2018-08-27T02:42:36.638Z</lastmod>
     
   </url>
   
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/12-MacStorageExpansion.html</loc>
     
     <lastmod>2018-07-29T04:27:21.572Z</lastmod>
     
@@ -219,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Distribution.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
     
     <lastmod>2018-07-29T04:27:21.555Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/06-Distribution.html</loc>
     
     <lastmod>2018-07-29T04:27:21.555Z</lastmod>
     
