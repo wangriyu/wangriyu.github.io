@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
+    <lastmod>2018-11-20T04:33:37.481Z</lastmod>
+    <data>
+        <display>
+        <title>UEFI + GPT + Win10 + Ubuntu + rEFInd</title>
+        <pubTime>2017-12-13T16:00:00.000Z</pubTime>
+        
+        <tag>UEFI&amp;GPT</tag>
+         
+        <tag>win10&amp;Ubuntu 双系统</tag>
+         
+        <tag>rEFInd 引导美化</tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer" url="https://blog.wangriyu.wang/categories/Computer/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
     <lastmod>2018-11-16T14:37:09.998Z</lastmod>
     <data>
@@ -180,21 +204,19 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
     <data>
         <display>
-        <title>Mac 系统如何解锁、root、刷 Android 手机</title>
-        <pubTime>2018-07-09T16:00:00.000Z</pubTime>
+        <title>使用 Aplayer 导致博客目录跳转失效</title>
+        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
         
-        <tag>root</tag>
-         
-        <tag>刷机</tag>
+        <tag>Aplayer</tag>
          
          
            
              
-              <breadCrumb title="搞机" url="https://blog.wangriyu.wang/categories/%E6%90%9E%E6%9C%BA/"/>
+              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
           
         </display>
     </data>
@@ -222,45 +244,27 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
     <data>
         <display>
-        <title>使用 Aplayer 导致博客目录跳转失效</title>
-        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
+        <title>Mac 系统如何解锁、root、刷 Android 手机</title>
+        <pubTime>2018-07-09T16:00:00.000Z</pubTime>
         
-        <tag>Aplayer</tag>
+        <tag>root</tag>
+         
+        <tag>刷机</tag>
          
          
            
              
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
+              <breadCrumb title="搞机" url="https://blog.wangriyu.wang/categories/%E6%90%9E%E6%9C%BA/"/>
           
         </display>
     </data>
     </url>
 
     
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 II</title>
-        <pubTime>2017-10-25T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://blog.wangriyu.wang/2017/12-Dart%20IV.html</loc>
@@ -363,50 +367,6 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>UEFI + GPT + Win10 + Ubuntu + rEFInd</title>
-        <pubTime>2017-12-13T16:00:00.000Z</pubTime>
-        
-        <tag>UEFI&amp;GPT</tag>
-         
-        <tag>win10&amp;Ubuntu 双系统</tag>
-         
-        <tag>rEFInd 引导美化</tag>
-         
-         
-           
-             
-              <breadCrumb title="Computer" url="https://blog.wangriyu.wang/categories/Computer/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Dart 语法入门 V</title>
-        <pubTime>2017-12-28T16:00:00.000Z</pubTime>
-        
-        <tag>dart</tag>
-         
-         
-           
-             
-              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.wangriyu.wang/2018/01-githubpage.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
@@ -427,12 +387,12 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/12-Dart%20V.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
         <display>
-        <title>Dart 语法入门 III</title>
-        <pubTime>2017-11-04T16:00:00.000Z</pubTime>
+        <title>Dart 语法入门 V</title>
+        <pubTime>2017-12-28T16:00:00.000Z</pubTime>
         
         <tag>dart</tag>
          
@@ -466,6 +426,46 @@
     </url>
 
     
+  <url>
+    <loc>https://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
+    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Dart 语法入门 III</title>
+        <pubTime>2017-11-04T16:00:00.000Z</pubTime>
+        
+        <tag>dart</tag>
+         
+         
+           
+             
+              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
+    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS 搭建 FTP 服务</title>
+        <pubTime>2018-05-21T16:00:00.000Z</pubTime>
+        
+        <tag>ftp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://blog.wangriyu.wang/2017/08-Storage.html</loc>
@@ -600,14 +600,18 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
         <display>
-        <title>CentOS 搭建 FTP 服务</title>
-        <pubTime>2018-05-21T16:00:00.000Z</pubTime>
+        <title>搭建 docker 环境并用 docker 部署 nextcloud 网盘</title>
+        <pubTime>2018-05-28T16:00:00.000Z</pubTime>
         
-        <tag>ftp</tag>
+        <tag>docker</tag>
+         
+        <tag>nextcloud</tag>
+         
+        <tag>个人网盘</tag>
          
          
            
@@ -666,30 +670,6 @@
 
     
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建 docker 环境并用 docker 部署 nextcloud 网盘</title>
-        <pubTime>2018-05-28T16:00:00.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-        <tag>nextcloud</tag>
-         
-        <tag>个人网盘</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.wangriyu.wang/2018/06-share.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
@@ -731,7 +711,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
@@ -739,6 +718,27 @@
         <display>
         <title>Dart 语法入门 I</title>
         <pubTime>2017-10-04T16:00:00.000Z</pubTime>
+        
+        <tag>dart</tag>
+         
+         
+           
+             
+              <breadCrumb title="Dart" url="https://blog.wangriyu.wang/categories/Dart/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
+    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Dart 语法入门 II</title>
+        <pubTime>2017-10-25T16:00:00.000Z</pubTime>
         
         <tag>dart</tag>
          

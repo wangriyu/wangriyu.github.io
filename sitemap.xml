@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
+    
+    <lastmod>2018-11-20T04:33:37.481Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
     
     <lastmod>2018-11-16T14:37:09.998Z</lastmod>
@@ -58,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
     
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
     
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/07-root.html</loc>
     
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
     
@@ -82,13 +89,6 @@
     <loc>https://blog.wangriyu.wang/about/index.html</loc>
     
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
-    
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
   </url>
   
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/01-githubpage.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/01-githubpage.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -212,7 +212,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -233,13 +233,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
-    
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.wangriyu.wang/2018/06-share.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
@@ -254,6 +247,13 @@
   </url>
   
   <url>
+    <loc>https://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
+    
+    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang//404.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
@@ -261,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/10-Dart%20I.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/10-Dart%20II.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
