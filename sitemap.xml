@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/about/index.html</loc>
-    
-    <lastmod>2018-07-29T04:27:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
     
     <lastmod>2018-07-29T04:27:27.000Z</lastmod>
@@ -114,7 +107,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
+    <loc>https://blog.wangriyu.wang/about/index.html</loc>
+    
+    <lastmod>2018-07-29T04:27:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-masm.html</loc>
+    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
