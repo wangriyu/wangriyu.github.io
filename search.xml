@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Grafana 企业微信报警</title>
+      <link href="/2019/01-docker-grafana.html"/>
+      <url>/2019/01-docker-grafana.html</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近想给自己组的 Grafana 添加合适的报警，最好时效性好一点的方案，首选是微信短信之类的，但是 Grafana 自带的通知方式里也就一个 dingding 还勉强满足要求，我遂上网找了其他相关方案，发现 <a href="https://zhuanlan.zhihu.com/p/38225794" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/38225794</a> 提供了企业微信的支持方法，便尝试一通。</p><p>作者给官方提了支持企业微信接口的 pr，但是官方好像不太买账，至今没有 merge 到主干上，最新的 grafana alerting 也没有 wechat 一说，所以我就打算自己试了。</p><p>虽然刚开始碰到了一些坑，但是好在瑕疵不大，这里直接提供现成方案。</p><h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="第一步下载官方库"><a href="#第一步下载官方库" class="headerlink" title="第一步下载官方库"></a>第一步下载官方库</h3><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">wget</span> https://codeload.github.com/grafana/grafana/tar.gz/v5.4.2 -O grafana-5.4.2.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>我一开始去 clone 的 master 库，然后编译 n 遍都失败了，本来以为是自己环境配置问题，到最后发现是代码问题，应该找份 release 文件，比如我这用的是 v5.4.2 的</p><p>然后解压：</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">mkdir</span> grafana$ <span class="token function">tar</span> xzf grafana.tar.gz -C grafana --strip-components 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="添加企业微信接口"><a href="#添加企业微信接口" class="headerlink" title="添加企业微信接口"></a>添加企业微信接口</h3><blockquote><p><a href="https://github.com/wangriyu/docker-grafana/tree/master/wechat-notifier" target="_blank" rel="noopener">https://github.com/wangriyu/docker-grafana/tree/master/wechat-notifier</a></p></blockquote><p>打开链接将其中的两份代码复制到 grafana/pkg/services/alerting/notifiers 中</p><h3 id="编译镜像"><a href="#编译镜像" class="headerlink" title="编译镜像"></a>编译镜像</h3><p>我这选择编译成镜像，使用方便一点，也可以照着官方的 readme 直接编译本地文件使用</p><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> grafana$ <span class="token function">make</span> build-docker-full<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>等待许久后会生成一个 grafana/grafana:dev 镜像</p><h3 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h3><pre class="line-numbers language-bash"><code class="language-bash">$ docker run -d --name<span class="token operator">=</span>grafana -p 3000:3000 grafana/grafana:dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>打开 localhost:3000 即可打开 grafana 页面，初始账号密码是 admin/admin</p><h3 id="添加报警方式"><a href="#添加报警方式" class="headerlink" title="添加报警方式"></a>添加报警方式</h3><p><a class='fancy-ctn' href='https://src.wangriyu.wang/images/blog/Grafana/notifier.png' title='notifier' data-fancybox='images' data-caption='notifier.png'><img data-original='https://src.wangriyu.wang/images/blog/Grafana/notifier.png' src='/img/loading.gif' title='notifier' alt='notifier'></a></p><p>打开 notification channels 界面，添加 wechat 方式的报警，</p><p>CorpId 去<a href="https://work.weixin.qq.com/" target="_blank" rel="noopener">企业微信</a>中登录后查看<code>我的企业</code>一栏最下方获取</p><p>AgentID 和 Secret 则需要去创建报警应用那里获取</p><p>ToUser 选择受众范围，默认 @all</p><h3 id="设置触发报警规则"><a href="#设置触发报警规则" class="headerlink" title="设置触发报警规则"></a>设置触发报警规则</h3><blockquote><p><a href="http://docs.grafana.org/alerting/rules/" target="_blank" rel="noopener">http://docs.grafana.org/alerting/rules/</a></p></blockquote><p>官方文档说的比较清晰了</p><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>可以在微信中接收报警信息</p><p><a class='fancy-ctn' href='https://src.wangriyu.wang/images/blog/Grafana/wechat.jpeg' title='wechat' data-fancybox='images' data-caption='wechat.jpeg'><img data-original='https://src.wangriyu.wang/images/blog/Grafana/wechat.jpeg' src='/img/loading.gif' title='wechat' alt='wechat'></a></p><p>可以附带截图信息</p><p><a class='fancy-ctn' href='https://src.wangriyu.wang/images/blog/Grafana/alerting.jpeg' title='alerting' data-fancybox='images' data-caption='alerting.jpeg'><img data-original='https://src.wangriyu.wang/images/blog/Grafana/alerting.jpeg' src='/img/loading.gif' title='alerting' alt='alerting'></a></p>]]></content>
+      
+      <categories>
+          
+          <category> Services </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Grafana </tag>
+            
+            <tag> Alerting </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Jenkins + Ansible 实现 Golang 自动化编译部署</title>
       <link href="/2018/08-Jenkins.html"/>
       <url>/2018/08-Jenkins.html</url>
