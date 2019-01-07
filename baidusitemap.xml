@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/08-Jenkins.html</loc>
+    <lastmod>2019-01-07T15:34:39.323Z</lastmod>
+    <data>
+        <display>
+        <title>Jenkins + Ansible 实现 Golang 自动化编译部署</title>
+        <pubTime>2018-08-25T16:00:00.000Z</pubTime>
+        
+        <tag>Jenkins</tag>
+         
+        <tag>Golang</tag>
+         
+         
+           
+             
+              <breadCrumb title="Services" url="https://blog.wangriyu.wang/categories/Services/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2019/01-docker-grafana.html</loc>
     <lastmod>2019-01-07T15:05:34.051Z</lastmod>
     <data>
@@ -218,28 +240,6 @@
         <tag>ELK</tag>
          
         <tag>Log</tag>
-         
-         
-           
-             
-              <breadCrumb title="Services" url="https://blog.wangriyu.wang/categories/Services/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/08-Jenkins.html</loc>
-    <lastmod>2018-09-26T03:47:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jenkins + Ansible 实现 Golang 自动化编译部署</title>
-        <pubTime>2018-08-25T16:00:00.000Z</pubTime>
-        
-        <tag>Jenkins</tag>
-         
-        <tag>Golang</tag>
          
          
            
