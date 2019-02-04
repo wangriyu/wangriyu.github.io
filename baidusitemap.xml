@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
+    <lastmod>2019-02-04T07:05:07.512Z</lastmod>
+    <data>
+        <display>
+        <title>博客搬家</title>
+        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2019/01-docker-grafana.html</loc>
     <lastmod>2019-01-08T05:31:13.374Z</lastmod>
     <data>
@@ -201,28 +223,6 @@
            
              
               <breadCrumb title="Computer" url="https://blog.wangriyu.wang/categories/Computer/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    <lastmod>2018-11-16T14:37:09.998Z</lastmod>
-    <data>
-        <display>
-        <title>博客搬家</title>
-        <pubTime>2018-05-16T16:00:00.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Server" url="https://blog.wangriyu.wang/categories/Server/"/>
           
         </display>
     </data>

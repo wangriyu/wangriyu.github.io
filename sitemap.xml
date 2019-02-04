@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
+    
+    <lastmod>2019-02-04T07:05:07.512Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.wangriyu.wang/2019/01-docker-grafana.html</loc>
     
     <lastmod>2019-01-08T05:31:13.374Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
     
     <lastmod>2018-11-20T04:33:37.481Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-git.html</loc>
-    
-    <lastmod>2018-11-16T14:37:09.998Z</lastmod>
     
   </url>
   
