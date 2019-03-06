@@ -144,7 +144,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-color);
   line-height: 1.35;
   font-variant-numeric: lining-nums;
-  margin: 1em;
 }
 
 em {
@@ -259,7 +258,7 @@ pre, code, pre tt {
 /* 一致化 horizontal rule */
 hr {
   border: none;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 3px solid #afafaf;
   margin-bottom: 0.8em;
   height: 10px;
 }
