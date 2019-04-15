@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2019/04-Golang-GC.html</loc>
+    <lastmod>2019-04-15T16:11:11.687Z</lastmod>
+    <data>
+        <display>
+        <title>学习 Golang GC</title>
+        <pubTime>2019-04-07T16:00:00.000Z</pubTime>
+        
+        <tag>GC</tag>
+         
+         
+           
+             
+              <breadCrumb title="go" url="https://blog.wangriyu.wang/categories/go/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2019/02-fix-memory-leak.html</loc>
     <lastmod>2019-03-22T18:13:03.657Z</lastmod>
     <data>
@@ -419,13 +439,14 @@
     </url>
 
     
+    
   <url>
-    <loc>https://blog.wangriyu.wang/2018/04-http-pki.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/03-http-message.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
         <display>
-        <title>PKI 体系</title>
-        <pubTime>2018-04-02T16:00:00.000Z</pubTime>
+        <title>HTTP Message</title>
+        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
         
         <tag>http 扩展阅读</tag>
          
@@ -440,7 +461,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
@@ -792,12 +812,12 @@
     
     
   <url>
-    <loc>https://blog.wangriyu.wang/2018/03-http-message.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/04-http-pki.html</loc>
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     <data>
         <display>
-        <title>HTTP Message</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        <title>PKI 体系</title>
+        <pubTime>2018-04-02T16:00:00.000Z</pubTime>
         
         <tag>http 扩展阅读</tag>
          
