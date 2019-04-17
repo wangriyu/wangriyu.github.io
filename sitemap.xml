@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.wangriyu.wang/about/index.html</loc>
+    <loc>https://blog.wangriyu.wang/2019/04-Golang-GC.html</loc>
     
-    <lastmod>2019-02-13T11:02:24.839Z</lastmod>
+    <lastmod>2019-04-17T14:52:04.773Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2019/02-fix-memory-leak.html</loc>
+    
+    <lastmod>2019-03-22T18:13:03.657Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/08-ELK.html</loc>
+    
+    <lastmod>2019-03-20T01:59:47.784Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
+    
+    <lastmod>2019-03-20T01:20:05.545Z</lastmod>
     
   </url>
   
@@ -65,23 +86,9 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-HTTP2.html</loc>
-    
-    <lastmod>2018-12-22T05:31:45.468Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.wangriyu.wang/2017/12-Win+Ubuntu.html</loc>
     
     <lastmod>2018-11-20T04:33:37.481Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/08-ELK.html</loc>
-    
-    <lastmod>2018-10-01T03:01:00.000Z</lastmod>
     
   </url>
   
@@ -121,14 +128,21 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/04-go-http.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/04-http-pki.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
+    
+    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -142,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -170,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/06-share.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/05-server-ftp.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -191,7 +205,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/05-server-nextcloud.html</loc>
+    <loc>https://blog.wangriyu.wang/2017/11-Dart%20III.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -219,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/04-go-http.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/06-share.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
@@ -268,14 +282,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wangriyu.wang/2018/04-go-rpc.html</loc>
-    
-    <lastmod>2018-07-29T04:27:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.wangriyu.wang/tags/index.html</loc>
+    <loc>https://blog.wangriyu.wang/2018/04-http-pki.html</loc>
     
     <lastmod>2018-07-29T04:27:21.000Z</lastmod>
     
