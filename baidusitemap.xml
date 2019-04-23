@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
+    <lastmod>2019-04-23T13:20:24.875Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Aplayer 导致博客目录跳转失效</title>
+        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
+        
+        <tag>Aplayer</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.wangriyu.wang/2019/04-Golang-GC.html</loc>
     <lastmod>2019-04-17T14:52:04.773Z</lastmod>
     <data>
@@ -351,26 +371,6 @@
            
              
               <breadCrumb title="Linux" url="https://blog.wangriyu.wang/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.wangriyu.wang/2018/06-Aplayer.html</loc>
-    <lastmod>2018-07-29T04:27:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Aplayer 导致博客目录跳转失效</title>
-        <pubTime>2018-06-04T16:00:00.000Z</pubTime>
-        
-        <tag>Aplayer</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://blog.wangriyu.wang/categories/Web/"/>
           
         </display>
     </data>
